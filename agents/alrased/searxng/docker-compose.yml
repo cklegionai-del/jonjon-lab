@@ -9,3 +9,10 @@ services:
     volumes:
       - ./searxng:/etc/searxng
     restart: unless-stopped
+
+  tor:
+    image: osminogin/tor-simple:latest
+    container_name: tor-proxy
+    restart: unless-stopped
+    ports:
+      - "9050:9050"

@@ -1,0 +1,32 @@
+{
+  "query": "latest news",
+  "timestamp": "2026-05-01_11-03-41",
+  "classification": "- ⚪ CNN: Breaking News, Latest News and Videos  \n- ⚪ Fox News – Breaking News Updates  \n- ⚪ Al Jazeera – Breaking News, World News and Video  \n- ⚪ BBC – Breaking News, World News, US News, Sports, Business  \n- ⚪ NBC News – Breaking Headlines and Video Reports on World, U.S. and…",
+  "results": [
+    {
+      "title": "CNN: Breaking News, Latest News and Videos",
+      "url": "https://edition.cnn.com/",
+      "content": "3 hours ago ... View the latest news and breaking news today for U.S., world, weather, entertainment, politics and health at CNN.com."
+    },
+    {
+      "title": "Fox News - Breaking News Updates | Latest News Headlines | Photos ...",
+      "url": "https://www.foxnews.com/",
+      "content": "قبل ساعة واحدة · Breaking News, Latest News and Current News from FOXNews.com. Breaking news and video. Latest Current News: U.S., World, Entertainment, Health, Business, ..."
+    },
+    {
+      "title": "Breaking News, World News and Video from Al Jazeera",
+      "url": "https://www.aljazeera.com/",
+      "content": "2 hours ago ... Al Jazeera · UK police charge man over stabbing of two Jewish men in London · Iran vows 'long, painful' response if US renews attacks · Russia ..."
+    },
+    {
+      "title": "BBC Home - Breaking News, World News, US News, Sports, Business ...",
+      "url": "https://www.bbc.com/",
+      "content": "قبل ساعة واحدة · British couple jailed in Iran: 'We're likely to be here for a long time' · Myanmar ex-leader Aung San Suu Kyi moved to house arrest, military says · 'Microcosm ..."
+    },
+    {
+      "title": "NBC News - Breaking Headlines and Video Reports on World, U.S. and ...",
+      "url": "https://www.nbcnews.com/",
+      "content": "3 hours ago ... U.K. terror threat level raised to 'severe' after stabbings of Jewish men in London · Alaska governor vetoes bipartisan election bill over 'significant ..."
+    }
+  ]
+}

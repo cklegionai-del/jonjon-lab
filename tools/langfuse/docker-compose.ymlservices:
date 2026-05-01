@@ -1,0 +1,20 @@
+  langfuse:
+    image: langfuse/langfuse:latest
+    container_name: langfuse
+    ports:
+      - "3001:3000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@langfuse-db:5432/langfuse
+      - NEXTAUTH_SECRET=jonjon-secret-key-change-me
+      - NEXTAUTH_URL=http://localhost:3001
+      - SALT=jonjon-salt
+    restart: unless-stopped
+
+  langfuse-db:
+    image: postgres:16
+    container_name: langfuse-db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=langfuse
+    restart: unless-stopped

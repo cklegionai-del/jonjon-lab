@@ -1,0 +1,19 @@
+# بيانات n8n
+n8n_data/
+tools/n8n/n8n_data/
+
+# بيانات Docker
+postgres_data/
+langfuse-db/
+
+# إعدادات البيئة
+.env
+*.secret
+
+# ذاكرة بايثون
+__pycache__/
+*.pyc
+
+# تقارير مؤقتة
+*.log
+reports/

@@ -1,0 +1,62 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مختبر جنجون للذكاء الاصطناعي</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .glassmorphism {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 min-h-screen flex flex-col justify-between p-4">
+    <header class="w-full text-right mb-8">
+        <nav class="flex items-center justify-end rounded-2xl glassmorphism px-6 py-3">
+            <div class="mr-auto flex items-center space-x-2">
+                <span>🧠</span>
+                <h1 class="text-xl font-bold">مختبر جنجون</h1>
+            </div>
+            <button class="bg-orange-500 text-white rounded-2xl px-4 py-2">جرب الآن</button>
+        </nav>
+    </header>
+    <main class="flex-1 flex items-center justify-center">
+        <section class="max-w-screen-lg w-full glassmorphism p-6 rounded-2xl shadow-xl flex flex-col space-y-4">
+            <h2 class="text-3xl font-bold">مختبر جنجون للذكاء الاصطناعي</h2>
+            <p class="text-lg">تقارير تحليلية عميقة • بحث حي • خصوصية كاملة</p>
+            <form class="flex items-center space-x-4">
+                <input type="search" placeholder="ابحث هنا..." class="rounded-2xl p-2 flex-grow bg-slate-800 text-white border-none outline-none"/>
+                <button class="bg-orange-500 text-white rounded-2xl px-6 py-2">ابدأ البحث</button>
+            </form>
+        </section>
+    </main>
+    <div class="flex flex-col md:flex-row space-y-4 md:space-x-8 justify-center items-stretch">
+        <article class="glassmorphism p-4 rounded-2xl shadow-xl flex-grow">
+            <h3 class="text-lg font-bold">🔍 بحث عميق</h3>
+        </article>
+        <article class="glassmorphism p-4 rounded-2xl shadow-xl flex-grow">
+            <h3 class="text-lg font-bold">📊 تقارير احترافية</h3>
+        </article>
+        <article class="glassmorphism p-4 rounded-2xl shadow-xl flex-grow">
+            <h3 class="text-lg font-bold">🤖 بوت تيليجرام</h3>
+        </article>
+    </div>
+    <section class="mt-auto mb-8 text-right">
+        <form class="flex flex-col items-center space-y-4 p-6 rounded-2xl bg-slate-800 shadow-xl max-w-screen-lg w-full glassmorphism">
+            <input type="text" placeholder="اسمك" class="rounded-2xl p-2 w-full bg-slate-700 text-white border-none outline-none"/>
+            <input type="email" placeholder="البريد الإلكتروني" class="rounded-2xl p-2 w-full bg-slate-700 text-white border-none outline-none"/>
+            <textarea placeholder="رسالتك هنا..." class="rounded-2xl p-2 w-full bg-slate-700 text-white border-none outline-none"></textarea>
+            <button type="submit" class="bg-orange-500 text-white rounded-2xl px-6 py-2">إرسال</button>
+        </form>
+    </section>
+    <footer class="text-center text-gray-400">
+        مدعوم بـ 9 نماذج ذكاء اصطناعي محلية
+    </footer>
+</body>
+</html>
+```
+

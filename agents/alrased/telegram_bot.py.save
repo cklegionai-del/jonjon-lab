@@ -1,0 +1,100 @@
+#!/usr/bin/env python3
+"""
+🤖 بوت جنجون - دائماً متصل بالويب
+- أي رسالة → بحث حي + رد
+- /search موضوع → بحث عميق (Super Agent)
+"""
+import os, sys, asyncio, requests, re
+from urllib.parse import quote
+from telegram import Update
+from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
+
+TOKEN = ""
+OLLAMA_URL = "http://localhost:11434/api/generate"
+SEARXNG_URL = "http://localhost:8080/search?format=json&q="
+CHAT_MODEL = "qwen2.5:32b"
+
+def search_web_quick(query, num=5):
+    """بحث سريع في الويب"""
+    results = []
+    # SearXNG
+    try:
+        r = requests.get(SEARXNG_URL + quote(query), timeout=10)
+        if r.status_code == 200:
+            results = r.json().get("results", [])[:num]
+    except: pass
+    # Google fallback
+    if not results:
+        try:
+            headers = {"User-Agent": "Mozilla/5.0"}
+            r = requests.get(f"https://www.google.com/search?q={quote(query)}", headers=headers, timeout=10)
+            if r.status_code == 200:
+                titles = re.findall(r'<h3[^>]*>(.*?)</h3>', r.text, re.DOTALL)
+                if titles: results = [{"title": re.sub(r'<[^>]+>', '', t), "url": "", "content": ""} for t in titles[:num]]
+        except: pass
+    return results
+
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text(
+        "🌐 أهلاً بك! أنا متصل بالويب دائماً.\n\n"
+        "• اكتب أي سؤال → أبحث في الإنترنت وأرد\n"
+        "• `/search موضوع` → بحث عميق (Super Agent)\n\n"
+        "مثال: `ما هي آخر أخبار ريال مدريد؟`"
+    )
+
+async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    query = update.message.text.strip()
+    if len(query) < 3: return await update.message.reply_text("❌ اكتب شيئاً أطول.")
+    
+    msg = await update.message.reply_text("🌐 جاري البحث في الويب...")
+    
+    try:
+        # 1. بحث سريع
+        results = search_web_quick(query)
+        web_context = "\n".join([f"- {r.get('title', '')}: {r.get('content', '')[:300]}" for r in results])
+        
+        # 2. إرسال للنموذج مع نتائج الويب
+        prompt = f"""أجب عن هذا السؤال بالعربية. استخدم معلومات الويب هذه:
+{web_context[:3000]}
+
+السؤال: {query}
+
+أعط إجابة مفيدة ومباشرة. إذا لم تكن المعلومات كافية، قل ذلك."""
+        
+        r = requests.post(OLLAMA_URL, json={"model": CHAT_MODEL, "prompt": prompt, "stream": False}, timeout=60)
+        if r.status_code == 200:
+            answer = r.json().get("response", "")[:4000]
+            if results and results[0].get("url"):
+                answer += f"\n\n📎 {results[0].get('url', '')}"
+            await msg.edit_text(answer)
+        else:
+            await msg.edit_text("❌ خطأ.")
+    except Exception as e:
+        await msg.edit_text(f"❌ {str(e)[:200]}")
+
+async def search_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    query = " ".join(context.args)
+    if not query: return await update.message.reply_text("❌ مثال: `/search الذكاء الاصطناعي`")
+    
+    msg = await update.message.reply_text(f"🐝 بحث عميق: {query}\n⏳ 3-5 دقائق...")
+    try:
+        from super_agent_final import super_search
+        report, score, path = super_search(query)
+        await msg.edit_text(f"📊 Score: {score}/100\n\n{report[:3800]}")
+        remaining = report[3800:]
+        while remaining:
+            await update.message.reply_text(remaining[:4000])
+            remaining = remaining[4000:]
+    except Exception as e:
+        await msg.edit_text(f"❌ {str(e)[:200]}")
+
+def main():
+    app = Application.builder().token(TOKEN).build()
+    app.add_handler(CommandHandler("start", start))
+    app.add_handler(CommandHandler("search", search_command))
+    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+    print("✅ البوت جاهز.")
+    app.run_polling(allowed_updates=Update.ALL_TYPES)
+
+if __name__ == "__main__":
+    main()

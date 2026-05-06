@@ -1,0 +1,21 @@
+{
+  "name": "جنجون",
+  "version": "1.0",
+  "hardware": "Mac M3 Max, 128GB RAM",
+  "models": {
+    "primary": ["qwen2.5:32b", "gpt-oss:20b", "qwen3-coder:30b"],
+    "specialized": ["qwen2-math:1.5b", "medgemma:4b", "bge-m3", "minicpm-o2.6:8b"],
+    "backup": ["qwen3:8b", "gemma3:4b"]
+  },
+  "tools": {
+    "automation": "n8n",
+    "search": "SearXNG + Tor + Google fallback",
+    "ui": "Open WebUI, December (Next.js)",
+    "monitoring": "Qwen3-Reranker, Langfuse",
+    "development": "VS Code + Continue.dev"
+  },
+  "agents": ["الحافظ", "المراجع", "الراصد", "المترجم", "المدقق", "المصفاة", "مركب", "المبدع"],
+  "swarm": "8 وكلاء + Tree Search + Super Agent",
+  "telegram_bot": "بوت تيليجرام متصل بالسوبرAgent",
+  "priorities": ["البحث العميق", "التقارير التحليلية", "بناء الوكلاء"]
+}

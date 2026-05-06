@@ -1,0 +1,264 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنصة الحديثة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lenis@1.0.27/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#1e40af',
+                        dark: '#0f172a',
+                        light: '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .navbar {
+            backdrop-filter: blur(10px);
+            background-color: rgba(15, 23, 42, 0.8);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+        }
+        .scroll-container {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="scroll-container">
+    <!-- Navbar -->
+    <nav class="navbar fixed w-full z-50 py-4 px-6 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mr-3">
+                    <span class="text-white text-xl">🚀</span>
+                </div>
+                <span class="text-xl font-bold">المنصة الحديثة</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-primary transition-colors">الرئيسية</a>
+                <a href="#services" class="hover:text-primary transition-colors">الخدمات</a>
+                <a href="#products" class="hover:text-primary transition-colors">المنتجات</a>
+                <a href="#about" class="hover:text-primary transition-colors">من نحن</a>
+                <a href="#contact" class="hover:text-primary transition-colors">اتصل بنا</a>
+            </div>
+            
+            <button class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                ابدأ الآن
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient min-h-screen flex items-center pt-16">
+        <div class="max-w-7xl mx-auto px-6 py-20 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                تطوير حلول <span class="text-white">التقنية</span> المبتكرة
+            </h1>
+            <p class="text-xl text-gray-200 mb-10 max-w-3xl mx-auto">
+                نقدم أفضل الخدمات والمنتجات لتلبية احتياجاتك التقنية وتحقيق النجاح في عالم متطور
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors">
+                    اكتشف المزيد
+                </button>
+                <button class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-lg font-semibold transition-colors">
+                    اتصل بنا
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-dark">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">خدماتنا المتميزة</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    نقدم مجموعة متكاملة من الخدمات التي تساعدك على تحقيق أهدافك التقنية
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="card-hover bg-darkSecondary rounded-xl p-8">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+                        <span class="text-2xl">💻</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">تطوير البرمجيات</h3>
+                    <p class="text-gray-300 mb-6">
+                        تصميم وتطوير تطبيقات ويب وجوال متطورة تلبي احتياجات عملائك بفعالية.
+                    </p>
+                    <a href="#" class="text-primary hover:text-secondary flex items-center">
+                        <span>اقرأ المزيد</span>
+                        <span class="mr-2">→</span>
+                    </a>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="card-hover bg-darkSecondary rounded-xl p-8">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+                        <span class="text-2xl">📱</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">التصميم الجرافيكي</h3>
+                    <p class="text-gray-300 mb-6">
+                        إنشاء هوية بصرية متميزة وتصميمات جذابة تُبرز علامتك التجارية.
+                    </p>
+                    <a href="#" class="text-primary hover:text-secondary flex items-center">
+                        <span>اقرأ المزيد</span>
+                        <span class="mr-2">→</span>
+                    </a>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="card-hover bg-darkSecondary rounded-xl p-8">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+                        <span class="text-2xl">📊</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">تحليل البيانات</h3>
+                    <p class="text-gray-300 mb-6">
+                        استخراج رؤى قوية من بياناتك لاتخاذ قرارات استراتيجية مدروسة.
+                    </p>
+                    <a href="#" class="text-primary hover:text-secondary flex items-center">
+                        <span>اقرأ المزيد</span>
+                        <span class="mr-2">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-darkSecondary py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mr-3">
+                            <span class="text-white text-xl">🚀</span>
+                        </div>
+                        <span class="text-xl font-bold">المنصة الحديثة</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        نقدم أفضل الخدمات التقنية لمساعدة شركاتك على النجاح.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">الخدمات</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">تطوير البرمجيات</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">التصميم الجرافيكي</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">تحليل البيانات</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">التسويق الرقمي</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">الروابط السريعة</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-primary transition-colors">الرئيسية</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-primary transition-colors">الخدمات</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-primary transition-colors">المنتجات</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-primary transition-colors">من نحن</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">تواصل معنا</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>الرياض، المملكة العربية السعودية</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mt-1 mr-3"></i>
+                            <span>+966 11 123 4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mt-1 mr-3"></i>
+                            <span>info@platform.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+                <p>© 2023 المنصة الحديثة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lenis for smooth scrolling
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    lenis.scrollTo(target, { offset: -80 });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+```

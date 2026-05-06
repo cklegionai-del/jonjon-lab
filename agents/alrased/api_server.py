@@ -7,7 +7,7 @@ import sys
 import os
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
-from swarm import swarm_search
+from super_agent_final import super_search as swarm_search
 
 class SwarmAPI(BaseHTTPRequestHandler):
     def _set_headers(self, status=200):

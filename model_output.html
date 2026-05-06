@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطعم تونسي - الألوان الذهبية والسوداء</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000;
+            color: #FFD700;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #000 0%, #222 100%);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #FFD700;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #FFD700;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #FFA500;
+            font-size: 1.2em;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23000"/><circle cx="20" cy="20" r="3" fill="%23FFD700"/><circle cx="50" cy="50" r="2" fill="%23FFD700"/><circle cx="80" cy="80" r="4" fill="%23FFD700"/></svg>');
+            background-size: cover;
+            padding: 50px 20px;
+            text-align: center;
+            border: 2px solid #FFD700;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .hero h2 {
+            color: #FFD700;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            color: #FFA500;
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content-section {
+            background: rgba(20, 20, 20, 0.9);
+            padding: 30px;
+            border: 2px solid #FFD700;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .content-section h2 {
+            color: #FFD700;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .menu-item {
+            background: rgba(30, 30, 30, 0.8);
+            padding: 20px;
+            border: 1px solid #FFD700;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+            border-color: #FFA500;
+        }
+        
+        .menu-item h3 {
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+        
+        .menu-item p {
+            color: #FFA500;
+            margin-bottom: 15px;
+        }
+        
+        .price {
+            color: #FFD700;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .special-offers {
+            background: linear-gradient(135deg, #000 0%, #222 100%);
+            padding: 30px;
+            border: 3px solid #FFD700;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .special-offers h2 {
+            color: #FFD700;
+            margin-bottom: 20px;
+        }
+        
+        .offer {
+            background: rgba(40, 40, 40, 0.8);
+            padding: 20px;
+            margin: 15px 0;
+            border: 1px solid #FFA500;
+            border-radius: 8px;
+        }
+        
+        .offer h3 {
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+        
+        .offer p {
+            color: #FFA500;
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #000;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            text-align: center;
+            margin: 20px 0;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
+        }
+        
+        .image-placeholder {
+            background: linear-gradient(45deg, #333, #000);
+            border: 2px dashed #FFD700;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            margin: 20px 0;
+            color: #FFD700;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #000 0%, #222 100%);
+            border-top: 3px solid #FFD700;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-items {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>مطعم تونسي الفاخر</h1>
+            <p class="subtitle">الطعم التقليدي مع لمسة ذهبية</p>
+        </header>
+        
+        <div class="hero">
+            <h2>استمتع بتجربة طعام تونسي أصيل</h2>
+            <p>نقدم لك أفضل الأطعمة التونسية في أجواء فاخرة وملونة باللون الذهبي والأسود</p>
+        </div>
+        
+        <div class="content-section">
+            <h2>قائمة الطعام</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3>الملفوف</h3>
+                    <p>ملفوف مطحون مع زيت زيتون وتوت بندورة</p>
+                    <p class="price">45 دينار</p>
+                </div>
+                <div class="menu-item">
+                    <h3>البلاط</h3>
+                    <p>بلاط مطحون مع زيت زيتون وتوت بندورة</p>
+                    <p class="price">35 دينار</p>
+                </div>
+                <div class="menu-item">
+                    <h3>الشوفان</h3>
+                    <p>شوفان مطحون مع زيت زيتون وتوت بندورة</p>
+                    <p class="price">50 دينار</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="special-offers">
+            <h2>عروض خاصة</h2>
+            <div class="offer">
+                <h3>عرض العيد</h3>
+                <p>احصل على خصم 30% على جميع الأطعمة عند حجز جدول في عيد الأضحى</p>
+                <p class="price">25 دينار</p>
+            </div>
+            <div class="offer">
+                <h3>عرض الأسبوع</h3>
+                <p>احصل على خصم 20% على طلب من 3 أطعمة</p>
+                <p class="price">30 دينار</p>
+            </div>
+            <div class="offer">
+                <h3>عرض العشاء</h3>
+                <p>احصل على خصم 15% على طلب من 2 أطعمة</p>
+                <p class="price">20 دينار</p>
+            </div>
+        </div>
+        
+        <div class="image-placeholder">
+            <p>صورة من Flux_Library</p>
+            <p>محتوى الصورة: مطعم تونسي فاخر</p>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="#" class="btn">احجز الآن</a>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 مطعم تونسي فاخر. جميع الحقوق محفوظة.</p>
+        </footer>
+    </div>
+</body>
+</html>

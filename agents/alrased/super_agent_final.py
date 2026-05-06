@@ -53,35 +53,147 @@ def send_telegram(text):
 def clean_json(text):
     return text.replace("```json", "").replace("```", "").strip()
 
-def save_to_memory(query, report, score):
-    try:
-        mem_file = os.path.join(MEMORY_DIR, "super_memory.json")
-        memory = []
-        if os.path.exists(mem_file):
-            with open(mem_file, "r", encoding="utf-8") as f:
-                memory = json.load(f)
-        memory.append({
+# ==================== الذاكرة الحية (Learning Memory) ====================
+class LearningMemory:
+    """ذاكرة تتعلم من كل بحث وتتحسن مع الوقت"""
+    
+    def __init__(self, memory_dir=MEMORY_DIR):
+        self.memory_file = os.path.join(memory_dir, "learning_memory.json")
+        self.memory = self._load()
+    
+    def _load(self):
+        if os.path.exists(self.memory_file):
+            try:
+                with open(self.memory_file, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except:
+                pass
+        return {"searches": [], "successful_queries": {}, "reliable_sources": {}, "total_searches": 0, "avg_score": 0}
+    
+    def _save(self):
+        os.makedirs(os.path.dirname(self.memory_file), exist_ok=True)
+        with open(self.memory_file, "w", encoding="utf-8") as f:
+            json.dump(self.memory, f, ensure_ascii=False, indent=2)
+    
+    def add_search(self, query, score, branches_data, report_preview):
+        """يسجل بحثاً جديداً ويتعلم منه"""
+        self.memory["total_searches"] += 1
+        
+        # تحديث متوسط Score
+        total = self.memory["avg_score"] * (self.memory["total_searches"] - 1)
+        self.memory["avg_score"] = round((total + score) / self.memory["total_searches"], 1)
+        
+        # حفظ البحث
+        self.memory["searches"].append({
             "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M"),
             "query": query,
             "score": score,
-            "preview": report[:500]
+            "preview": report_preview[:300]
         })
-        with open(mem_file, "w", encoding="utf-8") as f:
-            json.dump(memory, f, ensure_ascii=False, indent=2)
-    except: pass
-
-def compare_with_previous(query):
-    try:
-        mem_file = os.path.join(MEMORY_DIR, "super_memory.json")
-        if not os.path.exists(mem_file): return ""
-        with open(mem_file, "r", encoding="utf-8") as f:
-            memory = json.load(f)
-        similar = [m for m in memory if any(w in m.get("query","") for w in query.split()[:3])]
+        
+        # تعلم: أي فروع جلبت نتائج؟
+        for branch_data in branches_data:
+            branch_name = branch_data.get("branch", "")
+            key_facts = branch_data.get("key_facts", [])
+            sources = branch_data.get("sources", [])
+            
+            # سجل الاستفسارات الناجحة
+            if key_facts:
+                if branch_name not in self.memory["successful_queries"]:
+                    self.memory["successful_queries"][branch_name] = 0
+                self.memory["successful_queries"][branch_name] += 1
+            
+            # سجل المصادر الموثوقة
+            for src in sources:
+                url = src.get("url", "")
+                if url:
+                    domain = self._extract_domain(url)
+                    if domain not in self.memory["reliable_sources"]:
+                        self.memory["reliable_sources"][domain] = {"count": 0, "total_score": 0}
+                    self.memory["reliable_sources"][domain]["count"] += 1
+                    self.memory["reliable_sources"][domain]["total_score"] += score
+        
+        # احتفظ بآخر 50 بحثاً فقط
+        if len(self.memory["searches"]) > 50:
+            self.memory["searches"] = self.memory["searches"][-50:]
+        
+        self._save()
+    
+    def _extract_domain(self, url):
+        try:
+            from urllib.parse import urlparse
+            return urlparse(url).netloc.replace("www.", "")
+        except:
+            return url
+    
+    def get_improved_queries(self, topic, count=4):
+        """يقترح استفسارات محسّنة بناءً على التجارب السابقة"""
+        # البحث عن كلمات مشابهة في البحوث السابقة
+        keywords = topic.lower().split()
+        similar_searches = []
+        
+        for s in self.memory["searches"]:
+            if any(kw in s["query"].lower() for kw in keywords):
+                similar_searches.append(s)
+        
+        # إذا وجدنا بحوثاً سابقة ناجحة، نستخدم استفساراتها
+        if similar_searches:
+            best = sorted(similar_searches, key=lambda x: x["score"], reverse=True)
+            
+            # استخرج استفسارات ناجحة سابقاً
+            prompt = f"""Based on previous successful searches: {json.dumps(best[:3], ensure_ascii=False)}
+And the topic: "{topic}"
+Generate {count} improved search queries.
+Return JSON: {{"queries": ["query1", ...]}}"""
+            result = ask_model("gpt-oss:20b", prompt)
+            try:
+                return json.loads(clean_json(result)).get("queries", [])
+            except:
+                pass
+        
+        return []
+    
+    def get_reliable_sources(self, min_score=70):
+        """يعيد قائمة بالمصادر الموثوقة (Score متوسط عالي)"""
+        reliable = []
+        for domain, data in self.memory["reliable_sources"].items():
+            if data["count"] >= 2:  # ظهرت مرتين على الأقل
+                avg = data["total_score"] / data["count"]
+                if avg >= min_score:
+                    reliable.append({"domain": domain, "count": data["count"], "avg_score": round(avg, 1)})
+        return sorted(reliable, key=lambda x: x["avg_score"], reverse=True)[:10]
+    
+    def get_stats(self):
+        """إحصائيات عن أداء النظام"""
+        return {
+            "total_searches": self.memory["total_searches"],
+            "avg_score": self.memory["avg_score"],
+            "top_queries": list(self.memory["successful_queries"].keys())[:5],
+            "top_sources": self.get_reliable_sources()[:5],
+            "last_search": self.memory["searches"][-1]["query"] if self.memory["searches"] else None
+        }
+    
+    def compare_with_previous(self, query):
+        """يقارن ببحوث سابقة ويعيد ملخصاً"""
+        keywords = query.lower().split()
+        similar = [s for s in self.memory["searches"] 
+                   if any(kw in s["query"].lower() for kw in keywords[:3])]
+        
         if similar:
-            return f"\n\n📚 **مقارنة مع بحوث سابقة:** ({len(similar)} تقرير سابق)\n" + \
-                   "\n".join([f"- {m['timestamp']}: {m['query']} (Score: {m['score']})" for m in similar[-3:]])
-    except: pass
-    return ""
+            avg = sum(s["score"] for s in similar) / len(similar)
+            text = f"\n\n📚 **مقارنة مع بحوث سابقة:** ({len(similar)} تقرير سابق، متوسط Score: {avg:.0f})\n"
+            for s in similar[-3:]:
+                text += f"- {s['timestamp']}: {s['query'][:80]} (Score: {s['score']})\n"
+            return text
+        return ""
+
+# نسخة عامة من الذاكرة
+lm = LearningMemory()
+# نعيد تعريف الدوال القديمة لتستخدم الذاكرة الجديدة
+def save_to_memory(query, report, score):
+    pass  # LearningMemory تتولى هذا الآن
+def compare_with_previous(query):
+    return lm.compare_with_previous(query)
 # ==================== 0. طبقة المنطق الفائق ====================
 def logical_deconstruction(topic):
     """يفكك الموضوع إلى استفسارات واستراتيجيات بحث ذكية"""
@@ -248,7 +360,8 @@ def super_search(topic):
         f.write(f"# SUPER AGENT Report\nTopic: {topic}\nScore: {score}/100\nDate: {timestamp}\n\n{report}")
     
     # 8. ذاكرة
-    save_to_memory(topic, report, score)
+        # 8. ذاكرة (حية)
+    lm.add_search(topic, score, branches_data, report[:500])
     
     # 9. تيليجرام
     telegram_msg = f"🧠 SUPER AGENT\n📅 {datetime.now().strftime('%Y-%m-%d %H:%M')}\n🔍 {topic}\n📊 Score: {score}/100\n\n{report[:3800]}"

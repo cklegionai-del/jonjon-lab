@@ -1,44 +1,118 @@
 services:
-  chromadb:
-    image: chromadb/chroma:latest
-    ports:
-      - "8000:8000"
-    volumes:
-      - ./chroma_db:/chroma/chroma
-    environment:
-      - IS_PERSISTENT=TRUE
-    networks:
-      - ai-net
 
+  # ─────────────────────────────────────────
+  # 🧠 OPEN WEB UI — Chat Interface
+  # URL: http://localhost:3000
+  # ─────────────────────────────────────────
   open-webui:
-    image: ghcr.io/open-webui/open-webui:0.9.0
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
     ports:
-      - "3009:8080"
-    volumes:
-      - open-webui-data:/app/backend/data
+      - "3000:8080"
     environment:
       - OLLAMA_BASE_URL=http://host.docker.internal:11434
       - VECTOR_DB=chroma
       - CHROMA_HTTP_HOST=chromadb
       - CHROMA_HTTP_PORT=8000
-      - HF_TOKEN=skip
-      - HF_HUB_OFFLINE=1
-      - HF_HUB_DISABLE_TELEMETRY=1
+      - ENABLE_RAG_WEB_SEARCH=true
+      - RAG_WEB_SEARCH_ENGINE=searxng
+      - SEARXNG_QUERY_URL=http://searxng:8080/search?q=<query>&format=json
+      - WEBUI_SECRET_KEY=jonjon-secret-2025
+    volumes:
+      - open-webui-data:/app/backend/data
     depends_on:
       - chromadb
+      - searxng
+    restart: unless-stopped
     networks:
-      - ai-net
+      - jonjon-net
 
+  # ─────────────────────────────────────────
+  # 🗄️ CHROMADB — Vector DB for RAG
+  # URL: http://localhost:8000
+  # ─────────────────────────────────────────
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: chromadb
+    ports:
+      - "8000:8000"
+    volumes:
+      - chromadb-data:/chroma/chroma
+    environment:
+      - IS_PERSISTENT=TRUE
+      - ALLOW_RESET=TRUE
+    restart: unless-stopped
+    networks:
+      - jonjon-net
+
+  # ─────────────────────────────────────────
+  # 🔍 SEARXNG — Private Search Engine
+  # URL: http://localhost:8888
+  # ─────────────────────────────────────────
   searxng:
     image: searxng/searxng:latest
+    container_name: searxng
     ports:
-      - "8080:8080"
+      - "8888:8080"
+    environment:
+      - SEARXNG_BASE_URL=http://localhost:8888
+    volumes:
+      - searxng-data:/etc/searxng
+    restart: unless-stopped
     networks:
-      - ai-net
+      - jonjon-net
 
+  # ─────────────────────────────────────────
+  # ⚙️ N8N — Automation Workflows
+  # URL: http://localhost:5678
+  # ─────────────────────────────────────────
+  n8n:
+    image: n8nio/n8n
+    container_name: n8n
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_HOST=localhost
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - WEBHOOK_URL=http://localhost:5678/
+    volumes:
+      - n8n-data:/home/node/.n8n
+    restart: unless-stopped
+    networks:
+      - jonjon-net
+
+  # ─────────────────────────────────────────
+  # 🧅 TOR PROXY — Anonymity Layer
+  # SOCKS5: localhost:9050
+  # ─────────────────────────────────────────
+  tor-proxy:
+    image: osminogin/tor-simple:latest
+    container_name: tor-proxy
+    ports:
+      - "9050:9050"
+    restart: unless-stopped
+    networks:
+      - jonjon-net
+
+# ─────────────────────────────────────────
+# VOLUMES
+# ─────────────────────────────────────────
 volumes:
   open-webui-data:
+    name: open-webui-data
+  chromadb-data:
+    name: chromadb-data
+  searxng-data:
+    name: searxng-data
+  n8n-data:
+    name: n8n_data
+    external: true   # نحتفظ ببيانات n8n الموجودة
 
+# ─────────────────────────────────────────
+# NETWORK
+# ─────────────────────────────────────────
 networks:
-  ai-net:
+  jonjon-net:
+    name: jonjon-net
     driver: bridge

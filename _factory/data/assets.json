@@ -1,0 +1,4275 @@
+{
+  "metadata": {
+    "scannedAt": "2026-05-08T19:54:51.103987",
+    "version": "4.0"
+  },
+  "collections": [
+    {
+      "id": "images",
+      "label": "مكتبة الصور",
+      "labelEn": "Image Library",
+      "icon": "image",
+      "count": 258,
+      "items": [
+        {
+          "id": "img_0000",
+          "name": "flux_schnell_00028_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00028_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00028_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.4 MB",
+          "sizeBytes": 1515344,
+          "extension": ".png",
+          "modified": "2026-04-06T22:58:58.353551"
+        },
+        {
+          "id": "img_0001",
+          "name": "flux_dev_upscaled_00118_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00118_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00118_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "13.2 MB",
+          "sizeBytes": 13834862,
+          "extension": ".png",
+          "modified": "2026-04-24T20:00:18.024431"
+        },
+        {
+          "id": "img_0002",
+          "name": "flux_dev_00010_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00010_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00010_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.2 MB",
+          "sizeBytes": 1304063,
+          "extension": ".png",
+          "modified": "2026-04-09T00:41:14.145482"
+        },
+        {
+          "id": "img_0003",
+          "name": "flux_dev_00006_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00006_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00006_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1005.9 KB",
+          "sizeBytes": 1030000,
+          "extension": ".png",
+          "modified": "2026-04-08T22:59:25.711752"
+        },
+        {
+          "id": "img_0004",
+          "name": "flux_dev_upscaled_00030_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00030_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00030_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "33.9 MB",
+          "sizeBytes": 35591960,
+          "extension": ".png",
+          "modified": "2026-04-09T18:28:39.132326"
+        },
+        {
+          "id": "img_0005",
+          "name": "flux_schnell_00012_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00012_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00012_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.4 MB",
+          "sizeBytes": 1485609,
+          "extension": ".png",
+          "modified": "2026-04-06T21:49:38.868906"
+        },
+        {
+          "id": "img_0006",
+          "name": "flux_dev_upscaled_00122_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00122_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00122_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "17.5 MB",
+          "sizeBytes": 18329592,
+          "extension": ".png",
+          "modified": "2026-04-24T20:50:54.519729"
+        },
+        {
+          "id": "img_0007",
+          "name": "flux_dev_upscaled_00088_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00088_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00088_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "16.2 MB",
+          "sizeBytes": 16947846,
+          "extension": ".png",
+          "modified": "2026-04-20T18:03:34.083200"
+        },
+        {
+          "id": "img_0008",
+          "name": "flux_dev_upscaled_00134_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00134_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00134_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "19.9 MB",
+          "sizeBytes": 20900122,
+          "extension": ".png",
+          "modified": "2026-04-25T23:23:23.765384"
+        },
+        {
+          "id": "img_0009",
+          "name": "flux_dev_upscaled_00026_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00026_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00026_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "14.7 MB",
+          "sizeBytes": 15458753,
+          "extension": ".png",
+          "modified": "2026-04-09T16:31:38.113929"
+        },
+        {
+          "id": "img_0010",
+          "name": "flux_dev_upscaled_00114_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00114_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00114_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "16.4 MB",
+          "sizeBytes": 17201814,
+          "extension": ".png",
+          "modified": "2026-04-24T19:06:18.242511"
+        },
+        {
+          "id": "img_0011",
+          "name": "flux_schnell_00024_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00024_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00024_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.6 MB",
+          "sizeBytes": 1684532,
+          "extension": ".png",
+          "modified": "2026-04-06T22:50:16.175541"
+        },
+        {
+          "id": "img_0012",
+          "name": "flux_dev_upscaled_00143_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00143_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00143_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "18.3 MB",
+          "sizeBytes": 19223996,
+          "extension": ".png",
+          "modified": "2026-05-01T14:07:56.540918"
+        },
+        {
+          "id": "img_0013",
+          "name": "flux_dev_upscaled_00006_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00006_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00006_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "18.2 MB",
+          "sizeBytes": 19038950,
+          "extension": ".png",
+          "modified": "2026-04-09T13:04:55.896185"
+        },
+        {
+          "id": "img_0014",
+          "name": "flux_dev_upscaled_00010_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00010_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00010_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "20.6 MB",
+          "sizeBytes": 21634761,
+          "extension": ".png",
+          "modified": "2026-04-09T13:43:27.360006"
+        },
+        {
+          "id": "img_0015",
+          "name": "flux_schnell_00065_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00065_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00065_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.1 MB",
+          "sizeBytes": 1133565,
+          "extension": ".png",
+          "modified": "2026-04-08T13:35:04.135382"
+        },
+        {
+          "id": "img_0016",
+          "name": "flux_dev_upscaled_00102_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00102_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00102_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "25.5 MB",
+          "sizeBytes": 26759394,
+          "extension": ".png",
+          "modified": "2026-04-21T20:49:48.421395"
+        },
+        {
+          "id": "img_0017",
+          "name": "flux_dev_upscaled_00047_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00047_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00047_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.8 MB",
+          "sizeBytes": 16605125,
+          "extension": ".png",
+          "modified": "2026-04-11T17:18:54.560457"
+        },
+        {
+          "id": "img_0018",
+          "name": "flux_schnell_00032_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00032_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00032_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.6 MB",
+          "sizeBytes": 1709549,
+          "extension": ".png",
+          "modified": "2026-04-06T23:10:04.006822"
+        },
+        {
+          "id": "img_0019",
+          "name": "flux_dev_00026_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00026_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00026_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.6 MB",
+          "sizeBytes": 1655825,
+          "extension": ".png",
+          "modified": "2026-04-09T09:32:29.725677"
+        },
+        {
+          "id": "img_0020",
+          "name": "flux_schnell_00049_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00049_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00049_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.4 MB",
+          "sizeBytes": 1433896,
+          "extension": ".png",
+          "modified": "2026-04-07T21:21:01.184490"
+        },
+        {
+          "id": "img_0021",
+          "name": "flux_dev_upscaled_00084_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00084_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00084_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.1 MB",
+          "sizeBytes": 15785644,
+          "extension": ".png",
+          "modified": "2026-04-20T17:31:54.306716"
+        },
+        {
+          "id": "img_0022",
+          "name": "SD1.5_00016_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/SD1.5_00016_.png",
+          "relativePath": "Desktop/real_flux_images/SD1.5_00016_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "788.7 KB",
+          "sizeBytes": 807611,
+          "extension": ".png",
+          "modified": "2026-04-05T21:57:51.523336"
+        },
+        {
+          "id": "img_0023",
+          "name": "flux_dev_upscaled_00138_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00138_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00138_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "17.1 MB",
+          "sizeBytes": 17910452,
+          "extension": ".png",
+          "modified": "2026-04-26T22:36:49.827046"
+        },
+        {
+          "id": "img_0024",
+          "name": "flux_dev_upscaled_00092_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00092_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00092_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "21.9 MB",
+          "sizeBytes": 22933821,
+          "extension": ".png",
+          "modified": "2026-04-20T19:54:31.395984"
+        },
+        {
+          "id": "img_0025",
+          "name": "flux_schnell_00008_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00008_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00008_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.4 MB",
+          "sizeBytes": 1419491,
+          "extension": ".png",
+          "modified": "2026-04-06T21:33:35.920286"
+        },
+        {
+          "id": "img_0026",
+          "name": "flux_dev_00030_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00030_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00030_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.4 MB",
+          "sizeBytes": 1462912,
+          "extension": ".png",
+          "modified": "2026-04-09T09:55:18.509022"
+        },
+        {
+          "id": "img_0027",
+          "name": "flux_dev_00031_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00031_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00031_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.3 MB",
+          "sizeBytes": 1373644,
+          "extension": ".png",
+          "modified": "2026-04-09T10:11:54.108609"
+        },
+        {
+          "id": "img_0028",
+          "name": "flux_schnell_00009_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00009_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00009_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.4 MB",
+          "sizeBytes": 1473999,
+          "extension": ".png",
+          "modified": "2026-04-06T21:42:20.786174"
+        },
+        {
+          "id": "img_0029",
+          "name": "flux_dev_upscaled_00139_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00139_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00139_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "18.3 MB",
+          "sizeBytes": 19211087,
+          "extension": ".png",
+          "modified": "2026-04-28T13:09:14.063662"
+        },
+        {
+          "id": "img_0030",
+          "name": "flux_dev_upscaled_00093_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00093_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00093_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "20.3 MB",
+          "sizeBytes": 21283625,
+          "extension": ".png",
+          "modified": "2026-04-20T20:00:57.821086"
+        },
+        {
+          "id": "img_0031",
+          "name": "SD1.5_00017_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/SD1.5_00017_.png",
+          "relativePath": "Desktop/real_flux_images/SD1.5_00017_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "688.2 KB",
+          "sizeBytes": 704686,
+          "extension": ".png",
+          "modified": "2026-04-05T21:58:52.702668"
+        },
+        {
+          "id": "img_0032",
+          "name": "flux_dev_upscaled_00085_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00085_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00085_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "14.6 MB",
+          "sizeBytes": 15281028,
+          "extension": ".png",
+          "modified": "2026-04-20T17:46:39.016879"
+        },
+        {
+          "id": "img_0033",
+          "name": "flux_schnell_00048_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00048_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00048_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.6 MB",
+          "sizeBytes": 1642281,
+          "extension": ".png",
+          "modified": "2026-04-07T21:10:33.518699"
+        },
+        {
+          "id": "img_0034",
+          "name": "flux_dev_00027_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00027_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00027_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.7 MB",
+          "sizeBytes": 1805818,
+          "extension": ".png",
+          "modified": "2026-04-09T09:37:53.512345"
+        },
+        {
+          "id": "img_0035",
+          "name": "n8n_00002_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/n8n_00002_.png",
+          "relativePath": "Desktop/real_flux_images/n8n_00002_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "417.4 KB",
+          "sizeBytes": 427412,
+          "extension": ".png",
+          "modified": "2026-04-05T19:38:20.849658"
+        },
+        {
+          "id": "img_0036",
+          "name": "flux_schnell_00033_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00033_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00033_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.7 MB",
+          "sizeBytes": 1782742,
+          "extension": ".png",
+          "modified": "2026-04-06T23:11:31.982751"
+        },
+        {
+          "id": "img_0037",
+          "name": "flux_dev_upscaled_00103_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00103_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00103_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "21.0 MB",
+          "sizeBytes": 21969261,
+          "extension": ".png",
+          "modified": "2026-04-21T21:33:55.707762"
+        },
+        {
+          "id": "img_0038",
+          "name": "flux_dev_upscaled_00046_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00046_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00046_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.4 MB",
+          "sizeBytes": 16137037,
+          "extension": ".png",
+          "modified": "2026-04-11T14:58:48.796485"
+        },
+        {
+          "id": "img_0039",
+          "name": "flux_schnell_00064_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00064_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00064_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.2 MB",
+          "sizeBytes": 1257212,
+          "extension": ".png",
+          "modified": "2026-04-08T13:29:44.316968"
+        },
+        {
+          "id": "img_0040",
+          "name": "flux_dev_upscaled_00011_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00011_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00011_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "18.0 MB",
+          "sizeBytes": 18904889,
+          "extension": ".png",
+          "modified": "2026-04-09T14:08:04.919872"
+        },
+        {
+          "id": "img_0041",
+          "name": "flux_dev_upscaled_00142_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00142_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00142_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "22.4 MB",
+          "sizeBytes": 23440522,
+          "extension": ".png",
+          "modified": "2026-04-28T21:52:39.250977"
+        },
+        {
+          "id": "img_0042",
+          "name": "flux_dev_upscaled_00007_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00007_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00007_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.4 MB",
+          "sizeBytes": 16130220,
+          "extension": ".png",
+          "modified": "2026-04-09T13:11:02.033511"
+        },
+        {
+          "id": "img_0043",
+          "name": "flux_schnell_00025_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00025_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00025_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.4 MB",
+          "sizeBytes": 1488405,
+          "extension": ".png",
+          "modified": "2026-04-06T22:52:03.964417"
+        },
+        {
+          "id": "img_0044",
+          "name": "flux_dev_upscaled_00115_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00115_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00115_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "16.3 MB",
+          "sizeBytes": 17120913,
+          "extension": ".png",
+          "modified": "2026-04-24T19:16:29.541527"
+        },
+        {
+          "id": "img_0045",
+          "name": "flux_dev_upscaled_00050_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00050_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00050_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "16.4 MB",
+          "sizeBytes": 17217963,
+          "extension": ".png",
+          "modified": "2026-04-11T17:48:29.207055"
+        },
+        {
+          "id": "img_0046",
+          "name": "flux_dev_upscaled_00027_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00027_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00027_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "36.2 MB",
+          "sizeBytes": 37909058,
+          "extension": ".png",
+          "modified": "2026-04-09T17:48:35.267364"
+        },
+        {
+          "id": "img_0047",
+          "name": "flux_schnell_00052_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00052_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00052_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.2 MB",
+          "sizeBytes": 1251494,
+          "extension": ".png",
+          "modified": "2026-04-07T21:48:34.359482"
+        },
+        {
+          "id": "img_0048",
+          "name": "flux_dev_upscaled_00135_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00135_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00135_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "21.9 MB",
+          "sizeBytes": 22999012,
+          "extension": ".png",
+          "modified": "2026-04-25T23:31:37.647821"
+        },
+        {
+          "id": "img_0049",
+          "name": "flux_dev_upscaled_00123_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00123_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00123_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "17.8 MB",
+          "sizeBytes": 18630990,
+          "extension": ".png",
+          "modified": "2026-04-24T20:57:38.726175"
+        },
+        {
+          "id": "img_0050",
+          "name": "flux_dev_upscaled_00089_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00089_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00089_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.9 MB",
+          "sizeBytes": 16626368,
+          "extension": ".png",
+          "modified": "2026-04-20T19:07:42.766783"
+        },
+        {
+          "id": "img_0051",
+          "name": "flux_schnell_00013_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00013_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00013_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.7 MB",
+          "sizeBytes": 1731930,
+          "extension": ".png",
+          "modified": "2026-04-06T21:52:26.021990"
+        },
+        {
+          "id": "img_0052",
+          "name": "flux_dev_upscaled_00031_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00031_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00031_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "35.3 MB",
+          "sizeBytes": 36962426,
+          "extension": ".png",
+          "modified": "2026-04-09T18:40:47.936209"
+        },
+        {
+          "id": "img_0053",
+          "name": "flux_schnell_00044_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00044_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00044_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.2 MB",
+          "sizeBytes": 1302899,
+          "extension": ".png",
+          "modified": "2026-04-07T19:20:39.567296"
+        },
+        {
+          "id": "img_0054",
+          "name": "flux_dev_00007_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00007_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00007_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.1 MB",
+          "sizeBytes": 1111446,
+          "extension": ".png",
+          "modified": "2026-04-08T23:07:32.266780"
+        },
+        {
+          "id": "img_0055",
+          "name": "flux_dev_00011_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00011_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00011_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.3 MB",
+          "sizeBytes": 1393739,
+          "extension": ".png",
+          "modified": "2026-04-09T00:48:11.067304"
+        },
+        {
+          "id": "img_0056",
+          "name": "flux_dev_upscaled_00119_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00119_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00119_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "10.3 MB",
+          "sizeBytes": 10839296,
+          "extension": ".png",
+          "modified": "2026-04-24T20:24:32.134046"
+        },
+        {
+          "id": "img_0057",
+          "name": "flux_dev_upscaled_00112_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00112_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00112_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "21.5 MB",
+          "sizeBytes": 22590135,
+          "extension": ".png",
+          "modified": "2026-04-24T18:44:28.846382"
+        },
+        {
+          "id": "img_0058",
+          "name": "flux_dev_upscaled_00057_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00057_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00057_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "33.6 MB",
+          "sizeBytes": 35199326,
+          "extension": ".png",
+          "modified": "2026-04-12T15:15:05.810931"
+        },
+        {
+          "id": "img_0059",
+          "name": "flux_schnell_00022_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00022_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00022_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.6 MB",
+          "sizeBytes": 1664061,
+          "extension": ".png",
+          "modified": "2026-04-06T22:44:32.432210"
+        },
+        {
+          "id": "img_0060",
+          "name": "flux_dev_upscaled_00016_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00016_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00016_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.8 MB",
+          "sizeBytes": 16613529,
+          "extension": ".png",
+          "modified": "2026-04-09T14:37:42.803397"
+        },
+        {
+          "id": "img_0061",
+          "name": "ComfyUI_Flux_Dev_00007_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/ComfyUI_Flux_Dev_00007_.png",
+          "relativePath": "Desktop/real_flux_images/ComfyUI_Flux_Dev_00007_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "2.0 MB",
+          "sizeBytes": 2066821,
+          "extension": ".png",
+          "modified": "2026-04-13T07:42:57.236461"
+        },
+        {
+          "id": "img_0062",
+          "name": "flux_schnell_00063_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00063_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00063_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.3 MB",
+          "sizeBytes": 1325633,
+          "extension": ".png",
+          "modified": "2026-04-08T13:19:35.562012"
+        },
+        {
+          "id": "img_0063",
+          "name": "flux_dev_upscaled_00104_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00104_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00104_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "20.5 MB",
+          "sizeBytes": 21512840,
+          "extension": ".png",
+          "modified": "2026-04-21T21:54:01.388401"
+        },
+        {
+          "id": "img_0064",
+          "name": "flux_dev_upscaled_00041_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00041_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00041_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "14.2 MB",
+          "sizeBytes": 14862683,
+          "extension": ".png",
+          "modified": "2026-04-10T22:01:43.320738"
+        },
+        {
+          "id": "img_0065",
+          "name": "flux_schnell_00034_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00034_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00034_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.9 MB",
+          "sizeBytes": 1952393,
+          "extension": ".png",
+          "modified": "2026-04-06T23:14:53.215747"
+        },
+        {
+          "id": "img_0066",
+          "name": "flux_dev_00020_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00020_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00020_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.3 MB",
+          "sizeBytes": 1324740,
+          "extension": ".png",
+          "modified": "2026-04-09T01:35:54.420085"
+        },
+        {
+          "id": "img_0067",
+          "name": "flux_dev_upscaled_00082_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00082_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00082_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.2 MB",
+          "sizeBytes": 15905787,
+          "extension": ".png",
+          "modified": "2026-04-20T16:59:29.485960"
+        },
+        {
+          "id": "img_0068",
+          "name": "flux_dev_upscaled_00128_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00128_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00128_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "22.1 MB",
+          "sizeBytes": 23150967,
+          "extension": ".png",
+          "modified": "2026-04-25T15:12:19.357512"
+        },
+        {
+          "id": "img_0069",
+          "name": "flux_schnell_00018_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00018_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00018_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.4 MB",
+          "sizeBytes": 1457251,
+          "extension": ".png",
+          "modified": "2026-04-06T22:33:17.768546"
+        },
+        {
+          "id": "img_0070",
+          "name": "SD1.5_00010_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/SD1.5_00010_.png",
+          "relativePath": "Desktop/real_flux_images/SD1.5_00010_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "640.2 KB",
+          "sizeBytes": 655546,
+          "extension": ".png",
+          "modified": "2026-04-05T21:52:21.150636"
+        },
+        {
+          "id": "img_0071",
+          "name": "flux_dev_upscaled_00094_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00094_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00094_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "19.5 MB",
+          "sizeBytes": 20441274,
+          "extension": ".png",
+          "modified": "2026-04-20T20:06:40.970867"
+        },
+        {
+          "id": "img_0072",
+          "name": "SD1.5_00006_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/SD1.5_00006_.png",
+          "relativePath": "Desktop/real_flux_images/SD1.5_00006_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "751.3 KB",
+          "sizeBytes": 769373,
+          "extension": ".png",
+          "modified": "2026-04-05T20:42:25.063478"
+        },
+        {
+          "id": "img_0073",
+          "name": "flux_schnell_00059_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00059_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00059_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.2 MB",
+          "sizeBytes": 1229458,
+          "extension": ".png",
+          "modified": "2026-04-08T10:01:05.084864"
+        },
+        {
+          "id": "img_0074",
+          "name": "flux_dev_00041_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00041_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00041_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.1 MB",
+          "sizeBytes": 1196028,
+          "extension": ".png",
+          "modified": "2026-04-11T11:43:37.236505"
+        },
+        {
+          "id": "img_0075",
+          "name": "flux_upscaled_00003_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_upscaled_00003_.png",
+          "relativePath": "Desktop/real_flux_images/flux_upscaled_00003_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "9.2 MB",
+          "sizeBytes": 9646410,
+          "extension": ".png",
+          "modified": "2026-04-14T14:15:35.173568"
+        },
+        {
+          "id": "img_0076",
+          "name": "flux_dev_00016_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00016_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00016_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.7 MB",
+          "sizeBytes": 1784663,
+          "extension": ".png",
+          "modified": "2026-04-09T01:15:24.642173"
+        },
+        {
+          "id": "img_0077",
+          "name": "flux_schnell_00038_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00038_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00038_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.6 MB",
+          "sizeBytes": 1666110,
+          "extension": ".png",
+          "modified": "2026-04-06T23:21:40.115865"
+        },
+        {
+          "id": "img_0078",
+          "name": "flux_dev_upscaled_00108_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00108_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00108_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "21.9 MB",
+          "sizeBytes": 22991961,
+          "extension": ".png",
+          "modified": "2026-04-21T22:31:35.595818"
+        },
+        {
+          "id": "img_0079",
+          "name": "flux_schnell_00043_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00043_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00043_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.8 MB",
+          "sizeBytes": 1864521,
+          "extension": ".png",
+          "modified": "2026-04-07T13:48:04.023971"
+        },
+        {
+          "id": "img_0080",
+          "name": "flux_schnell_00014_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00014_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00014_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.5 MB",
+          "sizeBytes": 1530698,
+          "extension": ".png",
+          "modified": "2026-04-06T21:53:35.700997"
+        },
+        {
+          "id": "img_0081",
+          "name": "flux_dev_upscaled_00124_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00124_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00124_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "17.7 MB",
+          "sizeBytes": 18584850,
+          "extension": ".png",
+          "modified": "2026-04-24T21:10:28.077450"
+        },
+        {
+          "id": "img_0082",
+          "name": "flux_schnell_00002_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00002_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00002_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.2 MB",
+          "sizeBytes": 1272253,
+          "extension": ".png",
+          "modified": "2026-04-06T19:22:26.857049"
+        },
+        {
+          "id": "img_0083",
+          "name": "flux_dev_upscaled_00077_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00077_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00077_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "14.6 MB",
+          "sizeBytes": 15295883,
+          "extension": ".png",
+          "modified": "2026-04-20T07:23:51.586418"
+        },
+        {
+          "id": "img_0084",
+          "name": "flux_dev_upscaled_00098_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00098_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00098_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "21.1 MB",
+          "sizeBytes": 22132299,
+          "extension": ".png",
+          "modified": "2026-04-21T19:51:30.106478"
+        },
+        {
+          "id": "img_0085",
+          "name": "flux_dev_upscaled_00132_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00132_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00132_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "19.4 MB",
+          "sizeBytes": 20341196,
+          "extension": ".png",
+          "modified": "2026-04-25T23:08:10.666049"
+        },
+        {
+          "id": "img_0086",
+          "name": "flux_schnell_00055_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00055_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00055_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.4 MB",
+          "sizeBytes": 1503181,
+          "extension": ".png",
+          "modified": "2026-04-08T09:10:26.163295"
+        },
+        {
+          "id": "img_0087",
+          "name": "flux_dev_upscaled_00020_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00020_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00020_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "17.1 MB",
+          "sizeBytes": 17932394,
+          "extension": ".png",
+          "modified": "2026-04-09T15:36:21.178994"
+        },
+        {
+          "id": "img_0088",
+          "name": "flux_dev_upscaled_00021_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00021_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00021_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.5 MB",
+          "sizeBytes": 16273785,
+          "extension": ".png",
+          "modified": "2026-04-09T15:46:39.940569"
+        },
+        {
+          "id": "img_0089",
+          "name": "flux_schnell_00054_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00054_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00054_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.9 MB",
+          "sizeBytes": 1981887,
+          "extension": ".png",
+          "modified": "2026-04-08T08:57:41.401761"
+        },
+        {
+          "id": "img_0090",
+          "name": "flux_dev_upscaled_00076_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00076_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00076_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "14.8 MB",
+          "sizeBytes": 15475128,
+          "extension": ".png",
+          "modified": "2026-04-20T06:47:37.609130"
+        },
+        {
+          "id": "img_0091",
+          "name": "flux_dev_upscaled_00099_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00099_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00099_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "20.7 MB",
+          "sizeBytes": 21706851,
+          "extension": ".png",
+          "modified": "2026-04-21T20:03:44.955889"
+        },
+        {
+          "id": "img_0092",
+          "name": "flux_dev_upscaled_00133_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00133_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00133_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "18.0 MB",
+          "sizeBytes": 18857133,
+          "extension": ".png",
+          "modified": "2026-04-25T23:16:21.440829"
+        },
+        {
+          "id": "img_0093",
+          "name": "flux_dev_upscaled_00060_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00060_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00060_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "11.3 MB",
+          "sizeBytes": 11852067,
+          "extension": ".png",
+          "modified": "2026-04-13T21:02:12.783044"
+        },
+        {
+          "id": "img_0094",
+          "name": "flux_dev_upscaled_00125_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00125_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00125_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "19.5 MB",
+          "sizeBytes": 20430603,
+          "extension": ".png",
+          "modified": "2026-04-24T21:19:27.111845"
+        },
+        {
+          "id": "img_0095",
+          "name": "flux_schnell_00015_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00015_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00015_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.6 MB",
+          "sizeBytes": 1663364,
+          "extension": ".png",
+          "modified": "2026-04-06T21:54:44.764840"
+        },
+        {
+          "id": "img_0096",
+          "name": "flux_schnell_00042_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00042_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00042_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.9 MB",
+          "sizeBytes": 1960086,
+          "extension": ".png",
+          "modified": "2026-04-07T07:26:06.681273"
+        },
+        {
+          "id": "img_0097",
+          "name": "flux_dev_upscaled_00109_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00109_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00109_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "21.0 MB",
+          "sizeBytes": 21976004,
+          "extension": ".png",
+          "modified": "2026-04-21T23:22:36.115755"
+        },
+        {
+          "id": "img_0098",
+          "name": "flux_schnell_00039_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00039_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00039_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.3 MB",
+          "sizeBytes": 1412829,
+          "extension": ".png",
+          "modified": "2026-04-06T23:40:10.239309"
+        },
+        {
+          "id": "img_0099",
+          "name": "flux_dev_00017_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00017_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00017_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.3 MB",
+          "sizeBytes": 1382609,
+          "extension": ".png",
+          "modified": "2026-04-09T01:20:08.203346"
+        },
+        {
+          "id": "img_0100",
+          "name": "flux_upscaled_00002_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_upscaled_00002_.png",
+          "relativePath": "Desktop/real_flux_images/flux_upscaled_00002_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "10.4 MB",
+          "sizeBytes": 10900334,
+          "extension": ".png",
+          "modified": "2026-04-14T14:11:40.409215"
+        },
+        {
+          "id": "img_0101",
+          "name": "flux_dev_00040_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00040_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00040_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.3 MB",
+          "sizeBytes": 1354299,
+          "extension": ".png",
+          "modified": "2026-04-11T11:33:05.047503"
+        },
+        {
+          "id": "img_0102",
+          "name": "flux_schnell_00058_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00058_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00058_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.1 MB",
+          "sizeBytes": 1118111,
+          "extension": ".png",
+          "modified": "2026-04-08T09:46:53.536868"
+        },
+        {
+          "id": "img_0103",
+          "name": "flux_dev_00037_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00037_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00037_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.2 MB",
+          "sizeBytes": 1307741,
+          "extension": ".png",
+          "modified": "2026-04-11T11:05:45.940093"
+        },
+        {
+          "id": "img_0104",
+          "name": "SD1.5_00007_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/SD1.5_00007_.png",
+          "relativePath": "Desktop/real_flux_images/SD1.5_00007_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "689.6 KB",
+          "sizeBytes": 706185,
+          "extension": ".png",
+          "modified": "2026-04-05T20:48:47.244414"
+        },
+        {
+          "id": "img_0105",
+          "name": "flux_dev_upscaled_00095_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00095_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00095_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "20.9 MB",
+          "sizeBytes": 21913948,
+          "extension": ".png",
+          "modified": "2026-04-20T20:36:10.945856"
+        },
+        {
+          "id": "img_0106",
+          "name": "flux_schnell_00019_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00019_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00019_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.4 MB",
+          "sizeBytes": 1441782,
+          "extension": ".png",
+          "modified": "2026-04-06T22:39:23.814360"
+        },
+        {
+          "id": "img_0107",
+          "name": "SD1.5_00011_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/SD1.5_00011_.png",
+          "relativePath": "Desktop/real_flux_images/SD1.5_00011_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "854.0 KB",
+          "sizeBytes": 874496,
+          "extension": ".png",
+          "modified": "2026-04-05T21:54:14.952940"
+        },
+        {
+          "id": "img_0108",
+          "name": "flux_dev_upscaled_00083_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00083_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00083_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "14.2 MB",
+          "sizeBytes": 14858718,
+          "extension": ".png",
+          "modified": "2026-04-20T17:27:51.477199"
+        },
+        {
+          "id": "img_0109",
+          "name": "flux_dev_upscaled_00129_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00129_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00129_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "21.8 MB",
+          "sizeBytes": 22812779,
+          "extension": ".png",
+          "modified": "2026-04-25T22:45:56.873591"
+        },
+        {
+          "id": "img_0110",
+          "name": "flux_dev_00021_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00021_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00021_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.8 MB",
+          "sizeBytes": 1880799,
+          "extension": ".png",
+          "modified": "2026-04-09T01:41:58.830097"
+        },
+        {
+          "id": "img_0111",
+          "name": "flux_schnell_00035_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00035_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00035_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.9 MB",
+          "sizeBytes": 1984082,
+          "extension": ".png",
+          "modified": "2026-04-06T23:16:32.149011"
+        },
+        {
+          "id": "img_0112",
+          "name": "flux_dev_upscaled_00105_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00105_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00105_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "20.4 MB",
+          "sizeBytes": 21375227,
+          "extension": ".png",
+          "modified": "2026-04-21T22:02:44.067433"
+        },
+        {
+          "id": "img_0113",
+          "name": "ComfyUI_Flux_Dev_00006_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/ComfyUI_Flux_Dev_00006_.png",
+          "relativePath": "Desktop/real_flux_images/ComfyUI_Flux_Dev_00006_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.7 MB",
+          "sizeBytes": 1738810,
+          "extension": ".png",
+          "modified": "2026-04-12T15:22:42.283452"
+        },
+        {
+          "id": "img_0114",
+          "name": "flux_schnell_00062_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00062_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00062_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.0 MB",
+          "sizeBytes": 1093311,
+          "extension": ".png",
+          "modified": "2026-04-08T13:10:49.690930"
+        },
+        {
+          "id": "img_0115",
+          "name": "flux_dev_upscaled_00017_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00017_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00017_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "17.2 MB",
+          "sizeBytes": 18038314,
+          "extension": ".png",
+          "modified": "2026-04-09T14:43:23.717300"
+        },
+        {
+          "id": "img_0116",
+          "name": "flux_schnell_00023_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00023_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00023_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.3 MB",
+          "sizeBytes": 1390936,
+          "extension": ".png",
+          "modified": "2026-04-06T22:46:03.099169"
+        },
+        {
+          "id": "img_0117",
+          "name": "flux_dev_upscaled_00113_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00113_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00113_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "20.6 MB",
+          "sizeBytes": 21585926,
+          "extension": ".png",
+          "modified": "2026-04-24T18:52:19.517191"
+        },
+        {
+          "id": "img_0118",
+          "name": "flux_dev_upscaled_00056_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00056_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00056_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "28.2 MB",
+          "sizeBytes": 29599781,
+          "extension": ".png",
+          "modified": "2026-04-12T13:10:52.315538"
+        },
+        {
+          "id": "img_0119",
+          "name": "flux_dev_upscaled_00096_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00096_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00096_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "18.4 MB",
+          "sizeBytes": 19246881,
+          "extension": ".png",
+          "modified": "2026-04-21T18:34:38.232377"
+        },
+        {
+          "id": "img_0120",
+          "name": "flux_dev_upscaled_00079_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00079_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00079_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "16.6 MB",
+          "sizeBytes": 17363640,
+          "extension": ".png",
+          "modified": "2026-04-20T13:46:22.509995"
+        },
+        {
+          "id": "img_0121",
+          "name": "flux_dev_upscaled_00080_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00080_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00080_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.9 MB",
+          "sizeBytes": 16702683,
+          "extension": ".png",
+          "modified": "2026-04-20T13:59:03.279718"
+        },
+        {
+          "id": "img_0122",
+          "name": "flux_dev_00022_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00022_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00022_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.3 MB",
+          "sizeBytes": 1311245,
+          "extension": ".png",
+          "modified": "2026-04-09T09:06:27.258079"
+        },
+        {
+          "id": "img_0123",
+          "name": "flux_dev_upscaled_00038_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00038_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00038_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "13.7 MB",
+          "sizeBytes": 14368709,
+          "extension": ".png",
+          "modified": "2026-04-09T21:06:23.651584"
+        },
+        {
+          "id": "img_0124",
+          "name": "flux_schnell_00036_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00036_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00036_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "2.1 MB",
+          "sizeBytes": 2161363,
+          "extension": ".png",
+          "modified": "2026-04-06T23:19:00.641639"
+        },
+        {
+          "id": "img_0125",
+          "name": "flux_dev_upscaled_00043_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00043_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00043_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "16.3 MB",
+          "sizeBytes": 17101445,
+          "extension": ".png",
+          "modified": "2026-04-11T12:44:49.039422"
+        },
+        {
+          "id": "img_0126",
+          "name": "ComfyUI_Flux_Dev_00005_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/ComfyUI_Flux_Dev_00005_.png",
+          "relativePath": "Desktop/real_flux_images/ComfyUI_Flux_Dev_00005_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.6 MB",
+          "sizeBytes": 1671828,
+          "extension": ".png",
+          "modified": "2026-04-12T15:06:43.407480"
+        },
+        {
+          "id": "img_0127",
+          "name": "flux_dev_upscaled_00014_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00014_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00014_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "16.7 MB",
+          "sizeBytes": 17537853,
+          "extension": ".png",
+          "modified": "2026-04-09T14:26:44.854649"
+        },
+        {
+          "id": "img_0128",
+          "name": "flux_dev_upscaled_00002_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00002_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00002_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "16.6 MB",
+          "sizeBytes": 17421286,
+          "extension": ".png",
+          "modified": "2026-04-09T12:20:00.241809"
+        },
+        {
+          "id": "img_0129",
+          "name": "flux_dev_00018_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00018_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00018_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.6 MB",
+          "sizeBytes": 1712750,
+          "extension": ".png",
+          "modified": "2026-04-09T01:25:53.799955"
+        },
+        {
+          "id": "img_0130",
+          "name": "flux_schnell_00020_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00020_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00020_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.4 MB",
+          "sizeBytes": 1450837,
+          "extension": ".png",
+          "modified": "2026-04-06T22:40:57.682294"
+        },
+        {
+          "id": "img_0131",
+          "name": "flux_dev_upscaled_00055_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00055_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00055_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "12.3 MB",
+          "sizeBytes": 12880544,
+          "extension": ".png",
+          "modified": "2026-04-12T12:39:48.472172"
+        },
+        {
+          "id": "img_0132",
+          "name": "flux_dev_upscaled_00110_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00110_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00110_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "22.6 MB",
+          "sizeBytes": 23649886,
+          "extension": ".png",
+          "modified": "2026-04-21T23:30:31.665106"
+        },
+        {
+          "id": "img_0133",
+          "name": "flux_dev_upscaled_00022_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00022_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00022_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "14.9 MB",
+          "sizeBytes": 15618286,
+          "extension": ".png",
+          "modified": "2026-04-09T15:54:12.748147"
+        },
+        {
+          "id": "img_0134",
+          "name": "flux_dev_00038_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00038_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00038_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.3 MB",
+          "sizeBytes": 1409500,
+          "extension": ".png",
+          "modified": "2026-04-11T11:16:21.812757"
+        },
+        {
+          "id": "img_0135",
+          "name": "flux_schnell_00057_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00057_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00057_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.3 MB",
+          "sizeBytes": 1410230,
+          "extension": ".png",
+          "modified": "2026-04-08T09:35:26.612151"
+        },
+        {
+          "id": "img_0136",
+          "name": "flux_dev_upscaled_00130_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00130_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00130_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "20.2 MB",
+          "sizeBytes": 21176521,
+          "extension": ".png",
+          "modified": "2026-04-25T22:52:45.079204"
+        },
+        {
+          "id": "img_0137",
+          "name": "flux_dev_upscaled_00075_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00075_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00075_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.1 MB",
+          "sizeBytes": 15878859,
+          "extension": ".png",
+          "modified": "2026-04-19T17:47:59.637129"
+        },
+        {
+          "id": "img_0138",
+          "name": "SD1.5_00008_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/SD1.5_00008_.png",
+          "relativePath": "Desktop/real_flux_images/SD1.5_00008_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "698.5 KB",
+          "sizeBytes": 715299,
+          "extension": ".png",
+          "modified": "2026-04-05T21:40:12.356625"
+        },
+        {
+          "id": "img_0139",
+          "name": "flux_dev_upscaled_00126_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00126_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00126_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "20.5 MB",
+          "sizeBytes": 21495530,
+          "extension": ".png",
+          "modified": "2026-04-24T21:28:18.923729"
+        },
+        {
+          "id": "img_0140",
+          "name": "flux_dev_upscaled_00063_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00063_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00063_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "30.5 MB",
+          "sizeBytes": 32030025,
+          "extension": ".png",
+          "modified": "2026-04-17T20:45:04.446975"
+        },
+        {
+          "id": "img_0141",
+          "name": "flux_schnell_00016_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00016_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00016_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.5 MB",
+          "sizeBytes": 1563457,
+          "extension": ".png",
+          "modified": "2026-04-06T21:56:39.925747"
+        },
+        {
+          "id": "img_0142",
+          "name": "flux_dev_upscaled_00034_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00034_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00034_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.4 MB",
+          "sizeBytes": 16096036,
+          "extension": ".png",
+          "modified": "2026-04-09T19:33:58.238205"
+        },
+        {
+          "id": "img_0143",
+          "name": "flux_schnell_00041_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00041_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00041_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.3 MB",
+          "sizeBytes": 1363321,
+          "extension": ".png",
+          "modified": "2026-04-07T07:24:11.049342"
+        },
+        {
+          "id": "img_0144",
+          "name": "flux_dev_00002_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00002_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00002_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.7 MB",
+          "sizeBytes": 1768692,
+          "extension": ".png",
+          "modified": "2026-04-08T22:35:05.355612"
+        },
+        {
+          "id": "img_0145",
+          "name": "flux_dev_upscaled_00018_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00018_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00018_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "11.1 MB",
+          "sizeBytes": 11668962,
+          "extension": ".png",
+          "modified": "2026-04-09T14:49:20.872102"
+        },
+        {
+          "id": "img_0146",
+          "name": "flux_dev_00014_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00014_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00014_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.1 MB",
+          "sizeBytes": 1190378,
+          "extension": ".png",
+          "modified": "2026-04-09T01:03:30.394471"
+        },
+        {
+          "id": "img_0147",
+          "name": "flux_upscaled_00001_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_upscaled_00001_.png",
+          "relativePath": "Desktop/real_flux_images/flux_upscaled_00001_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "10.9 MB",
+          "sizeBytes": 11382621,
+          "extension": ".png",
+          "modified": "2026-04-14T14:08:57.686957"
+        },
+        {
+          "id": "img_0148",
+          "name": "flux_dev_upscaled_00059_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00059_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00059_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "13.4 MB",
+          "sizeBytes": 14059170,
+          "extension": ".png",
+          "modified": "2026-04-13T20:51:01.372491"
+        },
+        {
+          "id": "img_0149",
+          "name": "SD1.5_00024_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/SD1.5_00024_.png",
+          "relativePath": "Desktop/real_flux_images/SD1.5_00024_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.1 MB",
+          "sizeBytes": 1149091,
+          "extension": ".png",
+          "modified": "2026-04-05T22:21:21.410981"
+        },
+        {
+          "id": "img_0150",
+          "name": "flux_dev_00042_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00042_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00042_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.2 MB",
+          "sizeBytes": 1254573,
+          "extension": ".png",
+          "modified": "2026-04-11T11:47:40.840845"
+        },
+        {
+          "id": "img_0151",
+          "name": "flux_dev_upscaled_00058_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00058_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00058_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "34.0 MB",
+          "sizeBytes": 35654447,
+          "extension": ".png",
+          "modified": "2026-04-13T08:14:31.835927"
+        },
+        {
+          "id": "img_0152",
+          "name": "flux_dev_00015_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00015_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00015_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.4 MB",
+          "sizeBytes": 1517706,
+          "extension": ".png",
+          "modified": "2026-04-09T01:09:32.814127"
+        },
+        {
+          "id": "img_0153",
+          "name": "flux_dev_upscaled_00019_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00019_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00019_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "16.4 MB",
+          "sizeBytes": 17174776,
+          "extension": ".png",
+          "modified": "2026-04-09T15:28:50.417891"
+        },
+        {
+          "id": "img_0154",
+          "name": "flux_dev_00003_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00003_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00003_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.6 MB",
+          "sizeBytes": 1686781,
+          "extension": ".png",
+          "modified": "2026-04-08T22:41:33.338334"
+        },
+        {
+          "id": "img_0155",
+          "name": "flux_schnell_00040_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00040_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00040_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.4 MB",
+          "sizeBytes": 1456374,
+          "extension": ".png",
+          "modified": "2026-04-07T07:23:21.294004"
+        },
+        {
+          "id": "img_0156",
+          "name": "flux_dev_upscaled_00035_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00035_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00035_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.2 MB",
+          "sizeBytes": 15929128,
+          "extension": ".png",
+          "modified": "2026-04-09T19:58:30.232937"
+        },
+        {
+          "id": "img_0157",
+          "name": "flux_schnell_00017_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00017_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00017_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.2 MB",
+          "sizeBytes": 1284460,
+          "extension": ".png",
+          "modified": "2026-04-06T22:09:48.980458"
+        },
+        {
+          "id": "img_0158",
+          "name": "flux_dev_upscaled_00127_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00127_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00127_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "18.7 MB",
+          "sizeBytes": 19654677,
+          "extension": ".png",
+          "modified": "2026-04-24T21:35:06.799091"
+        },
+        {
+          "id": "img_0159",
+          "name": "flux_dev_upscaled_00062_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00062_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00062_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.4 MB",
+          "sizeBytes": 16175188,
+          "extension": ".png",
+          "modified": "2026-04-17T20:27:22.204632"
+        },
+        {
+          "id": "img_0160",
+          "name": "SD1.5_00009_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/SD1.5_00009_.png",
+          "relativePath": "Desktop/real_flux_images/SD1.5_00009_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "656.9 KB",
+          "sizeBytes": 672685,
+          "extension": ".png",
+          "modified": "2026-04-05T21:51:08.796471"
+        },
+        {
+          "id": "img_0161",
+          "name": "flux_schnell_00001_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00001_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00001_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.4 MB",
+          "sizeBytes": 1487707,
+          "extension": ".png",
+          "modified": "2026-04-06T19:12:25.558156"
+        },
+        {
+          "id": "img_0162",
+          "name": "flux_dev_upscaled_00131_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00131_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00131_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "18.4 MB",
+          "sizeBytes": 19324734,
+          "extension": ".png",
+          "modified": "2026-04-25T23:01:21.100273"
+        },
+        {
+          "id": "img_0163",
+          "name": "flux_dev_upscaled_00074_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00074_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00074_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "33.9 MB",
+          "sizeBytes": 35528952,
+          "extension": ".png",
+          "modified": "2026-04-19T15:41:33.580040"
+        },
+        {
+          "id": "img_0164",
+          "name": "flux_schnell_00056_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00056_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00056_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.3 MB",
+          "sizeBytes": 1376997,
+          "extension": ".png",
+          "modified": "2026-04-08T09:27:42.859676"
+        },
+        {
+          "id": "img_0165",
+          "name": "flux_dev_00039_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00039_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00039_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "956.3 KB",
+          "sizeBytes": 979207,
+          "extension": ".png",
+          "modified": "2026-04-11T11:27:30.108234"
+        },
+        {
+          "id": "img_0166",
+          "name": "flux_dev_upscaled_00023_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00023_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00023_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "14.9 MB",
+          "sizeBytes": 15651672,
+          "extension": ".png",
+          "modified": "2026-04-09T16:02:59.002862"
+        },
+        {
+          "id": "img_0167",
+          "name": "flux_dev_upscaled_00054_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00054_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00054_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "11.1 MB",
+          "sizeBytes": 11674936,
+          "extension": ".png",
+          "modified": "2026-04-12T12:29:33.534870"
+        },
+        {
+          "id": "img_0168",
+          "name": "flux_dev_upscaled_00111_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00111_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00111_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "19.2 MB",
+          "sizeBytes": 20171189,
+          "extension": ".png",
+          "modified": "2026-04-24T18:37:01.069999"
+        },
+        {
+          "id": "img_0169",
+          "name": "flux_schnell_00021_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00021_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00021_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.5 MB",
+          "sizeBytes": 1560633,
+          "extension": ".png",
+          "modified": "2026-04-06T22:42:44.539413"
+        },
+        {
+          "id": "img_0170",
+          "name": "flux_dev_00019_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00019_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00019_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.2 MB",
+          "sizeBytes": 1269173,
+          "extension": ".png",
+          "modified": "2026-04-09T01:31:22.255818"
+        },
+        {
+          "id": "img_0171",
+          "name": "flux_dev_upscaled_00003_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00003_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00003_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.1 MB",
+          "sizeBytes": 15825667,
+          "extension": ".png",
+          "modified": "2026-04-09T12:29:54.657257"
+        },
+        {
+          "id": "img_0172",
+          "name": "flux_dev_upscaled_00015_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00015_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00015_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "14.3 MB",
+          "sizeBytes": 15031060,
+          "extension": ".png",
+          "modified": "2026-04-09T14:31:48.169198"
+        },
+        {
+          "id": "img_0173",
+          "name": "flux_schnell_00060_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00060_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00060_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.1 MB",
+          "sizeBytes": 1170936,
+          "extension": ".png",
+          "modified": "2026-04-08T10:30:20.626451"
+        },
+        {
+          "id": "img_0174",
+          "name": "flux_dev_upscaled_00042_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00042_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00042_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.2 MB",
+          "sizeBytes": 15987176,
+          "extension": ".png",
+          "modified": "2026-04-10T22:08:53.819436"
+        },
+        {
+          "id": "img_0175",
+          "name": "flux_dev_upscaled_00107_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00107_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00107_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "18.7 MB",
+          "sizeBytes": 19559920,
+          "extension": ".png",
+          "modified": "2026-04-21T22:21:56.241078"
+        },
+        {
+          "id": "img_0176",
+          "name": "flux_dev_upscaled_00039_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00039_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00039_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "14.6 MB",
+          "sizeBytes": 15269775,
+          "extension": ".png",
+          "modified": "2026-04-10T19:45:46.990225"
+        },
+        {
+          "id": "img_0177",
+          "name": "flux_dev_00023_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00023_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00023_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1015.2 KB",
+          "sizeBytes": 1039614,
+          "extension": ".png",
+          "modified": "2026-04-09T09:10:28.354785"
+        },
+        {
+          "id": "img_0178",
+          "name": "flux_dev_upscaled_00081_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00081_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00081_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "16.2 MB",
+          "sizeBytes": 16967266,
+          "extension": ".png",
+          "modified": "2026-04-20T14:07:58.832137"
+        },
+        {
+          "id": "img_0179",
+          "name": "flux_dev_upscaled_00097_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00097_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00097_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "19.0 MB",
+          "sizeBytes": 19892917,
+          "extension": ".png",
+          "modified": "2026-04-21T18:41:12.254543"
+        },
+        {
+          "id": "img_0180",
+          "name": "flux_dev_upscaled_00078_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00078_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00078_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "13.8 MB",
+          "sizeBytes": 14500423,
+          "extension": ".png",
+          "modified": "2026-04-20T13:32:03.881734"
+        },
+        {
+          "id": "img_0181",
+          "name": "SD1.5_00005_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/SD1.5_00005_.png",
+          "relativePath": "Desktop/real_flux_images/SD1.5_00005_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "659.3 KB",
+          "sizeBytes": 675116,
+          "extension": ".png",
+          "modified": "2026-04-05T20:38:31.111671"
+        },
+        {
+          "id": "img_0182",
+          "name": "flux_dev_00035_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00035_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00035_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.0 MB",
+          "sizeBytes": 1065631,
+          "extension": ".png",
+          "modified": "2026-04-09T10:58:44.367520"
+        },
+        {
+          "id": "img_0183",
+          "name": "flux_dev_upscaled_00024_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00024_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00024_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "16.1 MB",
+          "sizeBytes": 16931701,
+          "extension": ".png",
+          "modified": "2026-04-09T16:11:10.449261"
+        },
+        {
+          "id": "img_0184",
+          "name": "flux_schnell_00051_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00051_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00051_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.5 MB",
+          "sizeBytes": 1589939,
+          "extension": ".png",
+          "modified": "2026-04-07T21:38:44.535443"
+        },
+        {
+          "id": "img_0185",
+          "name": "flux_dev_upscaled_00136_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00136_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00136_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "21.9 MB",
+          "sizeBytes": 22998198,
+          "extension": ".png",
+          "modified": "2026-04-25T23:38:15.584879"
+        },
+        {
+          "id": "img_0186",
+          "name": "flux_dev_upscaled_00073_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00073_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00073_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "7.7 MB",
+          "sizeBytes": 8118955,
+          "extension": ".png",
+          "modified": "2026-04-19T02:08:04.866815"
+        },
+        {
+          "id": "img_0187",
+          "name": "flux_schnell_00006_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00006_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00006_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.2 MB",
+          "sizeBytes": 1211558,
+          "extension": ".png",
+          "modified": "2026-04-06T20:13:24.355989"
+        },
+        {
+          "id": "img_0188",
+          "name": "flux_dev_upscaled_00120_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00120_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00120_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "18.0 MB",
+          "sizeBytes": 18912934,
+          "extension": ".png",
+          "modified": "2026-04-24T20:30:54.255946"
+        },
+        {
+          "id": "img_0189",
+          "name": "SD1.5_00018_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/SD1.5_00018_.png",
+          "relativePath": "Desktop/real_flux_images/SD1.5_00018_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "962.4 KB",
+          "sizeBytes": 985537,
+          "extension": ".png",
+          "modified": "2026-04-05T21:59:33.018527"
+        },
+        {
+          "id": "img_0190",
+          "name": "flux_schnell_00010_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00010_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00010_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.5 MB",
+          "sizeBytes": 1586954,
+          "extension": ".png",
+          "modified": "2026-04-06T21:43:18.083387"
+        },
+        {
+          "id": "img_0191",
+          "name": "flux_dev_00028_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00028_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00028_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.2 MB",
+          "sizeBytes": 1267733,
+          "extension": ".png",
+          "modified": "2026-04-09T09:42:51.197187"
+        },
+        {
+          "id": "img_0192",
+          "name": "flux_dev_upscaled_00032_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00032_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00032_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "36.2 MB",
+          "sizeBytes": 37965959,
+          "extension": ".png",
+          "modified": "2026-04-09T18:55:45.105789"
+        },
+        {
+          "id": "img_0193",
+          "name": "flux_schnell_00047_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00047_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00047_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.3 MB",
+          "sizeBytes": 1407408,
+          "extension": ".png",
+          "modified": "2026-04-07T21:01:42.131068"
+        },
+        {
+          "id": "img_0194",
+          "name": "flux_dev_upscaled_00049_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00049_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00049_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.9 MB",
+          "sizeBytes": 16677552,
+          "extension": ".png",
+          "modified": "2026-04-11T17:41:37.994953"
+        },
+        {
+          "id": "img_0195",
+          "name": "flux_dev_00004_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00004_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00004_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.7 MB",
+          "sizeBytes": 1797486,
+          "extension": ".png",
+          "modified": "2026-04-08T22:46:06.409934"
+        },
+        {
+          "id": "img_0196",
+          "name": "flux_dev_upscaled_00008_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00008_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00008_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "16.9 MB",
+          "sizeBytes": 17696637,
+          "extension": ".png",
+          "modified": "2026-04-09T13:19:12.802442"
+        },
+        {
+          "id": "img_0197",
+          "name": "flux_dev_00012_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00012_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00012_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.4 MB",
+          "sizeBytes": 1496160,
+          "extension": ".png",
+          "modified": "2026-04-09T00:53:45.240399"
+        },
+        {
+          "id": "img_0198",
+          "name": "flux_dev_upscaled_00028_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00028_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00028_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "34.7 MB",
+          "sizeBytes": 36356644,
+          "extension": ".png",
+          "modified": "2026-04-09T17:59:20.495343"
+        },
+        {
+          "id": "img_0199",
+          "name": "flux_dev_00032_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00032_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00032_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.3 MB",
+          "sizeBytes": 1387930,
+          "extension": ".png",
+          "modified": "2026-04-09T10:38:52.916069"
+        },
+        {
+          "id": "img_0200",
+          "name": "flux_dev_upscaled_00090_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00090_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00090_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "23.2 MB",
+          "sizeBytes": 24379346,
+          "extension": ".png",
+          "modified": "2026-04-20T19:37:14.663624"
+        },
+        {
+          "id": "img_0201",
+          "name": "flux_dev_upscaled_00086_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00086_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00086_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.6 MB",
+          "sizeBytes": 16357261,
+          "extension": ".png",
+          "modified": "2026-04-20T17:52:56.714148"
+        },
+        {
+          "id": "img_0202",
+          "name": "n8n_00001_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/n8n_00001_.png",
+          "relativePath": "Desktop/real_flux_images/n8n_00001_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "415.2 KB",
+          "sizeBytes": 425163,
+          "extension": ".png",
+          "modified": "2026-04-05T19:32:26.251433"
+        },
+        {
+          "id": "img_0203",
+          "name": "flux_dev_00024_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00024_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00024_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.1 MB",
+          "sizeBytes": 1149240,
+          "extension": ".png",
+          "modified": "2026-04-09T09:15:26.868928"
+        },
+        {
+          "id": "img_0204",
+          "name": "flux_schnell_00030_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00030_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00030_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.5 MB",
+          "sizeBytes": 1555234,
+          "extension": ".png",
+          "modified": "2026-04-06T23:07:20.105072"
+        },
+        {
+          "id": "img_0205",
+          "name": "flux_dev_upscaled_00045_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00045_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00045_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.0 MB",
+          "sizeBytes": 15723196,
+          "extension": ".png",
+          "modified": "2026-04-11T13:00:33.861205"
+        },
+        {
+          "id": "img_0206",
+          "name": "flux_dev_upscaled_00100_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00100_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00100_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "19.0 MB",
+          "sizeBytes": 19950708,
+          "extension": ".png",
+          "modified": "2026-04-21T20:10:13.231519"
+        },
+        {
+          "id": "img_0207",
+          "name": "ComfyUI_Flux_Dev_00003_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/ComfyUI_Flux_Dev_00003_.png",
+          "relativePath": "Desktop/real_flux_images/ComfyUI_Flux_Dev_00003_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.3 MB",
+          "sizeBytes": 1404573,
+          "extension": ".png",
+          "modified": "2026-04-12T12:50:27.343364"
+        },
+        {
+          "id": "img_0208",
+          "name": "flux_dev_00008_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00008_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00008_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.3 MB",
+          "sizeBytes": 1377718,
+          "extension": ".png",
+          "modified": "2026-04-09T00:07:16.829962"
+        },
+        {
+          "id": "img_0209",
+          "name": "flux_dev_upscaled_00012_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00012_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00012_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "18.7 MB",
+          "sizeBytes": 19595739,
+          "extension": ".png",
+          "modified": "2026-04-09T14:13:34.519371"
+        },
+        {
+          "id": "img_0210",
+          "name": "flux_dev_upscaled_00004_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00004_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00004_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "16.7 MB",
+          "sizeBytes": 17495759,
+          "extension": ".png",
+          "modified": "2026-04-09T12:42:06.733602"
+        },
+        {
+          "id": "img_0211",
+          "name": "flux_dev_upscaled_00141_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00141_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00141_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "20.6 MB",
+          "sizeBytes": 21642744,
+          "extension": ".png",
+          "modified": "2026-04-28T13:24:42.349110"
+        },
+        {
+          "id": "img_0212",
+          "name": "flux_schnell_00026_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00026_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00026_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.3 MB",
+          "sizeBytes": 1334231,
+          "extension": ".png",
+          "modified": "2026-04-06T22:53:37.267188"
+        },
+        {
+          "id": "img_0213",
+          "name": "flux_dev_upscaled_00053_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00053_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00053_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "12.5 MB",
+          "sizeBytes": 13124638,
+          "extension": ".png",
+          "modified": "2026-04-12T11:35:37.577658"
+        },
+        {
+          "id": "img_0214",
+          "name": "flux_dev_upscaled_00117_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00117_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00117_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "11.7 MB",
+          "sizeBytes": 12249980,
+          "extension": ".png",
+          "modified": "2026-04-24T19:51:54.642087"
+        },
+        {
+          "id": "img_0215",
+          "name": "flux_schnell_00027_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00027_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00027_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.4 MB",
+          "sizeBytes": 1455239,
+          "extension": ".png",
+          "modified": "2026-04-06T22:54:56.796208"
+        },
+        {
+          "id": "img_0216",
+          "name": "flux_dev_upscaled_00005_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00005_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00005_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "16.7 MB",
+          "sizeBytes": 17532053,
+          "extension": ".png",
+          "modified": "2026-04-09T12:58:50.010288"
+        },
+        {
+          "id": "img_0217",
+          "name": "flux_dev_upscaled_00140_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00140_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00140_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "19.0 MB",
+          "sizeBytes": 19926508,
+          "extension": ".png",
+          "modified": "2026-04-28T13:16:57.895238"
+        },
+        {
+          "id": "img_0218",
+          "name": "flux_dev_upscaled_00013_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00013_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00013_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "16.1 MB",
+          "sizeBytes": 16893174,
+          "extension": ".png",
+          "modified": "2026-04-09T14:19:11.617820"
+        },
+        {
+          "id": "img_0219",
+          "name": "flux_dev_00009_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00009_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00009_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.3 MB",
+          "sizeBytes": 1402837,
+          "extension": ".png",
+          "modified": "2026-04-09T00:25:15.641016"
+        },
+        {
+          "id": "img_0220",
+          "name": "ComfyUI_Flux_Dev_00002_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/ComfyUI_Flux_Dev_00002_.png",
+          "relativePath": "Desktop/real_flux_images/ComfyUI_Flux_Dev_00002_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.5 MB",
+          "sizeBytes": 1564346,
+          "extension": ".png",
+          "modified": "2026-04-12T11:47:21.666983"
+        },
+        {
+          "id": "img_0221",
+          "name": "flux_schnell_00066_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00066_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00066_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.1 MB",
+          "sizeBytes": 1172872,
+          "extension": ".png",
+          "modified": "2026-04-08T13:41:25.327560"
+        },
+        {
+          "id": "img_0222",
+          "name": "flux_dev_upscaled_00044_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00044_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00044_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.0 MB",
+          "sizeBytes": 15758394,
+          "extension": ".png",
+          "modified": "2026-04-11T12:51:01.768112"
+        },
+        {
+          "id": "img_0223",
+          "name": "flux_dev_upscaled_00101_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00101_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00101_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "26.0 MB",
+          "sizeBytes": 27219993,
+          "extension": ".png",
+          "modified": "2026-04-21T20:33:21.309047"
+        },
+        {
+          "id": "img_0224",
+          "name": "flux_schnell_00031_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00031_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00031_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.5 MB",
+          "sizeBytes": 1602808,
+          "extension": ".png",
+          "modified": "2026-04-06T23:08:32.795049"
+        },
+        {
+          "id": "img_0225",
+          "name": "flux_dev_00025_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00025_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00025_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.6 MB",
+          "sizeBytes": 1655830,
+          "extension": ".png",
+          "modified": "2026-04-09T09:20:01.427696"
+        },
+        {
+          "id": "img_0226",
+          "name": "test_image_00001_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/test_image_00001_.png",
+          "relativePath": "Desktop/real_flux_images/test_image_00001_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "428.9 KB",
+          "sizeBytes": 439213,
+          "extension": ".png",
+          "modified": "2026-04-14T11:14:52.661111"
+        },
+        {
+          "id": "img_0227",
+          "name": "flux_dev_upscaled_00087_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00087_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00087_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.8 MB",
+          "sizeBytes": 16605368,
+          "extension": ".png",
+          "modified": "2026-04-20T17:59:31.803503"
+        },
+        {
+          "id": "img_0228",
+          "name": "SD1.5_00015_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/SD1.5_00015_.png",
+          "relativePath": "Desktop/real_flux_images/SD1.5_00015_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "697.6 KB",
+          "sizeBytes": 714391,
+          "extension": ".png",
+          "modified": "2026-04-05T21:57:23.898333"
+        },
+        {
+          "id": "img_0229",
+          "name": "flux_dev_upscaled_00091_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00091_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00091_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "23.6 MB",
+          "sizeBytes": 24755556,
+          "extension": ".png",
+          "modified": "2026-04-20T19:44:52.344171"
+        },
+        {
+          "id": "img_0230",
+          "name": "flux_dev_00033_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00033_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00033_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.4 MB",
+          "sizeBytes": 1509564,
+          "extension": ".png",
+          "modified": "2026-04-09T10:44:11.916305"
+        },
+        {
+          "id": "img_0231",
+          "name": "SD1.5_00023_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/SD1.5_00023_.png",
+          "relativePath": "Desktop/real_flux_images/SD1.5_00023_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "996.3 KB",
+          "sizeBytes": 1020169,
+          "extension": ".png",
+          "modified": "2026-04-05T22:20:23.086212"
+        },
+        {
+          "id": "img_0232",
+          "name": "flux_dev_upscaled_00009_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00009_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00009_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.1 MB",
+          "sizeBytes": 15835518,
+          "extension": ".png",
+          "modified": "2026-04-09T13:25:58.801284"
+        },
+        {
+          "id": "img_0233",
+          "name": "flux_dev_upscaled_00048_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00048_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00048_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "14.8 MB",
+          "sizeBytes": 15505304,
+          "extension": ".png",
+          "modified": "2026-04-11T17:28:00.659660"
+        },
+        {
+          "id": "img_0234",
+          "name": "flux_schnell_00046_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00046_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00046_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.5 MB",
+          "sizeBytes": 1536567,
+          "extension": ".png",
+          "modified": "2026-04-07T19:43:45.224145"
+        },
+        {
+          "id": "img_0235",
+          "name": "flux_dev_upscaled_00033_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00033_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00033_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "37.9 MB",
+          "sizeBytes": 39688637,
+          "extension": ".png",
+          "modified": "2026-04-09T19:08:24.236128"
+        },
+        {
+          "id": "img_0236",
+          "name": "flux_dev_00029_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_00029_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_00029_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.2 MB",
+          "sizeBytes": 1229893,
+          "extension": ".png",
+          "modified": "2026-04-09T09:48:06.740242"
+        },
+        {
+          "id": "img_0237",
+          "name": "SD1.5_00019_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/SD1.5_00019_.png",
+          "relativePath": "Desktop/real_flux_images/SD1.5_00019_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "783.0 KB",
+          "sizeBytes": 801820,
+          "extension": ".png",
+          "modified": "2026-04-05T21:59:57.898561"
+        },
+        {
+          "id": "img_0238",
+          "name": "flux_schnell_00011_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00011_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00011_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.5 MB",
+          "sizeBytes": 1582354,
+          "extension": ".png",
+          "modified": "2026-04-06T21:45:20.045683"
+        },
+        {
+          "id": "img_0239",
+          "name": "flux_dev_upscaled_00121_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00121_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00121_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "18.2 MB",
+          "sizeBytes": 19071022,
+          "extension": ".png",
+          "modified": "2026-04-24T20:37:32.647567"
+        },
+        {
+          "id": "img_0240",
+          "name": "flux_dev_upscaled_00064_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00064_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00064_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "29.6 MB",
+          "sizeBytes": 31075968,
+          "extension": ".png",
+          "modified": "2026-04-18T21:50:15.834469"
+        },
+        {
+          "id": "img_0241",
+          "name": "flux_n8n_00001_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_n8n_00001_.png",
+          "relativePath": "Desktop/real_flux_images/flux_n8n_00001_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "15.4 MB",
+          "sizeBytes": 16119572,
+          "extension": ".png",
+          "modified": "2026-04-09T20:32:54.622979"
+        },
+        {
+          "id": "img_0242",
+          "name": "flux_schnell_00007_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00007_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00007_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.2 MB",
+          "sizeBytes": 1291888,
+          "extension": ".png",
+          "modified": "2026-04-06T20:17:44.954775"
+        },
+        {
+          "id": "img_0243",
+          "name": "flux_dev_upscaled_00137_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00137_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00137_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "20.9 MB",
+          "sizeBytes": 21894874,
+          "extension": ".png",
+          "modified": "2026-04-26T18:26:21.589873"
+        },
+        {
+          "id": "img_0244",
+          "name": "flux_dev_upscaled_00072_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00072_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00072_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "29.7 MB",
+          "sizeBytes": 31185501,
+          "extension": ".png",
+          "modified": "2026-04-19T01:57:34.568166"
+        },
+        {
+          "id": "img_0245",
+          "name": "flux_schnell_00050_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_schnell_00050_.png",
+          "relativePath": "Desktop/real_flux_images/flux_schnell_00050_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "1.7 MB",
+          "sizeBytes": 1818705,
+          "extension": ".png",
+          "modified": "2026-04-07T21:30:29.350247"
+        },
+        {
+          "id": "img_0246",
+          "name": "flux_dev_upscaled_00025_.png",
+          "path": "/Users/hichem/Desktop/real_flux_images/flux_dev_upscaled_00025_.png",
+          "relativePath": "Desktop/real_flux_images/flux_dev_upscaled_00025_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "real_flux_images",
+          "size": "14.0 MB",
+          "sizeBytes": 14665143,
+          "extension": ".png",
+          "modified": "2026-04-09T16:18:15.790951"
+        },
+        {
+          "id": "img_0247",
+          "name": "flux_dev_upscaled_00134_.png",
+          "path": "/Users/hichem/Desktop/Flux Images/flux_dev_upscaled_00134_.png",
+          "relativePath": "Desktop/Flux Images/flux_dev_upscaled_00134_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "Flux Images",
+          "size": "19.9 MB",
+          "sizeBytes": 20900122,
+          "extension": ".png",
+          "modified": "2026-04-25T23:25:00.722827"
+        },
+        {
+          "id": "img_0248",
+          "name": "flux_dev_upscaled_00138_.png",
+          "path": "/Users/hichem/Desktop/Flux Images/flux_dev_upscaled_00138_.png",
+          "relativePath": "Desktop/Flux Images/flux_dev_upscaled_00138_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "Flux Images",
+          "size": "17.1 MB",
+          "sizeBytes": 17910452,
+          "extension": ".png",
+          "modified": "2026-04-26T22:36:56.131768"
+        },
+        {
+          "id": "img_0249",
+          "name": "flux_dev_upscaled_00135_.png",
+          "path": "/Users/hichem/Desktop/Flux Images/flux_dev_upscaled_00135_.png",
+          "relativePath": "Desktop/Flux Images/flux_dev_upscaled_00135_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "Flux Images",
+          "size": "21.9 MB",
+          "sizeBytes": 22999012,
+          "extension": ".png",
+          "modified": "2026-04-25T23:31:42.108122"
+        },
+        {
+          "id": "img_0250",
+          "name": "flux_dev_upscaled_00132_.png",
+          "path": "/Users/hichem/Desktop/Flux Images/flux_dev_upscaled_00132_.png",
+          "relativePath": "Desktop/Flux Images/flux_dev_upscaled_00132_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "Flux Images",
+          "size": "19.4 MB",
+          "sizeBytes": 20341196,
+          "extension": ".png",
+          "modified": "2026-04-25T23:09:48.871490"
+        },
+        {
+          "id": "img_0251",
+          "name": "flux_dev_upscaled_00133_.png",
+          "path": "/Users/hichem/Desktop/Flux Images/flux_dev_upscaled_00133_.png",
+          "relativePath": "Desktop/Flux Images/flux_dev_upscaled_00133_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "Flux Images",
+          "size": "18.0 MB",
+          "sizeBytes": 18857133,
+          "extension": ".png",
+          "modified": "2026-04-25T23:16:25.508666"
+        },
+        {
+          "id": "img_0252",
+          "name": "flux_dev_upscaled_00129_.png",
+          "path": "/Users/hichem/Desktop/Flux Images/flux_dev_upscaled_00129_.png",
+          "relativePath": "Desktop/Flux Images/flux_dev_upscaled_00129_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "Flux Images",
+          "size": "21.8 MB",
+          "sizeBytes": 22812779,
+          "extension": ".png",
+          "modified": "2026-04-25T22:46:02.801944"
+        },
+        {
+          "id": "img_0253",
+          "name": "flux_dev_upscaled_00130_.png",
+          "path": "/Users/hichem/Desktop/Flux Images/flux_dev_upscaled_00130_.png",
+          "relativePath": "Desktop/Flux Images/flux_dev_upscaled_00130_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "Flux Images",
+          "size": "20.2 MB",
+          "sizeBytes": 21176521,
+          "extension": ".png",
+          "modified": "2026-04-25T22:54:50.203480"
+        },
+        {
+          "id": "img_0254",
+          "name": "flux_dev_upscaled_00127_.png",
+          "path": "/Users/hichem/Desktop/Flux Images/flux_dev_upscaled_00127_.png",
+          "relativePath": "Desktop/Flux Images/flux_dev_upscaled_00127_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "Flux Images",
+          "size": "18.7 MB",
+          "sizeBytes": 19654677,
+          "extension": ".png",
+          "modified": "2026-04-25T14:59:38.544121"
+        },
+        {
+          "id": "img_0255",
+          "name": "flux_dev_upscaled_00131_.png",
+          "path": "/Users/hichem/Desktop/Flux Images/flux_dev_upscaled_00131_.png",
+          "relativePath": "Desktop/Flux Images/flux_dev_upscaled_00131_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "Flux Images",
+          "size": "18.4 MB",
+          "sizeBytes": 19324734,
+          "extension": ".png",
+          "modified": "2026-04-25T23:01:25.956882"
+        },
+        {
+          "id": "img_0256",
+          "name": "flux_dev_upscaled_00136_.png",
+          "path": "/Users/hichem/Desktop/Flux Images/flux_dev_upscaled_00136_.png",
+          "relativePath": "Desktop/Flux Images/flux_dev_upscaled_00136_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "Flux Images",
+          "size": "21.9 MB",
+          "sizeBytes": 22998198,
+          "extension": ".png",
+          "modified": "2026-04-26T18:19:46.934569"
+        },
+        {
+          "id": "img_0257",
+          "name": "flux_dev_upscaled_00137_.png",
+          "path": "/Users/hichem/Desktop/Flux Images/flux_dev_upscaled_00137_.png",
+          "relativePath": "Desktop/Flux Images/flux_dev_upscaled_00137_.png",
+          "type": "image",
+          "category": "uncategorized",
+          "source": "Flux Images",
+          "size": "20.9 MB",
+          "sizeBytes": 21894874,
+          "extension": ".png",
+          "modified": "2026-04-26T18:28:23.489320"
+        }
+      ]
+    },
+    {
+      "id": "templates",
+      "label": "قوالب HTML",
+      "labelEn": "HTML Templates",
+      "icon": "code",
+      "count": 19,
+      "items": [
+        {
+          "id": "tpl_0000",
+          "name": "editorial",
+          "path": "/Users/hichem/jonjon-lab/html-templates/landing/editorial",
+          "relativePath": "jonjon-lab/html-templates/landing/editorial",
+          "type": "template",
+          "category": "landing",
+          "source": "landing",
+          "filesCount": 71,
+          "files": [
+            {
+              "name": "index.html",
+              "extension": ".html"
+            },
+            {
+              "name": "elements.html",
+              "extension": ".html"
+            },
+            {
+              "name": "README.txt",
+              "extension": ".txt"
+            },
+            {
+              "name": "generic.html",
+              "extension": ".html"
+            },
+            {
+              "name": "LICENSE.txt",
+              "extension": ".txt"
+            },
+            {
+              "name": "pic07.jpg",
+              "extension": ".jpg"
+            },
+            {
+              "name": "pic06.jpg",
+              "extension": ".jpg"
+            },
+            {
+              "name": "pic10.jpg",
+              "extension": ".jpg"
+            },
+            {
+              "name": "pic04.jpg",
+              "extension": ".jpg"
+            },
+            {
+              "name": "pic05.jpg",
+              "extension": ".jpg"
+            }
+          ],
+          "totalFiles": 71
+        },
+        {
+          "id": "tpl_0001",
+          "name": "forty",
+          "path": "/Users/hichem/jonjon-lab/html-templates/landing/forty",
+          "relativePath": "jonjon-lab/html-templates/landing/forty",
+          "type": "template",
+          "category": "landing",
+          "source": "landing",
+          "filesCount": 76,
+          "files": [
+            {
+              "name": "index.html",
+              "extension": ".html"
+            },
+            {
+              "name": "elements.html",
+              "extension": ".html"
+            },
+            {
+              "name": "README.txt",
+              "extension": ".txt"
+            },
+            {
+              "name": "generic.html",
+              "extension": ".html"
+            },
+            {
+              "name": "LICENSE.txt",
+              "extension": ".txt"
+            },
+            {
+              "name": "landing.html",
+              "extension": ".html"
+            },
+            {
+              "name": "banner.jpg",
+              "extension": ".jpg"
+            },
+            {
+              "name": "pic07.jpg",
+              "extension": ".jpg"
+            },
+            {
+              "name": "pic06.jpg",
+              "extension": ".jpg"
+            },
+            {
+              "name": "pic10.jpg",
+              "extension": ".jpg"
+            }
+          ],
+          "totalFiles": 76
+        },
+        {
+          "id": "tpl_0002",
+          "name": "hooks",
+          "path": "/Users/hichem/jonjon-lab/html-templates/landing/hooks",
+          "relativePath": "jonjon-lab/html-templates/landing/hooks",
+          "type": "template",
+          "category": "landing",
+          "source": "landing",
+          "filesCount": 14,
+          "files": [
+            {
+              "name": "commit-msg.sample",
+              "extension": ".sample"
+            },
+            {
+              "name": "pre-rebase.sample",
+              "extension": ".sample"
+            },
+            {
+              "name": "sendemail-validate.sample",
+              "extension": ".sample"
+            },
+            {
+              "name": "pre-commit.sample",
+              "extension": ".sample"
+            },
+            {
+              "name": "applypatch-msg.sample",
+              "extension": ".sample"
+            },
+            {
+              "name": "fsmonitor-watchman.sample",
+              "extension": ".sample"
+            },
+            {
+              "name": "pre-receive.sample",
+              "extension": ".sample"
+            },
+            {
+              "name": "prepare-commit-msg.sample",
+              "extension": ".sample"
+            },
+            {
+              "name": "post-update.sample",
+              "extension": ".sample"
+            },
+            {
+              "name": "pre-merge-commit.sample",
+              "extension": ".sample"
+            }
+          ],
+          "totalFiles": 14
+        },
+        {
+          "id": "tpl_0003",
+          "name": "inazuma-tailwind",
+          "path": "/Users/hichem/jonjon-lab/html-templates/landing/inazuma-tailwind",
+          "relativePath": "jonjon-lab/html-templates/landing/inazuma-tailwind",
+          "type": "template",
+          "category": "landing",
+          "source": "landing",
+          "filesCount": 2059,
+          "files": [
+            {
+              "name": "index.html",
+              "extension": ".html"
+            },
+            {
+              "name": "tailwind.config.js",
+              "extension": ".js"
+            },
+            {
+              "name": "LICENSE",
+              "extension": ""
+            },
+            {
+              "name": "README.md",
+              "extension": ".md"
+            },
+            {
+              "name": ".gitignore",
+              "extension": ""
+            },
+            {
+              "name": "package-lock.json",
+              "extension": ".json"
+            },
+            {
+              "name": "package.json",
+              "extension": ".json"
+            },
+            {
+              "name": ".package-lock.json",
+              "extension": ".json"
+            },
+            {
+              "name": "config",
+              "extension": ""
+            },
+            {
+              "name": "HEAD",
+              "extension": ""
+            }
+          ],
+          "totalFiles": 2059
+        },
+        {
+          "id": "tpl_0004",
+          "name": "info",
+          "path": "/Users/hichem/jonjon-lab/html-templates/landing/info",
+          "relativePath": "jonjon-lab/html-templates/landing/info",
+          "type": "template",
+          "category": "landing",
+          "source": "landing",
+          "filesCount": 1,
+          "files": [
+            {
+              "name": "exclude",
+              "extension": ""
+            }
+          ],
+          "totalFiles": 1
+        },
+        {
+          "id": "tpl_0005",
+          "name": "logs",
+          "path": "/Users/hichem/jonjon-lab/html-templates/landing/logs",
+          "relativePath": "jonjon-lab/html-templates/landing/logs",
+          "type": "template",
+          "category": "landing",
+          "source": "landing",
+          "filesCount": 3,
+          "files": [
+            {
+              "name": "HEAD",
+              "extension": ""
+            },
+            {
+              "name": "main",
+              "extension": ""
+            },
+            {
+              "name": "HEAD",
+              "extension": ""
+            }
+          ],
+          "totalFiles": 3
+        },
+        {
+          "id": "tpl_0006",
+          "name": "modern-business-1",
+          "path": "/Users/hichem/jonjon-lab/html-templates/landing/modern-business-1",
+          "relativePath": "jonjon-lab/html-templates/landing/modern-business-1",
+          "type": "template",
+          "category": "landing",
+          "source": "landing",
+          "filesCount": 4,
+          "files": [
+            {
+              "name": "index.html",
+              "extension": ".html"
+            },
+            {
+              "name": "styles.css",
+              "extension": ".css"
+            },
+            {
+              "name": "README.md",
+              "extension": ".md"
+            },
+            {
+              "name": "script.js",
+              "extension": ".js"
+            }
+          ],
+          "totalFiles": 4
+        },
+        {
+          "id": "tpl_0007",
+          "name": "modern-business-2",
+          "path": "/Users/hichem/jonjon-lab/html-templates/landing/modern-business-2",
+          "relativePath": "jonjon-lab/html-templates/landing/modern-business-2",
+          "type": "template",
+          "category": "landing",
+          "source": "landing",
+          "filesCount": 4,
+          "files": [
+            {
+              "name": "index.html",
+              "extension": ".html"
+            },
+            {
+              "name": "styles.css",
+              "extension": ".css"
+            },
+            {
+              "name": "README.md",
+              "extension": ".md"
+            },
+            {
+              "name": "script.js",
+              "extension": ".js"
+            }
+          ],
+          "totalFiles": 4
+        },
+        {
+          "id": "tpl_0008",
+          "name": "modern-portfolio-1",
+          "path": "/Users/hichem/jonjon-lab/html-templates/landing/modern-portfolio-1",
+          "relativePath": "jonjon-lab/html-templates/landing/modern-portfolio-1",
+          "type": "template",
+          "category": "landing",
+          "source": "landing",
+          "filesCount": 3,
+          "files": [
+            {
+              "name": "index.html",
+              "extension": ".html"
+            },
+            {
+              "name": "style.css",
+              "extension": ".css"
+            },
+            {
+              "name": "main.js",
+              "extension": ".js"
+            }
+          ],
+          "totalFiles": 3
+        },
+        {
+          "id": "tpl_0009",
+          "name": "modern-portfolio-2",
+          "path": "/Users/hichem/jonjon-lab/html-templates/landing/modern-portfolio-2",
+          "relativePath": "jonjon-lab/html-templates/landing/modern-portfolio-2",
+          "type": "template",
+          "category": "landing",
+          "source": "landing",
+          "filesCount": 4,
+          "files": [
+            {
+              "name": "index.html",
+              "extension": ".html"
+            },
+            {
+              "name": "styles.css",
+              "extension": ".css"
+            },
+            {
+              "name": "README.md",
+              "extension": ".md"
+            },
+            {
+              "name": "script.js",
+              "extension": ".js"
+            }
+          ],
+          "totalFiles": 4
+        },
+        {
+          "id": "tpl_0010",
+          "name": "objects",
+          "path": "/Users/hichem/jonjon-lab/html-templates/landing/objects",
+          "relativePath": "jonjon-lab/html-templates/landing/objects",
+          "type": "template",
+          "category": "landing",
+          "source": "landing",
+          "filesCount": 3,
+          "files": [
+            {
+              "name": "pack-f9fa97e0ed50fa134c7393e0f8a855e2f3b49a2c.rev",
+              "extension": ".rev"
+            },
+            {
+              "name": "pack-f9fa97e0ed50fa134c7393e0f8a855e2f3b49a2c.pack",
+              "extension": ".pack"
+            },
+            {
+              "name": "pack-f9fa97e0ed50fa134c7393e0f8a855e2f3b49a2c.idx",
+              "extension": ".idx"
+            }
+          ],
+          "totalFiles": 3
+        },
+        {
+          "id": "tpl_0011",
+          "name": "phantom",
+          "path": "/Users/hichem/jonjon-lab/html-templates/landing/phantom",
+          "relativePath": "jonjon-lab/html-templates/landing/phantom",
+          "type": "template",
+          "category": "landing",
+          "source": "landing",
+          "filesCount": 72,
+          "files": [
+            {
+              "name": "index.html",
+              "extension": ".html"
+            },
+            {
+              "name": "elements.html",
+              "extension": ".html"
+            },
+            {
+              "name": "README.txt",
+              "extension": ".txt"
+            },
+            {
+              "name": "generic.html",
+              "extension": ".html"
+            },
+            {
+              "name": "LICENSE.txt",
+              "extension": ".txt"
+            },
+            {
+              "name": "pic07.jpg",
+              "extension": ".jpg"
+            },
+            {
+              "name": "pic13.jpg",
+              "extension": ".jpg"
+            },
+            {
+              "name": "pic12.jpg",
+              "extension": ".jpg"
+            },
+            {
+              "name": "pic06.jpg",
+              "extension": ".jpg"
+            },
+            {
+              "name": "pic10.jpg",
+              "extension": ".jpg"
+            }
+          ],
+          "totalFiles": 72
+        },
+        {
+          "id": "tpl_0012",
+          "name": "refs",
+          "path": "/Users/hichem/jonjon-lab/html-templates/landing/refs",
+          "relativePath": "jonjon-lab/html-templates/landing/refs",
+          "type": "template",
+          "category": "landing",
+          "source": "landing",
+          "filesCount": 2,
+          "files": [
+            {
+              "name": "main",
+              "extension": ""
+            },
+            {
+              "name": "HEAD",
+              "extension": ""
+            }
+          ],
+          "totalFiles": 2
+        },
+        {
+          "id": "tpl_0013",
+          "name": "saas-premium",
+          "path": "/Users/hichem/jonjon-lab/html-templates/landing/saas-premium",
+          "relativePath": "jonjon-lab/html-templates/landing/saas-premium",
+          "type": "template",
+          "category": "landing",
+          "source": "landing",
+          "filesCount": 35,
+          "files": [
+            {
+              "name": "index.html",
+              "extension": ".html"
+            },
+            {
+              "name": "README.md",
+              "extension": ".md"
+            },
+            {
+              "name": "SaaSify - Marketing Made Smarter - Awesome Screenshot.webm",
+              "extension": ".webm"
+            },
+            {
+              "name": "script.js",
+              "extension": ".js"
+            },
+            {
+              "name": ".gitignore",
+              "extension": ""
+            },
+            {
+              "name": "style.css",
+              "extension": ".css"
+            },
+            {
+              "name": "favicon.svg",
+              "extension": ".svg"
+            },
+            {
+              "name": "config",
+              "extension": ""
+            },
+            {
+              "name": "HEAD",
+              "extension": ""
+            },
+            {
+              "name": "description",
+              "extension": ""
+            }
+          ],
+          "totalFiles": 35
+        },
+        {
+          "id": "tpl_0014",
+          "name": "solid-state",
+          "path": "/Users/hichem/jonjon-lab/html-templates/landing/solid-state",
+          "relativePath": "jonjon-lab/html-templates/landing/solid-state",
+          "type": "template",
+          "category": "landing",
+          "source": "landing",
+          "filesCount": 69,
+          "files": [
+            {
+              "name": "index.html",
+              "extension": ".html"
+            },
+            {
+              "name": "elements.html",
+              "extension": ".html"
+            },
+            {
+              "name": "README.txt",
+              "extension": ".txt"
+            },
+            {
+              "name": "generic.html",
+              "extension": ".html"
+            },
+            {
+              "name": "LICENSE.txt",
+              "extension": ".txt"
+            },
+            {
+              "name": "pic07.jpg",
+              "extension": ".jpg"
+            },
+            {
+              "name": "pic06.jpg",
+              "extension": ".jpg"
+            },
+            {
+              "name": "pic04.jpg",
+              "extension": ".jpg"
+            },
+            {
+              "name": "pic05.jpg",
+              "extension": ".jpg"
+            },
+            {
+              "name": "pic01.jpg",
+              "extension": ".jpg"
+            }
+          ],
+          "totalFiles": 69
+        },
+        {
+          "id": "tpl_0015",
+          "name": "tailwind",
+          "path": "/Users/hichem/jonjon-lab/html-templates/landing/tailwind",
+          "relativePath": "jonjon-lab/html-templates/landing/tailwind",
+          "type": "template",
+          "category": "landing",
+          "source": "landing",
+          "filesCount": 98,
+          "files": [
+            {
+              "name": "index.html",
+              "extension": ".html"
+            },
+            {
+              "name": "LICENSE",
+              "extension": ""
+            },
+            {
+              "name": "README.md",
+              "extension": ".md"
+            },
+            {
+              "name": "index.html",
+              "extension": ".html"
+            },
+            {
+              "name": "LICENSE",
+              "extension": ""
+            },
+            {
+              "name": "devices.svg",
+              "extension": ".svg"
+            },
+            {
+              "name": "bg.svg",
+              "extension": ".svg"
+            },
+            {
+              "name": "README.md",
+              "extension": ".md"
+            },
+            {
+              "name": "App Store.svg",
+              "extension": ".svg"
+            },
+            {
+              "name": "Play Store.svg",
+              "extension": ".svg"
+            }
+          ],
+          "totalFiles": 98
+        },
+        {
+          "id": "tpl_0016",
+          "name": "tailwind-landing",
+          "path": "/Users/hichem/jonjon-lab/html-templates/landing/tailwind-landing",
+          "relativePath": "jonjon-lab/html-templates/landing/tailwind-landing",
+          "type": "template",
+          "category": "landing",
+          "source": "landing",
+          "filesCount": 32,
+          "files": [
+            {
+              "name": "index.html",
+              "extension": ".html"
+            },
+            {
+              "name": "hero.png",
+              "extension": ".png"
+            },
+            {
+              "name": "LICENSE",
+              "extension": ""
+            },
+            {
+              "name": "README.md",
+              "extension": ".md"
+            },
+            {
+              "name": "config",
+              "extension": ""
+            },
+            {
+              "name": "HEAD",
+              "extension": ""
+            },
+            {
+              "name": "description",
+              "extension": ""
+            },
+            {
+              "name": "index",
+              "extension": ""
+            },
+            {
+              "name": "packed-refs",
+              "extension": ""
+            },
+            {
+              "name": "exclude",
+              "extension": ""
+            }
+          ],
+          "totalFiles": 32
+        },
+        {
+          "id": "tpl_0017",
+          "name": "business-corporate-websites",
+          "path": "/Users/hichem/jonjon-lab/html-templates/razen-landing-pages/business-corporate-websites",
+          "relativePath": "jonjon-lab/html-templates/razen-landing-pages/business-corporate-websites",
+          "type": "template",
+          "category": "razen-landing-pages",
+          "source": "razen-landing-pages",
+          "filesCount": 8,
+          "files": [
+            {
+              "name": "index.html",
+              "extension": ".html"
+            },
+            {
+              "name": "styles.css",
+              "extension": ".css"
+            },
+            {
+              "name": "README.md",
+              "extension": ".md"
+            },
+            {
+              "name": "script.js",
+              "extension": ".js"
+            },
+            {
+              "name": "index.html",
+              "extension": ".html"
+            },
+            {
+              "name": "styles.css",
+              "extension": ".css"
+            },
+            {
+              "name": "README.md",
+              "extension": ".md"
+            },
+            {
+              "name": "script.js",
+              "extension": ".js"
+            }
+          ],
+          "totalFiles": 8
+        },
+        {
+          "id": "tpl_0018",
+          "name": "portfolio-websites",
+          "path": "/Users/hichem/jonjon-lab/html-templates/razen-landing-pages/portfolio-websites",
+          "relativePath": "jonjon-lab/html-templates/razen-landing-pages/portfolio-websites",
+          "type": "template",
+          "category": "razen-landing-pages",
+          "source": "razen-landing-pages",
+          "filesCount": 7,
+          "files": [
+            {
+              "name": "index.html",
+              "extension": ".html"
+            },
+            {
+              "name": "index.html",
+              "extension": ".html"
+            },
+            {
+              "name": "styles.css",
+              "extension": ".css"
+            },
+            {
+              "name": "README.md",
+              "extension": ".md"
+            },
+            {
+              "name": "script.js",
+              "extension": ".js"
+            },
+            {
+              "name": "style.css",
+              "extension": ".css"
+            },
+            {
+              "name": "main.js",
+              "extension": ".js"
+            }
+          ],
+          "totalFiles": 7
+        }
+      ]
+    },
+    {
+      "id": "pages",
+      "label": "صفحات مولّدة",
+      "labelEn": "Generated Pages",
+      "icon": "globe",
+      "count": 9,
+      "items": [
+        {
+          "id": "gen_0000",
+          "name": "KYOTO_OS.html",
+          "path": "/Users/hichem/Desktop/HTML_Outputs/KYOTO_OS.html",
+          "relativePath": "Desktop/HTML_Outputs/KYOTO_OS.html",
+          "type": "page",
+          "category": "generated",
+          "source": "HTML_Outputs",
+          "size": "16.1 KB",
+          "sizeBytes": 16468,
+          "extension": ".html",
+          "modified": "2026-04-25T22:14:33.631360"
+        },
+        {
+          "id": "gen_0001",
+          "name": "alrased-store.html",
+          "path": "/Users/hichem/Desktop/HTML_Outputs/alrased-store.html",
+          "relativePath": "Desktop/HTML_Outputs/alrased-store.html",
+          "type": "page",
+          "category": "generated",
+          "source": "HTML_Outputs",
+          "size": "8.8 KB",
+          "sizeBytes": 9031,
+          "extension": ".html",
+          "modified": "2026-05-04T23:15:07.013992"
+        },
+        {
+          "id": "gen_0002",
+          "name": "coffee-shop.html",
+          "path": "/Users/hichem/Desktop/HTML_Outputs/coffee-shop.html",
+          "relativePath": "Desktop/HTML_Outputs/coffee-shop.html",
+          "type": "page",
+          "category": "generated",
+          "source": "HTML_Outputs",
+          "size": "18.5 KB",
+          "sizeBytes": 18956,
+          "extension": ".html",
+          "modified": "2026-05-04T22:47:55.845468"
+        },
+        {
+          "id": "gen_0003",
+          "name": "jonjon_landing_v2.html",
+          "path": "/Users/hichem/Desktop/HTML_Outputs/jonjon_landing_v2.html",
+          "relativePath": "Desktop/HTML_Outputs/jonjon_landing_v2.html",
+          "type": "page",
+          "category": "generated",
+          "source": "HTML_Outputs",
+          "size": "0.0 B",
+          "sizeBytes": 0,
+          "extension": ".html",
+          "modified": "2026-05-04T18:17:15.540088"
+        },
+        {
+          "id": "gen_0004",
+          "name": "simple-store.html",
+          "path": "/Users/hichem/Desktop/HTML_Outputs/simple-store.html",
+          "relativePath": "Desktop/HTML_Outputs/simple-store.html",
+          "type": "page",
+          "category": "generated",
+          "source": "HTML_Outputs",
+          "size": "994.0 B",
+          "sizeBytes": 994,
+          "extension": ".html",
+          "modified": "2026-05-04T23:19:49.633665"
+        },
+        {
+          "id": "gen_0005",
+          "name": "temp.html",
+          "path": "/Users/hichem/Desktop/HTML_Outputs/temp.html",
+          "relativePath": "Desktop/HTML_Outputs/temp.html",
+          "type": "page",
+          "category": "generated",
+          "source": "HTML_Outputs",
+          "size": "23.0 B",
+          "sizeBytes": 23,
+          "extension": ".html",
+          "modified": "2026-05-04T23:15:20.160894"
+        },
+        {
+          "id": "gen_0006",
+          "name": "test.html",
+          "path": "/Users/hichem/Desktop/HTML_Outputs/test.html",
+          "relativePath": "Desktop/HTML_Outputs/test.html",
+          "type": "page",
+          "category": "generated",
+          "source": "HTML_Outputs",
+          "size": "8.8 KB",
+          "sizeBytes": 8967,
+          "extension": ".html",
+          "modified": "2026-05-04T23:18:09.244384"
+        },
+        {
+          "id": "gen_0007",
+          "name": "tunisian-safari.html",
+          "path": "/Users/hichem/Desktop/HTML_Outputs/tunisian-safari.html",
+          "relativePath": "Desktop/HTML_Outputs/tunisian-safari.html",
+          "type": "page",
+          "category": "generated",
+          "source": "HTML_Outputs",
+          "size": "21.0 KB",
+          "sizeBytes": 21544,
+          "extension": ".html",
+          "modified": "2026-05-04T23:40:23.420148"
+        },
+        {
+          "id": "gen_0008",
+          "name": "vorszk-archive.html",
+          "path": "/Users/hichem/Desktop/HTML_Outputs/vorszk-archive.html",
+          "relativePath": "Desktop/HTML_Outputs/vorszk-archive.html",
+          "type": "page",
+          "category": "generated",
+          "source": "HTML_Outputs",
+          "size": "158.3 KB",
+          "sizeBytes": 162068,
+          "extension": ".html",
+          "modified": "2026-05-08T19:54:31.640965"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "totalImages": 258,
+    "totalTemplates": 19,
+    "totalPages": 9,
+    "totalAssets": 286
+  }
+}

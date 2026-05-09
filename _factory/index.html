@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مصنع الأصول | Asset Factory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Tajawal', sans-serif; }
+        .card-hover { transition: all 0.2s ease; cursor: pointer; }
+        .card-hover:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(0,0,0,0.3); }
+        .nav-link { transition: all 0.2s ease; }
+        .nav-link.active { background: rgba(16,185,129,0.1); color: #34d399; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 3px; }
+        .modal { display: none; }
+        .modal.open { display: flex; }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen flex">
+
+    <aside id="sidebar" class="w-64 bg-gray-900 border-l border-gray-800 min-h-screen p-4 flex flex-col">
+        <div class="flex items-center gap-2 mb-8 px-2">
+            <i class="fas fa-cubes text-2xl text-emerald-400"></i>
+            <span class="text-lg font-bold">مصنع الأصول</span>
+        </div>
+        <nav id="nav-menu" class="flex-1 space-y-1"></nav>
+        <div class="border-t border-gray-800 pt-4 mt-auto">
+            <button onclick="toggleTheme()" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-800">
+                <i id="themeIcon" class="fas fa-moon text-gray-400"></i>
+                <span id="themeLabel">الوضع الليلي</span>
+            </button>
+        </div>
+    </aside>
+
+    <main class="flex-1 min-h-screen">
+        <header class="bg-gray-900/50 backdrop-blur border-b border-gray-800 p-4 sticky top-0 z-40">
+            <div class="flex items-center justify-between">
+                <h1 id="pageTitle" class="text-xl font-bold">📸 مكتبة الصور</h1>
+                <div class="flex items-center gap-3">
+                    <span id="assetCount" class="text-sm text-gray-400"></span>
+                    <input type="text" id="searchInput" placeholder="🔍 بحث..." class="bg-gray-800 border border-gray-700 rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:border-emerald-500 w-40">
+                </div>
+            </div>
+        </header>
+        <div id="mainContent" class="p-4 md:p-6"></div>
+    </main>
+
+    <div id="detailModal" class="modal fixed inset-0 bg-black/70 backdrop-blur-sm z-50 items-center justify-center p-4" onclick="if(event.target===this)closeModal()">
+        <div class="bg-gray-900 border border-gray-700 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto" id="modalContent"></div>
+    </div>
+
+<script>
+let state = { currentView: 'images', collections: [], searchQuery: '', theme: 'dark' };
+
+async function init() {
+    try {
+        const res = await fetch('./data/assets.json');
+        const data = await res.json();
+        state.collections = data.collections;
+        renderNav();
+        switchView(state.collections[0]?.id || 'images');
+    } catch(e) {
+        document.getElementById('mainContent').innerHTML = '<div class="text-center py-20 text-red-400"><i class="fas fa-exclamation-triangle text-5xl mb-4 block"></i><p>فشل تحميل data/assets.json</p><p class="text-sm text-gray-500 mt-2">شغّل scanner.py أولاً</p></div>';
+    }
+}
+
+function renderNav() {
+    const nav = document.getElementById('nav-menu');
+    const icons = { images: 'fa-image', templates: 'fa-code', pages: 'fa-globe' };
+    nav.innerHTML = state.collections.map(col => `
+        <button class="nav-link w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-right ${col.id===state.currentView?'active':''}" onclick="switchView('${col.id}')" data-view="${col.id}">
+            <i class="fas ${icons[col.id]||'fa-folder'} w-5 text-center"></i>
+            <span class="flex-1">${col.label}</span>
+            <span class="text-xs bg-gray-800 px-2 py-0.5 rounded-full">${col.count}</span>
+        </button>`).join('');
+}
+
+function switchView(viewId) {
+    state.currentView = viewId;
+    const collection = state.collections.find(c => c.id === viewId);
+    if(!collection) return;
+    document.querySelectorAll('.nav-link').forEach(b => b.classList.remove('active'));
+    const btn = document.querySelector(`[data-view="${viewId}"]`);
+    if(btn) btn.classList.add('active');
+    const titles = { images: '📸 مكتبة الصور', templates: '📄 قوالب HTML', pages: '🌐 صفحات مولّدة' };
+    document.getElementById('pageTitle').textContent = titles[viewId] || 'الأصول';
+    renderGrid(collection);
+}
+
+function renderGrid(collection) {
+    let items = collection.items || [];
+    const query = state.searchQuery.toLowerCase().trim();
+    if(query) items = items.filter(i => i.name.toLowerCase().includes(query) || (i.category||'').toLowerCase().includes(query));
+    document.getElementById('assetCount').textContent = items.length + ' / ' + collection.count;
+    const c = document.getElementById('mainContent');
+    if(!items.length){ c.innerHTML = '<div class="text-center py-20 text-gray-500"><i class="fas fa-search text-5xl mb-4 block"></i><p>لا توجد نتائج</p></div>'; return; }
+    if(collection.id==='images') renderImages(c,items);
+    else if(collection.id==='templates') renderTemplates(c,items);
+    else renderPages(c,items);
+}
+
+function renderImages(c,imgs){c.innerHTML='<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">'+imgs.slice(0,100).map(i=>'<div class="card-hover bg-gray-900 border border-gray-800 rounded-xl overflow-hidden group" onclick="showDetail(\''+i.id+'\')"><div class="aspect-square bg-gray-800 flex items-center justify-center overflow-hidden"><img src="file://'+i.path+'" alt="'+i.name+'" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" onerror="this.parentElement.innerHTML=\'<i class=&quot;fas fa-image text-4xl text-gray-600&quot;></i>\'"></div><div class="p-3"><p class="text-sm font-medium truncate" title="'+i.name+'">'+i.name+'</p><div class="flex justify-between mt-1.5"><span class="text-xs text-gray-500">'+(i.size||'')+'</span><span class="text-xs bg-gray-800 px-2 py-0.5 rounded-full text-gray-400 truncate max-w-[80px]">'+(i.category||'')+'</span></div></div></div>').join('')+(imgs.length>100?'<p class="text-center text-gray-500 mt-4 col-span-full text-sm">... و '+(imgs.length-100)+' صورة أخرى (استخدم البحث)</p>':'')+'</div>';}
+
+function renderTemplates(c,tpls){c.innerHTML='<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">'+tpls.map(t=>'<div class="card-hover bg-gray-900 border border-gray-800 rounded-xl p-4 group" onclick="showDetail(\''+t.id+'\')"><div class="flex items-start justify-between mb-3"><i class="fas fa-file-code text-3xl text-emerald-400"></i><span class="text-xs bg-gray-800 px-2 py-0.5 rounded-full text-gray-400">'+(t.filesCount||0)+' ملف</span></div><h3 class="font-bold text-lg mb-2">'+t.name+'</h3></div>').join('')+'</div>';}
+
+function renderPages(c,pgs){c.innerHTML='<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">'+pgs.map(p=>'<div class="card-hover bg-gray-900 border border-gray-800 rounded-xl p-4 group" onclick="showDetail(\''+p.id+'\')"><div class="flex items-start justify-between mb-3"><i class="fas fa-globe text-3xl text-blue-400"></i><span class="text-xs bg-gray-800 px-2 py-0.5 rounded-full text-gray-400">'+(p.extension||'html')+'</span></div><h3 class="font-bold text-lg mb-2 break-all">'+p.name+'</h3><p class="text-xs text-gray-500">'+(p.size||'')+'</p></div>').join('')+'</div>';}
+
+function showDetail(id){const col=state.collections.find(c=>c.id===state.currentView);const asset=col?.items.find(i=>i.id===id);if(!asset)return;const modal=document.getElementById('detailModal');const content=document.getElementById('modalContent');const isImage=asset.type==='image';content.innerHTML=isImage?'<div class="relative"><button onclick="closeModal()" class="absolute top-3 right-3 z-10 bg-black/50 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center">✕</button><div class="bg-gray-950 rounded-t-2xl flex items-center justify-center min-h-[300px] max-h-[60vh] overflow-hidden"><img src="file://'+asset.path+'" alt="'+asset.name+'" class="max-w-full max-h-[60vh] object-contain"></div><div class="p-5 space-y-3"><h2 class="text-lg font-bold break-all">'+asset.name+'</h2><div class="grid grid-cols-2 gap-3 text-sm"><div class="bg-gray-800 rounded-lg p-3"><span class="text-gray-500 text-xs">📁</span><br><span>'+(asset.category||'')+'</span></div><div class="bg-gray-800 rounded-lg p-3"><span class="text-gray-500 text-xs">📏</span><br><span>'+(asset.size||'')+'</span></div><div class="bg-gray-800 rounded-lg p-3"><span class="text-gray-500 text-xs">📝</span><br><span class="uppercase">'+(asset.extension||'')+'</span></div><div class="bg-gray-800 rounded-lg p-3"><span class="text-gray-500 text-xs">📂</span><br><span class="text-xs">'+asset.relativePath+'</span></div></div><button onclick="closeModal()" class="w-full bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-lg mt-3">إغلاق</button></div></div>':'<div class="relative p-5"><button onclick="closeModal()" class="absolute top-3 right-3 z-10 bg-black/50 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center">✕</button><div class="flex items-center gap-3 mb-4"><i class="fas '+(asset.type==='template'?'fa-file-code text-emerald-400':'fa-globe text-blue-400')+' text-4xl"></i><div><h2 class="text-xl font-bold">'+asset.name+'</h2><span class="text-sm text-gray-400">'+(asset.filesCount||0)+' ملف</span></div></div><div class="bg-gray-800 rounded-lg p-3 mb-4"><span class="text-gray-500 text-xs">📂 المسار</span><br><code class="text-gray-300 text-xs break-all">'+(asset.relativePath||asset.path)+'</code></div><button onclick="closeModal()" class="w-full bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-lg">إغلاق</button></div>';modal.classList.add('open');document.body.style.overflow='hidden';}
+
+function closeModal(){document.getElementById('detailModal').classList.remove('open');document.body.style.overflow='';}
+
+function toggleTheme(){state.theme=state.theme==='dark'?'light':'dark';const h=document.documentElement,icon=document.getElementById('themeIcon'),label=document.getElementById('themeLabel');if(state.theme==='light'){h.classList.remove('dark');h.classList.add('light');document.body.className='bg-gray-100 text-gray-900 min-h-screen flex';icon.className='fas fa-sun text-yellow-400';label.textContent='الوضع النهاري';}else{h.classList.add('dark');h.classList.remove('light');document.body.className='bg-gray-950 text-gray-100 min-h-screen flex';icon.className='fas fa-moon text-gray-400';label.textContent='الوضع الليلي';}localStorage.setItem('theme',state.theme);}
+
+document.addEventListener('DOMContentLoaded',()=>{init();const saved=localStorage.getItem('theme');if(saved==='light')toggleTheme();document.getElementById('searchInput').addEventListener('input',e=>{state.searchQuery=e.target.value;const col=state.collections.find(c=>c.id===state.currentView);if(col)renderGrid(col);});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});});
+</script>
+</body>
+</html>

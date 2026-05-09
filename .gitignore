@@ -18,3 +18,11 @@ __pycache__/
 *.log
 reports/
 .aider*
+tools/dify/volumes/
+tools/dify/dify/
+tools/aider/venv/
+*.db
+tools/dify/volumes/
+tools/dify/dify/
+tools/aider/venv/
+*.db

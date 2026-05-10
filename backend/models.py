@@ -261,3 +261,24 @@ class FamilyContact(Base):
     student = relationship("Student", back_populates="family_contacts")
     school = relationship("School", back_populates="family_contacts")
     contacted_by_user = relationship("User", back_populates="family_contacts")
+
+# Add to_dict method for DailyReport model
+def to_dict(self):
+    return {
+        "id": self.id,
+        "school_id": self.school_id,
+        "date": str(self.date),
+        "submitted_by": self.submitted_by,
+        "teachers_total": self.teachers_total,
+        "teachers_absent": self.teachers_absent,
+        "teachers_excused": self.teachers_excused,
+        "staff_total": self.staff_total,
+        "staff_absent": self.staff_absent,
+        "students_total": self.students_total,
+        "students_absent": self.students_absent,
+        "notes": self.notes,
+        "status": self.status.value,
+        "created_at": str(self.created_at)
+    }
+
+DailyReport.to_dict = to_dict

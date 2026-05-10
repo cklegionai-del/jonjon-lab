@@ -1,4 +1,5 @@
 from pydantic import BaseModel, Field
+from typing import Optional
 
 class DailyReportCreate(BaseModel):
     teachers_total: int = Field(..., gt=0)
@@ -8,7 +9,7 @@ class DailyReportCreate(BaseModel):
     staff_absent: int = Field(..., ge=0)
     students_total: int = Field(..., gt=0)
     students_absent: int = Field(..., ge=0)
-    notes: str | None = None
+    notes: Optional[str] = None
 
 class DailyReportResponse(BaseModel):
     id: int
@@ -22,7 +23,7 @@ class DailyReportResponse(BaseModel):
     staff_absent: int
     students_total: int
     students_absent: int
-    notes: str | None = None
+    notes: Optional[str] = None
     status: str
     created_at: str
 

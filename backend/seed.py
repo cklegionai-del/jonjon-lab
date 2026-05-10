@@ -69,8 +69,7 @@ def seed_data():
             username=f"modir_{i}",
             email=f"modir{i}@example.com",
             hashed_password=get_password_hash("pass123"),
-            role=UserRole.DIRECTOR,
-            school_id=i + 1
+            role=UserRole.DIRECTOR
         ) for i in range(1, 4)
     ]
 

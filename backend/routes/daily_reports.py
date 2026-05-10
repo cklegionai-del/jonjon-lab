@@ -3,13 +3,14 @@ from sqlalchemy.orm import Session
 from database import get_db
 from models import DailyReport, User, UserRole, School, Mandoubia
 from routes.auth import verify_token
+from schemas import DailyReportCreate
 from datetime import datetime
 
 router = APIRouter()
 
 @router.post("/daily-reports/")
 async def submit_daily_report(
-    report: DailyReport,
+    report: DailyReportCreate,
     db: Session = Depends(get_db),
     user: User = Depends(verify_token)
 ):

@@ -66,7 +66,7 @@ class User(Base):
     daily_reports = relationship("DailyReport", back_populates="submitted_by_user")
     employee_absences = relationship("EmployeeAbsence", back_populates="recorded_by_user")
     student_absences = relationship("StudentAbsence", back_populates="recorded_by_user")
-    family_contacts = relationship("FamilyContact", back_populates="contacted_by_user")
+    family_contacts = relationship("FamilyContact")
 
 class Mandoubia(Base):
     __tablename__ = "mandoubiat"
@@ -78,7 +78,7 @@ class Mandoubia(Base):
     # Relationships
     users = relationship("User", back_populates="mandoubia")
     schools = relationship("School", back_populates="mandoubia")
-    inventory = relationship("Inventory", back_populates="mandoubia")
+    inventory = relationship("Inventory")
 
 class Employee(Base):
     __tablename__ = "employees"
@@ -99,7 +99,7 @@ class Employee(Base):
     school = relationship("School", back_populates="employees")
     attendance = relationship("Attendance", back_populates="employee")
     movements = relationship("Movement", back_populates="employee")
-    employee_absences = relationship("EmployeeAbsence", back_populates="employee")
+    employee_absences = relationship("EmployeeAbsence")
 
 class School(Base):
     __tablename__ = "schools"
@@ -119,7 +119,7 @@ class School(Base):
     daily_reports = relationship("DailyReport", back_populates="school")
     employee_absences = relationship("EmployeeAbsence", back_populates="school")
     student_absences = relationship("StudentAbsence", back_populates="school")
-    family_contacts = relationship("FamilyContact", back_populates="school")
+    family_contacts = relationship("FamilyContact")
 
 class Student(Base):
     __tablename__ = "students"
@@ -136,7 +136,7 @@ class Student(Base):
     # Relationships
     school = relationship("School", back_populates="students")
     attendance = relationship("Attendance", back_populates="student")
-    student_absences = relationship("StudentAbsence", back_populates="student")
+    student_absences = relationship("StudentAbsence")
 
 class Attendance(Base):
     __tablename__ = "attendance"
@@ -151,7 +151,7 @@ class Attendance(Base):
     
     # Relationships
     employee = relationship("Employee", back_populates="attendance")
-    student = relationship("Student", back_populates="attendance")
+    student = relationship("Student")
 
 class Movement(Base):
     __tablename__ = "movements"
@@ -203,7 +203,7 @@ class DailyReport(Base):
     
     # Relationships
     school = relationship("School", back_populates="daily_reports")
-    submitted_by_user = relationship("User", back_populates="daily_reports")
+    submitted_by_user = relationship("User")
 
 class EmployeeAbsence(Base):
     __tablename__ = "employee_absences"
@@ -220,8 +220,7 @@ class EmployeeAbsence(Base):
     
     # Relationships
     employee = relationship("Employee", back_populates="employee_absences")
-    school = relationship("School", back_populates="employee_absences")
-    recorded_by_user = relationship("User", back_populates="employee_absences")
+    school = relationship("School")
 
 class StudentAbsence(Base):
     __tablename__ = "student_absences"
@@ -238,8 +237,7 @@ class StudentAbsence(Base):
     
     # Relationships
     student = relationship("Student", back_populates="student_absences")
-    school = relationship("School", back_populates="student_absences")
-    recorded_by_user = relationship("User", back_populates="student_absences")
+    school = relationship("School")
 
 class FamilyContact(Base):
     __tablename__ = "family_contacts"
@@ -253,14 +251,9 @@ class FamilyContact(Base):
     outcome = Column(Text, nullable=True)
     notes = Column(Text, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
-    
-    # Relationships
-    student = relationship("Student", back_populates="family_contacts")
-    school = relationship("School", back_populates="family_contacts")
-    contacted_by_user = relationship("User", back_populates="family_contacts")
 
-# Add to_dict method for DailyReport model
-def to_dict(self):
+# Add serialize method for DailyReport model
+def serialize(self):
     return {
         "id": self.id,
         "school_id": self.school_id,
@@ -278,4 +271,4 @@ def to_dict(self):
         "created_at": str(self.created_at)
     }
 
-DailyReport.to_dict = to_dict
+DailyReport.serialize = serialize

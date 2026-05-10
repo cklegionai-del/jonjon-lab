@@ -5,15 +5,19 @@ from models import DailyReport, User, UserRole, School, Mandoubia
 from routes.auth import verify_token
 from schemas import DailyReportCreate
 from datetime import datetime
+from fastapi.security import OAuth2PasswordBearer
 
 router = APIRouter()
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")
 
 @router.post("/daily-reports/")
 async def submit_daily_report(
     report: DailyReportCreate,
-    db: Session = Depends(get_db),
-    user: User = Depends(verify_token)
+    token: str = Depends(oauth2_scheme),
+    db: Session = Depends(get_db)
 ):
+    user = verify_token(token, db)
+
     if user.role != UserRole.MODIR:
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Only modir can submit daily reports")
 
@@ -49,9 +53,11 @@ async def submit_daily_report(
 
 @router.get("/daily-reports/")
 async def get_daily_reports(
-    db: Session = Depends(get_db),
-    user: User = Depends(verify_token)
+    token: str = Depends(oauth2_scheme),
+    db: Session = Depends(get_db)
 ):
+    user = verify_token(token, db)
+
     if user.role == UserRole.MANDOUB:
         reports = (
             db.query(DailyReport)
@@ -73,9 +79,11 @@ async def get_daily_reports(
 @router.get("/daily-reports/{school_id}/today")
 async def get_todays_report(
     school_id: int,
-    db: Session = Depends(get_db),
-    user: User = Depends(verify_token)
+    token: str = Depends(oauth2_scheme),
+    db: Session = Depends(get_db)
 ):
+    user = verify_token(token, db)
+
     if user.role == UserRole.MODIR and user.school_id != school_id:
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="You can only view reports for your own school")
 
@@ -95,9 +103,11 @@ async def get_todays_report(
 
 @router.get("/daily-reports/missing-today")
 async def get_missing_reports(
-    db: Session = Depends(get_db),
-    user: User = Depends(verify_token)
+    token: str = Depends(oauth2_scheme),
+    db: Session = Depends(get_db)
 ):
+    user = verify_token(token, db)
+
     if user.role != UserRole.MANDOUB:
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Only mandoub can view missing reports")
 

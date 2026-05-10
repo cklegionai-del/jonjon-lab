@@ -116,7 +116,6 @@ class School(Base):
     mandoubia = relationship("Mandoubia", back_populates="schools")
     employees = relationship("Employee", back_populates="school")
     students = relationship("Student", back_populates="school")
-    attendance = relationship("Attendance", back_populates="school")
     daily_reports = relationship("DailyReport", back_populates="school")
     employee_absences = relationship("EmployeeAbsence", back_populates="school")
     student_absences = relationship("StudentAbsence", back_populates="school")
@@ -153,7 +152,6 @@ class Attendance(Base):
     # Relationships
     employee = relationship("Employee", back_populates="attendance")
     student = relationship("Student", back_populates="attendance")
-    school = relationship("School", back_populates="attendance")
 
 class Movement(Base):
     __tablename__ = "movements"

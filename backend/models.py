@@ -161,8 +161,8 @@ class Movement(Base):
     type = Column(Enum(MovementType), nullable=False)
     date = Column(Date, nullable=False)
     details = Column(Text, nullable=True)
-    from_mandoubia_id = Column(Integer, nullable=True)
-    to_mandoubia_id = Column(Integer, nullable=True)
+    from_mandoubia_id = Column(Integer, ForeignKey("mandoubiat.id"), nullable=True)
+    to_mandoubia_id = Column(Integer, ForeignKey("mandoubiat.id"), nullable=True)
     
     # Relationships
     employee = relationship("Employee", back_populates="movements")

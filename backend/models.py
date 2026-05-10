@@ -63,9 +63,9 @@ class User(Base):
     
     # Relationships
     mandoubia = relationship("Mandoubia", back_populates="users", foreign_keys=[mandoubia_id])
-    daily_reports = relationship("DailyReport", back_populates="submitted_by_user")
-    employee_absences = relationship("EmployeeAbsence", back_populates="recorded_by_user")
-    student_absences = relationship("StudentAbsence", back_populates="recorded_by_user")
+    daily_reports = relationship("DailyReport")
+    employee_absences = relationship("EmployeeAbsence")
+    student_absences = relationship("StudentAbsence")
     family_contacts = relationship("FamilyContact")
 
 class Mandoubia(Base):
@@ -77,7 +77,7 @@ class Mandoubia(Base):
     
     # Relationships
     users = relationship("User", back_populates="mandoubia")
-    schools = relationship("School", back_populates="mandoubia")
+    schools = relationship("School")
     inventory = relationship("Inventory")
 
 class Employee(Base):
@@ -94,11 +94,12 @@ class Employee(Base):
     phone = Column(String, nullable=True)
     email = Column(String, nullable=True)
     hire_date = Column(Date, nullable=True)
+    matricule = Column(String, unique=True, nullable=True, index=True)  # Added column
     
     # Relationships
-    school = relationship("School", back_populates="employees")
-    attendance = relationship("Attendance", back_populates="employee")
-    movements = relationship("Movement", back_populates="employee")
+    school = relationship("School")
+    attendance = relationship("Attendance")
+    movements = relationship("Movement")
     employee_absences = relationship("EmployeeAbsence")
 
 class School(Base):
@@ -113,12 +114,12 @@ class School(Base):
     mandoubia_id = Column(Integer, ForeignKey("mandoubiat.id"), nullable=False)
     
     # Relationships
-    mandoubia = relationship("Mandoubia", back_populates="schools")
-    employees = relationship("Employee", back_populates="school")
-    students = relationship("Student", back_populates="school")
-    daily_reports = relationship("DailyReport", back_populates="school")
-    employee_absences = relationship("EmployeeAbsence", back_populates="school")
-    student_absences = relationship("StudentAbsence", back_populates="school")
+    mandoubia = relationship("Mandoubia")
+    employees = relationship("Employee")
+    students = relationship("Student")
+    daily_reports = relationship("DailyReport")
+    employee_absences = relationship("EmployeeAbsence")
+    student_absences = relationship("StudentAbsence")
     family_contacts = relationship("FamilyContact")
 
 class Student(Base):
@@ -132,10 +133,11 @@ class Student(Base):
     parent_info = Column(Text, nullable=True)
     enrollment_date = Column(Date, nullable=True)
     status = Column(String, nullable=False)
+    matricule = Column(String, unique=True, nullable=True, index=True)  # Added column
     
     # Relationships
-    school = relationship("School", back_populates="students")
-    attendance = relationship("Attendance", back_populates="student")
+    school = relationship("School")
+    attendance = relationship("Attendance")
     student_absences = relationship("StudentAbsence")
 
 class Attendance(Base):
@@ -150,7 +152,7 @@ class Attendance(Base):
     recorded_at = Column(DateTime, default=datetime.utcnow)
     
     # Relationships
-    employee = relationship("Employee", back_populates="attendance")
+    employee = relationship("Employee")
     student = relationship("Student")
 
 class Movement(Base):
@@ -165,7 +167,7 @@ class Movement(Base):
     to_mandoubia_id = Column(Integer, ForeignKey("mandoubiat.id"), nullable=True)
     
     # Relationships
-    employee = relationship("Employee", back_populates="movements")
+    employee = relationship("Employee")
     from_mandoubia = relationship("Mandoubia", foreign_keys=[from_mandoubia_id])
     to_mandoubia = relationship("Mandoubia", foreign_keys=[to_mandoubia_id])
 
@@ -202,7 +204,7 @@ class DailyReport(Base):
     created_at = Column(DateTime, default=datetime.utcnow)
     
     # Relationships
-    school = relationship("School", back_populates="daily_reports")
+    school = relationship("School")
     submitted_by_user = relationship("User")
 
 class EmployeeAbsence(Base):
@@ -219,7 +221,7 @@ class EmployeeAbsence(Base):
     created_at = Column(DateTime, default=datetime.utcnow)
     
     # Relationships
-    employee = relationship("Employee", back_populates="employee_absences")
+    employee = relationship("Employee")
     school = relationship("School")
 
 class StudentAbsence(Base):
@@ -236,7 +238,7 @@ class StudentAbsence(Base):
     created_at = Column(DateTime, default=datetime.utcnow)
     
     # Relationships
-    student = relationship("Student", back_populates="student_absences")
+    student = relationship("Student")
     school = relationship("School")
 
 class FamilyContact(Base):

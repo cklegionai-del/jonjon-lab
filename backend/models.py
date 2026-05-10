@@ -59,10 +59,10 @@ class User(Base):
     email = Column(String, unique=True, index=True, nullable=False)
     hashed_password = Column(String, nullable=False)
     role = Column(Enum(UserRole), nullable=False)
-    mandoubia_id = Column(Integer, nullable=True)
+    mandoubia_id = Column(Integer, ForeignKey("mandoubiat.id"), nullable=True)
     
     # Relationships
-    mandoubia = relationship("Mandoubia", back_populates="users")
+    mandoubia = relationship("Mandoubia", back_populates="users", foreign_keys=[mandoubia_id])
     daily_reports = relationship("DailyReport", back_populates="submitted_by_user")
     employee_absences = relationship("EmployeeAbsence", back_populates="recorded_by_user")
     student_absences = relationship("StudentAbsence", back_populates="recorded_by_user")

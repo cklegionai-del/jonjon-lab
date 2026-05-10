@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تسجيل الدخول - لوحة الإدارة</title>
+    <title>لوحة تحكم المندوب - تونس 1</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -14,287 +13,188 @@
             font-family: 'Tajawal', sans-serif;
         }
         
-        body {
-            background: linear-gradient(135deg, #006633 0%, #009966 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+        body, html {
+            height: 100%;
+            background-color: #f5f5f5;
         }
-        
-        .login-container {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            width: 100%;
-            max-width: 400px;
-            padding: 40px 30px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .login-container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(to right, #006633, #009966, #006633);
-        }
-        
-        .flag-container {
-            margin-bottom: 25px;
-        }
-        
-        .flag {
-            font-size: 5rem;
-            margin-bottom: 15px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-        
-        .logo {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #006633 0%, #009966 100%);
-            border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        
-        .logo i {
-            font-size: 2.5rem;
+
+        .header {
+            background-color: #006633;
             color: white;
-        }
-        
-        h1 {
-            color: #006633;
-            margin-bottom: 5px;
+            padding: 20px;
+            text-align: center;
             font-size: 1.5rem;
         }
         
-        .subtitle {
-            color: #333;
-            margin-bottom: 30px;
-            font-size: 0.9rem;
-        }
-        
-        .input-group {
-            margin-bottom: 20px;
-            text-align: right;
-        }
-        
-        .input-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: #333;
-            font-weight: 500;
-        }
-        
-        .input-group input {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-        
-        .input-group input:focus {
-            border-color: #006633;
-            box-shadow: 0 0 0 3px rgba(0, 102, 51, 0.2);
-            outline: none;
-        }
-        
-        .input-group i {
+        .logout-btn {
             position: absolute;
-            right: 15px;
-            top: 40px;
-            color: #777;
-        }
-        
-        .btn {
-            background: linear-gradient(to right, #006633, #009966);
+            top: 20px;
+            right: 20px;
+            background-color: #ef4444;
             color: white;
             border: none;
-            padding: 14px;
-            width: 100%;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 500;
+            padding: 10px 20px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 10px;
-            box-shadow: 0 4px 10px rgba(0, 102, 51, 0.3);
+            font-size: 1rem;
         }
         
-        .btn:hover {
-            background: linear-gradient(to right, #00552b, #007755);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(0, 102, 51, 0.4);
-        }
-        
-        .btn:active {
-            transform: translateY(0);
-        }
-        
-        .footer {
-            margin-top: 30px;
-            color: #666;
-            font-size: 0.9rem;
-        }
-        
-        .footer a {
-            color: #006633;
-            text-decoration: none;
-        }
-        
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        
-        .error-message {
-            color: #ef4444;
-            background: #fee2e2;
-            padding: 10px;
-            border-radius: 8px;
-            margin-top: 15px;
-            display: none;
-        }
-        
-        .success-message {
-            color: #10b981;
-            background: #d1fae5;
-            padding: 10px;
-            border-radius: 8px;
-            margin-top: 15px;
-            display: none;
-        }
-        
-        .remember-me {
+        .quick-stats {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 20px;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: calc(25% - 30px);
+        }
+
+        .card h2 {
+            font-size: 1rem;
+            margin-bottom: 10px;
         }
         
-        .remember-me input {
-            margin-left: 8px;
-        }
-        
-        .forgot-password {
+        .card p {
+            font-size: 1.5rem;
             color: #006633;
-            text-decoration: none;
-            font-size: 0.9rem;
+        }
+
+        .table-container {
+            width: 90%;
+            margin: auto;
+            margin-top: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
         
-        .forgot-password:hover {
-            text-decoration: underline;
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
         }
+        
+        th {
+            background-color: #006633;
+            color: white;
+        }
+
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <div class="flag-container">
-            <div class="flag">🇹🇳</div>
+    <div class="header">
+        لوحة تحكم المندوب - تونس 1
+        <span id="date"></span>
+        <button class="logout-btn" onclick="handleLogout()">تسجيل الخروج</button>
+    </div>
+
+    <div class="quick-stats">
+        <div class="card" id="schools-reported-card">
+            <h2>مدارس رسلت تقرير اليوم</h2>
+            <p id="reported-schools-count">0</p>
         </div>
         
-        <div class="logo">
-            <i class="fas fa-graduation-cap"></i>
+        <div class="card" id="schools-not-reported-card">
+            <h2>مدارس لم ترسل بعد</h2>
+            <p id="not-reported-schools-count">0</p>
         </div>
-        
-        <h1>لوحة الإدارة الإقليمية</h1>
-        <p class="subtitle">وزارة التربية - الجمهورية التونسية</p>
-        
-        <div class="error-message" id="errorMessage"></div>
-        <div class="success-message" id="successMessage"></div>
-        
-        <form id="loginForm">
-            <div class="input-group">
-                <label for="username">اسم المستخدم</label>
-                <div style="position: relative;">
-                    <input type="text" id="username" name="username" required>
-                    <i class="fas fa-user"></i>
-                </div>
-            </div>
-            
-            <div class="input-group">
-                <label for="password">كلمة المرور</label>
-                <div style="position: relative;">
-                    <input type="password" id="password" name="password" required>
-                    <i class="fas fa-lock"></i>
-                </div>
-            </div>
-            
-            <div class="remember-me">
-                <label>
-                    <input type="checkbox" id="remember"> تذكرني
-                </label>
-                <a href="#" class="forgot-password">نسيت كلمة المرور؟</a>
-            </div>
-            
-            <button type="submit" class="btn">تسجيل الدخول</button>
-        </form>
-        
-        <div class="footer">
-            <p>© 2023 وزارة التربية - الجمهورية التونسية</p>
-            <p><a href="#">المساعدة</a> | <a href="#">الخصوصية</a></p>
+
+        <div class="card" id="teachers-absent-card">
+            <h2>إجمالي الأساتذة الغائبين اليوم</h2>
+            <p id="total-teachers-absent">0</p>
+        </div>
+
+        <div class="card" id="students-absent-card">
+            <h2>إجمالي التلاميذ الغائبين اليوم</h2>
+            <p id="total-students-absent">0</p>
         </div>
     </div>
 
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>اسم المدرسة</th>
+                    <th>النوع</th>
+                    <th>المدير</th>
+                </tr>
+            </thead>
+            <tbody id="missing-reports-table-body"></tbody>
+        </table>
+    </div>
+
     <script>
-        document.getElementById('loginForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const remember = document.getElementById('remember').checked;
-            
-            // Show loading state
-            const btn = document.querySelector('.btn');
-            const originalText = btn.textContent;
-            btn.textContent = 'جاري تسجيل الدخول...';
-            btn.disabled = true;
-            
-            try {
-                // In a real implementation, this would call the backend API
-                // For now, we'll simulate a successful login
-                await new Promise(resolve => setTimeout(resolve, 1500));
-                
-                // Show success message
-                document.getElementById('successMessage').textContent = 'تم تسجيل الدخول بنجاح!';
-                document.getElementById('successMessage').style.display = 'block';
-                
-                // Reset form
-                document.getElementById('loginForm').reset();
-                
-                // Redirect after a delay
-                setTimeout(() => {
-                    // In a real app, this would redirect to the dashboard
-                    alert('Redirecting to dashboard...');
-                }, 1000);
-                
-            } catch (error) {
-                document.getElementById('errorMessage').textContent = 'خطأ في تسجيل الدخول. يرجى التحقق من بياناتك.';
-                document.getElementById('errorMessage').style.display = 'block';
-            } finally {
-                btn.textContent = originalText;
-                btn.disabled = false;
+        document.addEventListener('DOMContentLoaded', function() {
+            const token = localStorage.getItem('access_token');
+            if (!token) {
+                window.location.href = '/login.html';
+                return;
             }
+
+            fetchDailyReports();
+            fetchMissingReports();
+
+            // Update date
+            const today = new Date().toLocaleDateString("ar-EG");
+            document.getElementById('date').textContent = `التاريخ: ${today}`;
         });
-        
-        // Clear messages when user starts typing
-        document.querySelectorAll('input').forEach(input => {
-            input.addEventListener('input', function() {
-                document.getElementById('errorMessage').style.display = 'none';
-                document.getElementById('successMessage').style.display = 'none';
-            });
-        });
+
+        function handleLogout() {
+            localStorage.removeItem('access_token');
+            window.location.href = '/login.html';
+        }
+
+        async function fetchDailyReports() {
+            try {
+                const response = await fetch('http://localhost:8001/api/daily-reports/', {
+                    headers: { 'Authorization': `Bearer ${localStorage.getItem('access_token')}` }
+                });
+
+                if (!response.ok) throw new Error(await response.text());
+
+                const reports = await response.json();
+                
+                // Update quick stats
+                document.getElementById('reported-schools-count').textContent = reports.length;
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        async function fetchMissingReports() {
+            try {
+                const response = await fetch('http://localhost:8001/api/daily-reports/missing-today', {
+                    headers: { 'Authorization': `Bearer ${localStorage.getItem('access_token')}` }
+                });
+
+                if (!response.ok) throw new Error(await response.text());
+
+                const missingReports = await response.json();
+                
+                // Update quick stats
+                document.getElementById('not-reported-schools-count').textContent = missingReports.length;
+
+                // Populate table body
+                const tbody = document.getElementById('missing-reports-table-body');
+                tbody.innerHTML = '';
+                missingReports.forEach(report => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${report.name}</td>
+                        <td>...</td>
+                        <td>...</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            } catch (error) {
+                console.error(error);
+            }
+        }
     </script>
 </body>
 </html>

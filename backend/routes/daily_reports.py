@@ -11,7 +11,7 @@ router = APIRouter()
 @router.post("/daily-reports/")
 async def submit_daily_report(
     report: DailyReportCreate,
-    user: User = Depends(require_role([UserRole.MODIR])),
+    user: User = Depends(require_role([UserRole.DIRECTOR])),
     db: Session = Depends(get_db)
 ):
     today_reports = (
@@ -49,14 +49,14 @@ async def get_daily_reports(
     user: User = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
-    if user.role == UserRole.MANDOUB:
+    if user.role == UserRole.SUPERVISOR:
         reports = (
             db.query(DailyReport)
             .join(School, School.id == DailyReport.school_id)
             .filter(School.mandoubia_id == user.mandoubia_id)
             .all()
         )
-    elif user.role == UserRole.MODIR:
+    elif user.role == UserRole.DIRECTOR:
         reports = (
             db.query(DailyReport)
             .filter(DailyReport.school_id == user.school_id)
@@ -73,7 +73,7 @@ async def get_todays_report(
     user: User = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
-    if user.role == UserRole.MODIR and user.school_id != school_id:
+    if user.role == UserRole.DIRECTOR and user.school_id != school_id:
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="You can only view reports for your own school")
 
     report = (
@@ -92,7 +92,7 @@ async def get_todays_report(
 
 @router.get("/daily-reports/missing-today")
 async def get_missing_reports(
-    user: User = Depends(require_role([UserRole.MANDOUB])),
+    user: User = Depends(require_role([UserRole.SUPERVISOR])),
     db: Session = Depends(get_db)
 ):
     schools_in_mandoubia = (

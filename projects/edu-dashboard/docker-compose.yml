@@ -9,7 +9,7 @@ services:
       POSTGRES_USER: edu_user
       POSTGRES_PASSWORD: edu_pass
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
@@ -21,7 +21,7 @@ services:
       dockerfile: Dockerfile
     container_name: edu-backend
     ports:
-      - "8001:8001"
+      - "8002:8001"
     depends_on:
       - postgres
     networks:
@@ -31,7 +31,7 @@ services:
     image: nginx:latest
     container_name: edu-frontend
     ports:
-      - "8090:80"
+      - "8093:80"
     volumes:
       - ./frontend:/usr/share/nginx/html
       - ./nginx.conf:/etc/nginx/nginx.conf

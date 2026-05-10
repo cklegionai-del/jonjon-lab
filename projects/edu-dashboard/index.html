@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة إدارة التعليم الإقليمية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#006633',
+                        secondary: '#009966',
+                        dark: '#0f172a',
+                        dark2: '#1e293b',
+                        light: '#f8fafc',
+                        accent: '#006633',
+                        official_green: '#006633',
+                        official_light_green: '#009966',
+                        official_blue: '#003366',
+                        official_light_blue: '#336699'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            direction: rtl;
+            background-image: url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjEwIiBmaWxsPSIjMDA2NjMzIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=');
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        .sidebar {
+            transition: all 0.3s ease;
+            background: linear-gradient(to bottom, #006633, #009966);
+        }
+        
+        .chat-widget {
+            transition: all 0.3s ease;
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 300px;
+        }
+        
+        .stat-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0, 102, 51, 0.3);
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            border-color: rgba(0, 102, 51, 0.6);
+        }
+        
+        .table-container {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .sidebar-link.active {
+            background-color: #009966;
+            color: white;
+        }
+        
+        .sidebar-link:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        .table-sortable th {
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .table-sortable th:hover {
+            background-color: #1e293b;
+        }
+        
+        .table-sortable th.sort-asc::after {
+            content: " ↑";
+        }
+        
+        .table-sortable th.sort-desc::after {
+            content: " ↓";
+        }
+        
+        .filter-input {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 0.375rem;
+            padding: 0.5rem 0.75rem;
+            width: 100%;
+            color: #f8fafc;
+        }
+        
+        .filter-input:focus {
+            outline: none;
+            border-color: #006633;
+        }
+        
+        .file-upload-area {
+            border: 2px dashed #334155;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .file-upload-area:hover {
+            border-color: #006633;
+            background-color: #1e293b;
+        }
+        
+        .file-upload-area.drag-over {
+            border-color: #006633;
+            background-color: #0f172a;
+        }
+        
+        .attendance-cell {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.75rem;
+        }
+        
+        .present {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .absent {
+            background-color: #ef4444;
+            color: white;
+        }
+        
+        .late {
+            background-color: #f59e0b;
+            color: white;
+        }
+        
+        .chat-message {
+            max-width: 80%;
+        }
+        
+        .chat-message.sent {
+            margin-left: auto;
+        }
+        
+        .chat-message.received {
+            margin-right: auto;
+        }
+        
+        .office-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .office-card {
+            background-color: #1e293b;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid #334155;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .office-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border-color: #006633;
+        }
+        
+        .office-card.occupied {
+            border-color: #10b981;
+        }
+        
+        .office-card.vacant {
+            border-color: #3b82f6;
+        }
+        
+        .office-card.maintenance {
+            border-color: #f59e0b;
+        }
+        
+        .office-number {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .office-floor {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-bottom: 0.5rem;
+        }
+        
+        .office-function {
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .office-responsible {
+            font-size: 0.7rem;
+            color: #94a3b8;
+        }
+        
+        .office-details {
+            background-color: #1e293b;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-top: 1rem;
+            display: none;
+            border: 1px solid rgba(0, 102, 51, 0.3);
+        }
+        
+        .office-details.show {
+            display: block;
+        }
+        
+        .inventory-item {
+            transition: all 0.3s ease;
+        }
+        
+        .inventory-item:hover {
+            background-color: #1e293b;
+        }
+        
+        .low-stock {
+            background-color: #1e293b;
+            border-left: 3px solid #f59e0b;
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-left: 0.5rem;
+        }
+        
+        .status-occupied {
+            background-color: #10b981;
+        }
+        
+        .status-vacant {
+            background-color: #3b82f6;
+        }
+        
+        .status-maintenance {
+            background-color: #f59e0b;
+        }
+        
+        .header-seal {
+            background: linear-gradient(to right, #006633, #009966, #006633);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+            border: 1px solid rgba(0, 102, 51, 0.3);
+        }
+        
+        .header-seal h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header-seal p {
+            font-size: 1rem;
+            color: #e2e8f0;
+            margin-top: 0.5rem;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            border-radius: 4px;
+            background-color: #334155;
+            margin-top: 0.5rem;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(to right, #006633, #009966);
+        }
+        
+        .trend-arrow {
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+        
+        .trend-up {
+            color: #10b981;
+        }
+        
+        .trend-down {
+            color: #ef4444;
+        }
+        
+        .ministry-logo {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #006633 0%, #009966 100%);
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .ministry-logo i {
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .official-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #006633 0%, #009966 100%);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-top: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-dark text-light">
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar fixed top-0 left-0 h-full w-64 p-4 z-30">
+        <div class="flex flex-col items-center mb-8">
+            <div class="ministry-logo">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h1 class="text-xl font-bold text-white">وزارة التربية</h1>
+            <p class="text-white text-sm opacity-80">الجمهورية التونسية</p>
+        </div>
+        
+        <nav>
+            <ul class="space-y-2">
+                <li>
+                    <a href="#" class="sidebar-link flex items-center p-3 rounded-lg active">
+                        <i class="fas fa-home ml-3"></i>
+                        <span>الرئيسية</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-link flex items-center p-3 rounded-lg">
+                        <i class="fas fa-users ml-3"></i>
+                        <span>الموظفون</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-link flex items-center p-3 rounded-lg">
+                        <i class="fas fa-graduation-cap ml-3"></i>
+                        <span>الطلاب</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-link flex items-center p-3 rounded-lg">
+                        <i class="fas fa-school ml-3"></i>
+                        <span>المدارس</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-link flex items-center p-3 rounded-lg">
+                        <i class="fas fa-calendar-check ml-3"></i>
+                        <span>الحضور اليومي</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-link flex items-center p-3 rounded-lg">
+                        <i class="fas fa-chart-bar ml-3"></i>
+                        <span>الإحصائيات</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-link flex items-center p-3 rounded-lg">
+                        <i class="fas fa-building ml-3"></i>
+                        <span>إدارة المقرات</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-link flex items-center p-3 rounded-lg">
+                        <i class="fas fa-cog ml-3"></i>
+                        <span>الإعدادات</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="ml-64 p-6">
+        <!-- Header -->
+        <header class="mb-8">
+            <div class="header-seal">
+                <div class="flex justify-center mb-4">
+                    <span class="text-4xl">🇹🇳</span>
+                </div>
+                <h1>الجمهورية التونسية - وزارة التربية</h1>
+                <p>لوحة الإدارة الإقليمية</p>
+                <div class="official-badge">الإصدار الرسمي</div>
+            </div>
+            
+            <div class="relative">
+                <input type="text" id="searchInput" placeholder="البحث..." class="bg-dark2 rounded-lg px-4 py-2 pl-10 focus:outline-none focus:ring-2 focus:ring-primary w-full">
+                <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+            </div>
+        </header>
+
+        <!-- Stats Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="stat-card bg-dark2 rounded-xl p-6 shadow-lg">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-gray-400">عدد المدارس</p>
+                        <p class="text-3xl font-bold text-primary">128</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                        <div class="flex items-center mt-1">
+                            <span class="trend-arrow trend-up"><i class="fas fa-arrow-up"></i></span>
+                            <span class="text-xs text-gray-400">5% من الشهر الماضي</span>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-green-900/30 rounded-lg">
+                        <i class="fas fa-school text-xl text-primary"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="stat-card bg-dark2 rounded-xl p-6 shadow-lg">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-gray-400">عدد المعلمين</p>
+                        <p class="text-3xl font-bold text-primary">842</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%"></div>
+                        </div>
+                        <div class="flex items-center mt-1">
+                            <span class="trend-arrow trend-down"><i class="fas fa-arrow-down"></i></span>
+                            <span class="text-xs text-gray-400">2% من الشهر الماضي</span>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-teal-900/30 rounded-lg">
+                        <i class="fas fa-chalkboard-teacher text-xl text-primary"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="stat-card bg-dark2 rounded-xl p-6 shadow-lg">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-gray-400">عدد الطلاب</p>
+                        <p class="text-3xl font-bold text-primary">15,420</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                        <div class="flex items-center mt-1">
+                            <span class="trend-arrow trend-up"><i class="fas fa-arrow-up"></i></span>
+                            <span class="text-xs text-gray-400">12% من الشهر الماضي</span>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-cyan-900/30 rounded-lg">
+                        <i class="fas fa-users text-xl text-primary"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="stat-card bg-dark2 rounded-xl p-6 shadow-lg">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-gray-400">الحضور اليومي</p>
+                        <p class="text-3xl font-bold text-primary">92%</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 92%"></div>
+                        </div>
+                        <div class="flex items-center mt-1">
+                            <span class="trend-arrow trend-up"><i class="fas fa-arrow-up"></i></span>
+                            <span class="text-xs text-gray-400">3% من الشهر الماضي</span>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-emerald-900/30 rounded-lg">
+                        <i class="fas fa-calendar-check text-xl text-primary"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div class="bg-dark2 rounded-xl p-6 shadow-lg">
+                <h3 class="text-lg font-bold mb-4">توزيع المدارس حسب المنطقة</h3>
+                <div class="chart-container">
+                    <canvas id="schoolChart"></canvas>
+                </div>
+            </div>
+            <div class="bg-dark2 rounded-xl p-6 shadow-lg">
+                <h3 class="text-lg font-bold mb-4">نسبة الحضور للطلاب</h3>
+                <div class="chart-container">
+                    <canvas id="attendanceChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Employee Registry -->
+        <div class="bg-dark2 rounded-xl p-6 shadow-lg mb-8">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-bold">قائمة المعلمين</h3>
+                <div class="flex space-x-2">
+                    <button class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg text-sm">
+                        <i class="fas fa-plus ml-2"></i> إضافة معلم
+                    </button>
+                    <button class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg text-sm">
+                        <i class="fas fa-download ml-2"></i> تصدير
+                    </button>
+                </div>
+            </div>
+            <div class="mb-4 flex space-x-4">
+                <div class="flex-1">
+                    <input type="text" id="employeeFilter" placeholder="البحث في المعلمين..." class="filter-input">
+                </div>
+                <div class="w-40">
+                    <select id="employeeDepartmentFilter" class="filter-input">
+                        <option value="">جميع الأقسام</option>
+                        <option value="العلوم">العلوم</option>
+                        <option value="اللغة العربية">اللغة العربية</option>
+                        <option value="الرياضيات">الرياضيات</option>
+                        <option value="اللغة الإنجليزية">اللغة الإنجليزية</option>
+                    </select>
+                </div>
+            </div>
+            <div class="table-container">
+                <table class="w-full table-sortable">
+                    <thead>
+                        <tr class="border-b border-gray-700">
+                            <th class="py-3 px-4 text-right sortable" data-column="name">الاسم</th>
+                            <th class="py-3 px-4 text-right sortable" data-column="school">المدرسة</th>
+                            <th class="py-3 px-4 text-right sortable" data-column="position">الوظيفة</th>
+                            <th class="py-3 px-4 text-right sortable" data-column="department">القسم</th>
+                            <th class="py-3 px-4 text-right sortable" data-column="status">الحالة</th>
+                            <th class="py-3 px-4 text-right">الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-700 hover:bg-dark">
+                            <td class="py-3 px-4">أحمد محمد</td>
+                            <td class="py-3 px-4">المدرسة الثانوية 1</td>
+                            <td class="py-3 px-4">معلم علوم</td>
+                            <td class="py-3 px-4">العلوم</td>
+                            <td class="py-3 px-4"><span class="bg-green-900/30 text-green-400 px-2 py-1 rounded text-xs">نشط</span></td>
+                            <td class="py-3 px-4">
+                                <button class="text-blue-400 hover:text-blue-300 mr-2"><i class="fas fa-edit"></i></button>
+                                <button class="text-red-400 hover:text-red-300"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-700 hover:bg-dark">
+                            <td class="py-3 px-4">سارة علي</td>
+                            <td class="py-3 px-4">المدرسة الابتدائية 2</td>
+                            <td class="py-3 px-4">معلمة عربية</td>
+                            <td class="py-3 px-4">اللغة العربية</td>
+                            <td class="py-3 px-4"><span class="bg-green-900/30 text-green-400 px-2 py-1 rounded text-xs">نشط</span></td>
+                            <td class="py-3 px-4">
+                                <button class="text-blue-400 hover:text-blue-300 mr-2"><i class="fas fa-edit"></i></button>
+                                <button class="text-red-400 hover:text-red-300"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-700 hover:bg-dark">
+                            <td class="py-3 px-4">خالد حسن</td>
+                            <td class="py-3 px-4">المدرسة الثانوية 3</td>
+                            <td class="py-3 px-4">معلم رياضيات</td>
+                            <td class="py-3 px-4">الرياضيات</td>
+                            <td class="py-3 px-4"><span class="bg-red-900/30 text-red-400 px-2 py-1 rounded text-xs">غير نشط</span></td>
+                            <td class="py-3 px-4">
+                                <button class="text-blue-400 hover:text-blue-300 mr-2"><i class="fas fa-edit"></i></button>
+                                <button class="text-red-400 hover:text-red-300"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-700 hover:bg-dark">
+                            <td class="py-3 px-4">فاطمة أحمد</td>
+                            <td class="py-3 px-4">المدرسة الثانوية 1</td>
+                            <td class="py-3 px-4">معلمة إنجليزية</td>
+                            <td class="py-3 px-4">اللغة الإنجليزية</td>
+                            <td class="py-3 px-4"><span class="bg-green-900/30 text-green-400 px-2 py-1 rounded text-xs">نشط</span></td>
+                            <td class="py-3 px-4">
+                                <button class="text-blue-400 hover:text-blue-300 mr-2"><i class="fas fa-edit"></i></button>
+                                <button class="text-red-400 hover:text-red-300"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-700 hover:bg-dark">
+                            <td class="py-3 px-4">محمد علي</td>
+                            <td class="py-3 px-4">المدرسة الابتدائية 3</td>
+                            <td class="py-3 px-4">معلم علوم</td>
+                            <td class="py-3 px-4">العلوم</td>
+                            <td class="py-3 px-4"><span class="bg-green-900/30 text-green-400 px-2 py-1 rounded text-xs">نشط</span></td>
+                            <td class="py-3 px-4">
+                                <button class="text-blue-400 hover:text-blue-300 mr-2"><i class="fas fa-edit"></i></button>
+                                <button class="text-red-400 hover:text-red-300"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Students Registry -->
+        <div class="bg-dark2 rounded-xl p-6 shadow-lg mb-8">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-bold">قائمة الطلاب</h3>
+                <div class="flex space-x-2">
+                    <button class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg text-sm">
+                        <i class="fas fa-plus ml-2"></i> إضافة طالب
+                    </button>
+                    <button class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg text-sm">
+                        <i class="fas fa-download ml-2"></i> تصدير
+                    </button>
+                </div>
+            </div>
+            <div class="mb-4 flex space-x-4">
+                <div class="flex-1">
+                    <input type="text" id="studentFilter" placeholder="البحث في الطلاب..." class="filter-input">
+                </div>
+                <div class="w-40">
+                    <select id="studentClassFilter" class="filter-input">
+                        <option value="">جميع الصفوف</option>
+                        <option value="الصف الأول الابتدائي">الصف الأول الابتدائي</option>
+                        <option value="الصف الثاني الابتدائي">الصف الثاني الابتدائي</option>
+                        <option value="الصف الثالث الابتدائي">الصف الثالث الابتدائي</option>
+                        <option value="الصف الرابع الابتدائي">الصف الرابع الابتدائي</option>
+                        <option value="الصف الخامس الابتدائي">الصف الخامس الابتدائي</option>
+                        <option value="الصف السادس الابتدائي">الصف السادس الابتدائي</option>
+                        <option value="الصف الأول الثانوي">الصف الأول الثانوي</option>
+                        <option value="الصف الثاني الثانوي">الصف الثاني الثانوي</option>
+                        <option value="الصف الثالث الثانوي">الصف الثالث الثانوي</option>
+                    </select>
+                </div>
+            </div>
+            <div class="table-container">
+                <table class="w-full table-sortable">
+                    <thead>
+                        <tr class="border-b border-gray-700">
+                            <th class="py-3 px-4 text-right sortable" data-column="name">الاسم</th>
+                            <th class="py-3 px-4 text-right sortable" data-column="school">المدرسة</th>
+                            <th class="py-3 px-4 text-right sortable" data-column="class">الصف</th>
+                            <th class="py-3 px-4 text-right sortable" data-column="grade">الدرجة</th>
+                            <th class="py-3 px-4 text-right sortable" data-column="status">الحالة</th>
+                            <th class="py-3 px-4 text-right">الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-700 hover:bg-dark">
+                            <td class="py-3 px-4">محمد علي</td>
+                            <td class="py-3 px-4">المدرسة الثانوية 1</td>
+                            <td class="py-3 px-4">الصف الثالث الثانوي</td>
+                            <td class="py-3 px-4">85%</td>
+                            <td class="py-3 px-4"><span class="bg-green-900/30 text-green-400 px-2 py-1 rounded text-xs">نشط</span></td>
+                            <td class="py-3 px-4">
+                                <button class="text-blue-400 hover:text-blue-300 mr-2"><i class="fas fa-edit"></i></button>
+                                <button class="text-red-400 hover:text-red-300"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-700 hover:bg-dark">
+                            <td class="py-3 px-4">فاطمة أحمد</td>
+                            <td class="py-3 px-4">المدرسة الابتدائية 2</td>
+                            <td class="py-3 px-4">الصف الرابع الابتدائي</td>
+                            <td class="py-3 px-4">92%</td>
+                            <td class="py-3 px-4"><span class="bg-green-900/30 text-green-400 px-2 py-1 rounded text-xs">نشط</span></td>
+                            <td class="py-3 px-4">
+                                <button class="text-blue-400 hover:text-blue-300 mr-2"><i class="fas fa-edit"></i></button>
+                                <button class="text-red-400 hover:text-red-300"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-700 hover:bg-dark">
+                            <td class="py-3 px-4">سالم حسن</td>
+                            <td class="py-3 px-4">المدرسة الثانوية 3</td>
+                            <td class="py-3 px-4">الصف الثاني الثانوي</td>
+                            <td class="py-3 px-4">78%</td>
+                            <td class="py-3 px-4"><span class="bg-red-900/30 text-red-400 px-2 py-1 rounded text-xs">غير نشط</span></td>
+                            <td class="py-3 px-4">
+                                <button class="text-blue-400 hover:text-blue-300 mr-2"><i class="fas fa-edit"></i></button>
+                                <button class="text-red-400 hover:text-red-300"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-700 hover:bg-dark">
+                            <td class="py-3 px-4">أحمد سالم</td>
+                            <td class="py-3 px-4">المدرسة الابتدائية 1</td>
+                            <td class="py-3 px-4">الصف الثالث الابتدائي</td>
+                            <td class="py-3 px-4">95%</td>
+                            <td class="py-3 px-4"><span class="bg-green-900/30 text-green-400 px-2 py-1 rounded text-xs">نشط</span></td>
+                            <td class="py-3 px-4">
+                                <button class="text-blue-400 hover:text-blue-300 mr-2"><i class="fas fa-edit"></i></button>
+                                <button class="text-red-400 hover:text-red-300"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-700 hover:bg-dark">
+                            <td class="py-3 px-4">نورا محمد</td>
+                            <td class="py-3 px-4">المدرسة الثانوية 2</td>
+                            <td class="py-3 px-4">الصف الأول الثانوي</td>
+                            <td class="py-3 px-4">88%</td>
+                            <td class="py-3 px-4"><span class="bg-green-900/30 text-green-400 px-2 py-1 rounded text-xs">نشط</span></td>
+                            <td class="py-3 px-4">
+                                <button class="text-blue-400 hover:text-blue-300 mr-2"><i class="fas fa-edit"></i></button>
+                                <button class="text-red-400 hover:text-red-300"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Schools Management -->
+        <div class="bg-dark2 rounded-xl p-6 shadow-lg mb-8">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-bold">إدارة المدارس</h3>
+                <button class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg text-sm">
+                    <i class="fas fa-plus ml-2"></i> إضافة مدرسة
+                </button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-dark p-4 rounded-lg border border-gray-700">
+                    <h4 class="font-bold mb-2">المدرسة الثانوية 1</h4>
+                    <p class="text-sm text-gray-400 mb-2">عدد الطلاب: 850</p>
+                    <p class="text-sm text-gray-400 mb-2">عدد المعلمين: 42</p>
+                    <p class="text-sm text-gray-400 mb-3">العنوان: شارع الزيتون، الرياض</p>
+                    <div class="flex space-x-2">
+                        <button class="text-xs bg-blue-900/30 hover:bg-blue-800 text-blue-400 px-3 py-1 rounded">تعديل</button>
+                        <button class="text-xs bg-red-900/30 hover:bg-red-800 text-red-400 px-3 py-1 rounded">حذف</button>
+                    </div>
+                </div>
+                <div class="bg-dark p-4 rounded-lg border border-gray-700">
+                    <h4 class="font-bold mb-2">المدرسة الابتدائية 2</h4>
+                    <p class="text-sm text-gray-400 mb-2">عدد الطلاب: 620</p>
+                    <p class="text-sm text-gray-400 mb-2">عدد المعلمين: 28</p>
+                    <p class="text-sm text-gray-400 mb-3">العنوان: شارع النخيل، الساحل</p>
+                    <div class="flex space-x-2">
+                        <button class="text-xs bg-blue-900/30 hover:bg-blue-800 text-blue-400 px-3 py-1 rounded">تعديل</button>
+                        <button class="text-xs bg-red-900/30 hover:bg-red-800 text-red-400 px-3 py-1 rounded">حذف</button>
+                    </div>
+                </div>
+                <div class="bg-dark p-4 rounded-lg border border-gray-700">
+                    <h4 class="font-bold mb-2">المدرسة الثانوية 3</h4>
+                    <p class="text-sm text-gray-400 mb-2">عدد الطلاب: 780</p>
+                    <p class="text-sm text-gray-400 mb-2">عدد المعلمين: 35</p>
+                    <p class="text-sm text-gray-400 mb-3">العنوان: شارع الأرز، القصبة</p>
+                    <div class="flex space-x-2">
+                        <button class="text-xs bg-blue-900/30 hover:bg-blue-800 text-blue-400 px-3 py-1 rounded">تعديل</button>
+                        <button class="text-xs bg-red-900/30 hover:bg-red-800 text-red-400 px-3 py-1 rounded">حذف</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Administration Spaces Section -->
+        <div class="bg-dark2 rounded-xl p-6 shadow-lg mb-8">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-bold">إدارة المقرات</h3>
+                <div class="flex space-x-2">
+                    <button class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg text-sm">
+                        <i class="fas fa-plus ml-2"></i> إضافة مكتب
+                    </button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Floor Map -->
+                <div class="lg:col-span-2">
+                    <h4 class="text-md font-bold mb-3">خريطة المقر الإداري</h4>
+                    <div class="bg-dark p-4 rounded-lg border border-gray-700">
+                        <div class="flex justify-between mb-4">
+                            <div class="text-sm">
+                                <span class="inline-block w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+                                <span>مشغول</span>
+                            </div>
+                            <div class="text-sm">
+                                <span class="inline-block w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
+                                <span>فارغ</span>
+                            </div>
+                            <div class="text-sm">
+                                <span class="inline-block w-3 h-3 bg-yellow-500 rounded-full mr-2"></span>
+                                <span>قيد الصيانة</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h5 class="font-bold mb-2">الطابق الأول</h5>
+                            <div class="office-grid">
+                                <div class="office-card occupied" data-id="1">
+                                    <div class="office-number">01</div>
+                                    <div class="office-floor">الطابق الأول</div>
+                                    <div class="office-function">مكتب المدير العام</div>
+                                    <div class="office-responsible">أحمد محمد</div>
+                                </div>
+                                <div class="office-card vacant" data-id="2">
+                                    <div class="office-number">02</div>
+                                    <div class="office-floor">الطابق الأول</div>
+                                    <div class="office-function">مكتب المكتب الإداري</div>
+                                    <div class="office-responsible">-</div>
+                                </div>
+                                <div class="office-card maintenance" data-id="3">
+                                    <div class="office-number">03</div>
+                                    <div class="office-floor">الطابق الأول</div>
+                                    <div class="office-function">مكتب المكتب المالي</div>
+                                    <div class="office-responsible">-</div>
+                                </div>
+                                <div class="office-card occupied" data-id="4">
+                                    <div class="office-number">04</div>
+                                    <div class="office-floor">الطابق الأول</div>
+                                    <div class="office-function">مكتب المكتب التعليمي</div>
+                                    <div class="office-responsible">سارة علي</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h5 class="font-bold mb-2">الطابق الثاني</h5>
+                            <div class="office-grid">
+                                <div class="office-card occupied" data-id="5">
+                                    <div class="office-number">11</div>
+                                    <div class="office-floor">الطابق الثاني</div>
+                                    <div class="office-function">مكتب المكتب الإداري</div>
+                                    <div class="office-responsible">خالد حسن</div>
+                                </div>
+                                <div class="office-card vacant" data-id="6">
+                                    <div class="office-number">12</div>
+                                    <div class="office-floor">الطابق الثاني</div>
+                                    <div class="office-function">مكتب المكتب المالي</div>
+                                    <div class="office-responsible">-</div>
+                                </div>
+                                <div class="office-card occupied" data-id="7">
+                                    <div class="office-number">13</div>
+                                    <div class="office-floor">الطابق الثاني</div>
+                                    <div class="office-function">مكتب المكتب التعليمي</div>
+                                    <div class="office-responsible">فاطمة أحمد</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Office Details Panel -->
+                    <div id="officeDetails" class="office-details">
+                        <h4 class="text-lg font-bold mb-3">تفاصيل المكتب</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <p><span class="font-bold">رقم المكتب:</span> <span id="detailNumber">01</span></p>
+                                <p><span class="font-bold">الطابق:</span> <span id="detailFloor">الطابق الأول</span></p>
+                                <p><span class="font-bold">الوظيفة:</span> <span id="detailFunction">مكتب المدير العام</span></p>
+                            </div>
+                            <div>
+                                <p><span class="font-bold">المسؤول:</span> <span id="detailResponsible">أحمد محمد</span></p>
+                                <p><span class="font-bold">الحالة:</span> 
+                                    <span id="detailStatus" class="inline-block w-3 h-3 rounded-full mr-2"></span>
+                                    <span id="statusText">مشغول</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex space-x-2">
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm">
+                                <i class="fas fa-edit ml-2"></i> تعديل
+                            </button>
+                            <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm">
+                                <i class="fas fa-trash ml-2"></i> حذف
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Administrative Storage -->
+                <div>
+                    <h4 class="text-md font-bold mb-3">المخزن الإداري</h4>
+                    <div class="bg-dark p-4 rounded-lg border border-gray-700">
+                        <div class="mb-4 flex space-x-2">
+                            <input type="text" id="inventoryFilter" placeholder="البحث في المخزن..." class="filter-input flex-1">
+                            <button class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg text-sm">
+                                <i class="fas fa-search ml-2"></i> بحث
+                            </button>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <select id="inventoryCategoryFilter" class="filter-input w-full">
+                                <option value="">جميع الفئات</option>
+                                <option value="أثاث">أثاث</option>
+                                <option value="إلكترونيات">إلكترونيات</option>
+                                <option value="كتب">كتب</option>
+                                <option value="أدوات">أدوات</option>
+                            </select>
+                        </div>
+                        
+                        <div class="table-container">
+                            <table class="w-full">
+                                <thead>
+                                    <tr class="border-b border-gray-700">
+                                        <th class="py-3 px-4 text-right">الاسم</th>
+                                        <th class="py-3 px-4 text-right">الكمية</th>
+                                        <th class="py-3 px-4 text-right">الحالة</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-700 hover:bg-dark inventory-item">
+                                        <td class="py-3 px-4">كراسات</td>
+                                        <td class="py-3 px-4">120</td>
+                                        <td class="py-3 px-4"><span class="status-indicator status-occupied"></span> جيد</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-700 hover:bg-dark inventory-item low-stock">
+                                        <td class="py-3 px-4">أقلام</td>
+                                        <td class="py-3 px-4">8</td>
+                                        <td class="py-3 px-4"><span class="status-indicator status-maintenance"></span> منخفض</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-700 hover:bg-dark inventory-item">
+                                        <td class="py-3 px-4">حاسوب</td>
+                                        <td class="py-3 px-4">5</td>
+                                        <td class="py-3 px-4"><span class="status-indicator status-occupied"></span> جيد</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-700 hover:bg-dark inventory-item">
+                                        <td class="py-3 px-4">كراسات</td>
+                                        <td class="py-3 px-4">120</td>
+                                        <td class="py-3 px-4"><span class="status-indicator status-occupied"></span> جيد</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-700 hover:bg-dark inventory-item low-stock">
+                                        <td class="py-3 px-4">أقلام</td>
+                                        <td class="py-3 px-4">8</td>
+                                        <td class="py-3 px-4"><span class="status-indicator status-maintenance"></span> منخفض</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="mt-4 flex space-x-2">
+                            <button class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg text-sm">
+                                <i class="fas fa-plus ml-2"></i> إضافة عنصر
+                            </button>
+                            <button class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg text-sm">
+                                <i class="fas fa-download ml-2"></i> تصدير
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Attendance Section -->
+        <div class="bg-dark2 rounded-xl p-6 shadow-lg mb-8">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-bold">الحضور اليومي</h3>
+                <div class="flex space-x-2">
+                    <button class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg text-sm">
+                        <i class="fas fa-plus ml-2"></i> تسجيل حضور
+                    </button>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="flex items-center mb-4">
+                    <div class="w-32 text-sm text-gray-400">التاريخ:</div>
+                    <div class="flex-1">
+                        <input type="date" id="attendanceDate" class="bg-dark2 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                </div>
+                <div class="flex items-center mb-4">
+                    <div class="w-32 text-sm text-gray-400">المدرسة:</div>
+                    <div class="flex-1">
+                        <select id="attendanceSchool" class="bg-dark2 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary w-full">
+                            <option value="">اختر المدرسة</option>
+                            <option value="1">المدرسة الثانوية 1</option>
+                            <option value="2">المدرسة الابتدائية 2</option>
+                            <option value="3">المدرسة الثانوية 3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="table-container">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b border-gray-700">
+                            <th class="py-3 px-4 text-right">الاسم</th>
+                            <th class="py-3 px-4 text-right">الصف</th>
+                            <th class="py-3 px-4 text-right">الحضور</th>
+                            <th class="py-3 px-4 text-right">الوقت</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-700 hover:bg-dark">
+                            <td class="py-3 px-4">محمد علي</td>
+                            <td class="py-3 px-4">الصف الثالث الثانوي</td>
+                            <td class="py-3 px-4">
+                                <span class="attendance-cell present">✓</span>
+                            </td>
+                            <td class="py-3 px-4">08:05</td>
+                        </tr>
+                        <tr class="border-b border-gray-700 hover:bg-dark">
+                            <td class="py-3 px-4">فاطمة أحمد</td>
+                            <td class="py-3 px-4">الصف الرابع الابتدائي</td>
+                            <td class="py-3 px-4">
+                                <span class="attendance-cell present">✓</span>
+                            </td>
+                            <td class="py-3 px-4">08:10</td>
+                        </tr>
+                        <tr class="border-b border-gray-700 hover:bg-dark">
+                            <td class="py-3 px-4">سالم حسن</td>
+                            <td class="py-3 px-4">الصف الثاني الثانوي</td>
+                            <td class="py-3 px-4">
+                                <span class="attendance-cell absent">✗</span>
+                            </td>
+                            <td class="py-3 px-4">08:00</td>
+                        </tr>
+                        <tr class="border-b border-gray-700 hover:bg-dark">
+                            <td class="py-3 px-4">أحمد سالم</td>
+                            <td class="py-3 px-4">الصف الثالث الابتدائي</td>
+                            <td class="py-3 px-4">
+                                <span class="attendance-cell late">遲</span>
+                            </td>
+                            <td class="py-3 px-4">08:15</td>
+                        </tr>
+                        <tr class="border-b border-gray-700 hover:bg-dark">
+                            <td class="py-3 px-4">نورا محمد</td>
+                            <td class="py-3 px-4">الصف الأول الثانوي</td>
+                            <td class="py-3 px-4">
+                                <span class="attendance-cell present">✓</span>
+                            </td>
+                            <td class="py-3 px-4">08:02</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Widget -->
+    <div id="chatWidget" class="chat-widget fixed bottom-6 right-6 w-80 bg-dark2 rounded-xl shadow-xl border border-gray-700 z-50">
+        <div class="p-4 border-b border-gray-700 flex justify-between items-center">
+            <h3 class="font-bold">المساعد الذكي</h3>
+            <button id="chatToggle" class="text-gray-400 hover:text-white">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="p-4 h-64 overflow-y-auto">
+            <div class="mb-3">
+                <div class="chat-message received bg-dark p-3 rounded-lg rounded-tr-none inline-block">
+                    مرحباً! أنا مساعدك الذكي في إدارة التعليم. كيف يمكنني مساعدتك اليوم؟
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="chat-message sent bg-primary/10 text-primary p-3 rounded-lg rounded-tl-none inline-block">
+                    يمكنني مساعدتك في البحث عن معلومات المدارس أو المعلمين.
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="chat-message received bg-dark p-3 rounded-lg rounded-tr-none inline-block">
+                    هل يمكنك إخباري عن عدد المدارس في المنطقة؟
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="chat-message sent bg-primary/10 text-primary p-3 rounded-lg rounded-tl-none inline-block">
+                    بالطبع! هناك 128 مدرسة في المنطقة.
+                </div>
+            </div>
+        </div>
+        <div class="p-3 border-t border-gray-700 flex">
+            <input type="text" placeholder="اكتب رسالتك هنا..." class="flex-1 bg-dark2 rounded-l-lg px-4 py-2 focus:outline-none">
+            <button class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-r-lg">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+        <div class="p-3 border-t border-gray-700 flex justify-center">
+            <div class="file-upload-area" id="fileUploadArea">
+                <i class="fas fa-paperclip text-xl mb-2"></i>
+                <p class="text-sm">إرفاق ملف</p>
+                <p class="text-xs text-gray-500 mt-1">انقر أو اسحب الملف هنا</p>
+                <input type="file" class="hidden" id="fileInput">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark2 border-t border-gray-700 py-4 px-6 text-center text-gray-400 text-sm">
+        <p>Developed by Hichem Bejaoui</p>
+        <p class="mt-1">© 2023 وزارة التربية - الجمهورية التونسية</p>
+    </footer>
+
+    <script>
+        // Initialize charts
+        document.addEventListener('DOMContentLoaded', function() {
+            // School distribution chart
+            const schoolCtx = document.getElementById('schoolChart').getContext('2d');
+            new Chart(schoolCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['المنطقة 1', 'المنطقة 2', 'المنطقة 3', 'المنطقة 4', 'المنطقة 5'],
+                    datasets: [{
+                        label: 'عدد المدارس',
+                        data: [25, 30, 20, 28, 25],
+                        backgroundColor: '#006633',
+                        borderColor: '#009966',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#f8fafc'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#f8fafc'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#f8fafc'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Attendance chart
+            const attendanceCtx = document.getElementById('attendanceChart').getContext('2d');
+            new Chart(attendanceCtx, {
+                type: 'line',
+                data: {
+                    labels: ['سبت', 'أحد', 'اثنين', 'ثلاثاء', 'أربعاء', 'خميس', 'جمعة'],
+                    datasets: [{
+                        label: 'نسبة الحضور',
+                        data: [92, 88, 95, 90, 87, 93, 91],
+                        borderColor: '#006633',
+                        backgroundColor: 'rgba(0, 102, 51, 0.1)',
+                        tension: 0.3,
+                        fill: true,
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#f8fafc'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#f8fafc'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#f8fafc'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Toggle sidebar
+            const sidebarToggle = document.getElementById('sidebarToggle');
+            const sidebar = document.getElementById('sidebar');
+            
+            sidebarToggle.addEventListener('click', function() {
+                sidebar.classList.toggle('hidden');
+            });
+
+            // Toggle chat widget
+            const chatToggle = document.getElementById('chatToggle');
+            const chatWidget = document.getElementById('chatWidget');
+            
+            chatToggle.addEventListener('click', function() {
+                chatWidget.classList.toggle('hidden');
+            });
+
+            // Sidebar links
+            const sidebarLinks = document.querySelectorAll('.sidebar-link');
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    sidebarLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Table sorting
+            const sortableHeaders = document.querySelectorAll('.sortable');
+            sortableHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const column = header.getAttribute('data-column');
+                    const table = header.closest('table');
+                    const rows = Array.from(table.querySelectorAll('tbody tr'));
+                    const isAscending = header.classList.contains('sort-asc');
+                    
+                    // Remove sort indicators
+                    sortableHeaders.forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
+                    
+                    // Sort rows
+                    rows.sort((a, b) => {
+                        const aValue = a.cells[Array.from(header.parentNode.children).indexOf(header)].textContent.trim();
+                        const bValue = b.cells[Array.from(header.parentNode.children).indexOf(header)].textContent.trim();
+                        
+                        if (isAscending) {
+                            return aValue.localeCompare(bValue, 'ar');
+                        } else {
+                            return bValue.localeCompare(aValue, 'ar');
+                        }
+                    });
+                    
+                    // Add sort indicator
+                    header.classList.toggle('sort-asc', !isAscending);
+                    header.classList.toggle('sort-desc', isAscending);
+                    
+                    // Re-append sorted rows
+                    const tbody = table.querySelector('tbody');
+                    rows.forEach(row => tbody.appendChild(row));
+                });
+            });
+
+            // Search functionality
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                // In a real implementation, this would filter the data
+                console.log('Searching for:', searchTerm);
+            });
+
+            // File upload area
+            const fileUploadArea = document.getElementById('fileUploadArea');
+            const fileInput = document.getElementById('fileInput');
+            
+            fileUploadArea.addEventListener('click', () => {
+                fileInput.click();
+            });
+            
+            fileUploadArea.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                fileUploadArea.classList.add('drag-over');
+            });
+            
+            fileUploadArea.addEventListener('dragleave', () => {
+                fileUploadArea.classList.remove('drag-over');
+            });
+            
+            fileUploadArea.addEventListener('drop', (e) => {
+                e.preventDefault();
+                fileUploadArea.classList.remove('drag-over');
+                
+                if (e.dataTransfer.files.length) {
+                    const file = e.dataTransfer.files[0];
+                    console.log('File dropped:', file.name);
+                    // In a real implementation, this would handle the file upload
+                }
+            });
+            
+            fileInput.addEventListener('change', (e) => {
+                if (e.target.files.length) {
+                    const file = e.target.files[0];
+                    console.log('File selected:', file.name);
+                    // In a real implementation, this would handle the file upload
+                }
+            });
+
+            // Filter functionality for employee table
+            const employeeFilter = document.getElementById('employeeFilter');
+            const employeeDepartmentFilter = document.getElementById('employeeDepartmentFilter');
+            
+            employeeFilter.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const rows = document.querySelectorAll('#employeeTable tbody tr');
+                
+                rows.forEach(row => {
+                    const name = row.cells[0].textContent.toLowerCase();
+                    const school = row.cells[1].textContent.toLowerCase();
+                    const position = row.cells[2].textContent.toLowerCase();
+                    
+                    if (name.includes(searchTerm) || school.includes(searchTerm) || position.includes(searchTerm)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+            
+            employeeDepartmentFilter.addEventListener('change', function() {
+                const selectedDepartment = this.value;
+                const rows = document.querySelectorAll('#employeeTable tbody tr');
+                
+                rows.forEach(row => {
+                    const department = row.cells[3].textContent;
+                    
+                    if (selectedDepartment === '' || department === selectedDepartment) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+
+            // Filter functionality for student table
+            const studentFilter = document.getElementById('studentFilter');
+            const studentClassFilter = document.getElementById('studentClassFilter');
+            
+            studentFilter.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const rows = document.querySelectorAll('#studentTable tbody tr');
+                
+                rows.forEach(row => {
+                    const name = row.cells[0].textContent.toLowerCase();
+                    const school = row.cells[1].textContent.toLowerCase();
+                    const classText = row.cells[2].textContent.toLowerCase();
+                    
+                    if (name.includes(searchTerm) || school.includes(searchTerm) || classText.includes(searchTerm)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+            
+            studentClassFilter.addEventListener('change', function() {
+                const selectedClass = this.value;
+                const rows = document.querySelectorAll('#studentTable tbody tr');
+                
+                rows.forEach(row => {
+                    const classText = row.cells[2].textContent;
+                    
+                    if (selectedClass === '' || classText === selectedClass) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+
+            // Office card click handler
+            const officeCards = document.querySelectorAll('.office-card');
+            const officeDetails = document.getElementById('officeDetails');
+            const detailNumber = document.getElementById('detailNumber');
+            const detailFloor = document.getElementById('detailFloor');
+            const detailFunction = document.getElementById('detailFunction');
+            const detailResponsible = document.getElementById('detailResponsible');
+            const detailStatus = document.getElementById('detailStatus');
+            const statusText = document.getElementById('statusText');
+
+            officeCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const id = this.getAttribute('data-id');
+                    const number = this.querySelector('.office-number').textContent;
+                    const floor = this.querySelector('.office-floor').textContent;
+                    const functionText = this.querySelector('.office-function').textContent;
+                    const responsible = this.querySelector('.office-responsible').textContent;
+                    const statusClass = this.classList[1]; // occupied, vacant, maintenance
+                    
+                    // Update details panel
+                    detailNumber.textContent = number;
+                    detailFloor.textContent = floor;
+                    detailFunction.textContent = functionText;
+                    detailResponsible.textContent = responsible;
+                    
+                    // Update status indicator
+                    detailStatus.className = 'inline-block w-3 h-3 rounded-full mr-2';
+                    if (statusClass === 'occupied') {
+                        detailStatus.classList.add('status-occupied');
+                        statusText.textContent = 'مشغول';
+                    } else if (statusClass === 'vacant') {
+                        detailStatus.classList.add('status-vacant');
+                        statusText.textContent = 'فارغ';
+                    } else if (statusClass === 'maintenance') {
+                        detailStatus.classList.add('status-maintenance');
+                        statusText.textContent = 'قيد الصيانة';
+                    }
+                    
+                    // Show details panel
+                    officeDetails.classList.add('show');
+                });
+            });
+
+            // Inventory filter
+            const inventoryFilter = document.getElementById('inventoryFilter');
+            const inventoryCategoryFilter = document.getElementById('inventoryCategoryFilter');
+            
+            inventoryFilter.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const rows = document.querySelectorAll('.inventory-item');
+                
+                rows.forEach(row => {
+                    const name = row.cells[0].textContent.toLowerCase();
+                    
+                    if (name.includes(searchTerm)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+            
+            inventoryCategoryFilter.addEventListener('change', function() {
+                const selectedCategory = this.value;
+                const rows = document.querySelectorAll('.inventory-item');
+                
+                rows.forEach(row => {
+                    // In a real implementation, we would check the category
+                    if (selectedCategory === '') {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -253,34 +253,39 @@
             
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
-            const remember = document.getElementById('remember').checked;
-            
+
             // Show loading state
             const btn = document.querySelector('.btn');
             const originalText = btn.textContent;
             btn.textContent = 'جاري تسجيل الدخول...';
             btn.disabled = true;
-            
+
             try {
-                // In a real implementation, this would call the backend API
-                // For now, we'll simulate a successful login
-                await new Promise(resolve => setTimeout(resolve, 1500));
+                const response = await fetch('http://localhost:8001/auth/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password })
+                });
+
+                if (!response.ok) {
+                    throw new Error(await response.text());
+                }
+
+                const data = await response.json();
                 
-                // Show success message
+                // Save the access token to localStorage
+                localStorage.setItem('access_token', data.access_token);
+
+                // Show success message and redirect
                 document.getElementById('successMessage').textContent = 'تم تسجيل الدخول بنجاح!';
                 document.getElementById('successMessage').style.display = 'block';
                 
-                // Reset form
-                document.getElementById('loginForm').reset();
-                
-                // Redirect after a delay
                 setTimeout(() => {
-                    // In a real app, this would redirect to the dashboard
-                    alert('Redirecting to dashboard...');
+                    window.location.href = '/index.html';
                 }, 1000);
-                
             } catch (error) {
-                document.getElementById('errorMessage').textContent = 'خطأ في تسجيل الدخول. يرجى التحقق من بياناتك.';
+                // Show error message
+                document.getElementById('errorMessage').textContent = `خطأ في تسجيل الدخول: ${error.message}`;
                 document.getElementById('errorMessage').style.display = 'block';
             } finally {
                 btn.textContent = originalText;

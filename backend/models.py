@@ -100,7 +100,6 @@ class Employee(Base):
     attendance = relationship("Attendance", back_populates="employee")
     movements = relationship("Movement", back_populates="employee")
     employee_absences = relationship("EmployeeAbsence", back_populates="employee")
-    student_absences = relationship("StudentAbsence", back_populates="student")
 
 class School(Base):
     __tablename__ = "schools"

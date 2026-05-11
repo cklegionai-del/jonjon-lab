@@ -1,0 +1,1 @@
+{"invoiceNumber":"TEST-001","date":"2026-05-12","supplier":{"name":"شركة اختبار","vatNumber":"123456789","address":"تونس"},"customer":{"name":"عميل تجريبي","vatNumber":"987654321","address":"سوسة"},"items":[{"description":"خدمة تجريبية","quantity":1,"unitPrice":100,"vatRate":19,"total":100}],"totalAmount":100,"vatAmount":19,"totalWithVat":119}

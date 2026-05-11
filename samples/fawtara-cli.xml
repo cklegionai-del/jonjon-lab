@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice xmlns="urn:fawtara:ttn:v1">
+  <Header>
+    <InvoiceNumber>TEST-001</InvoiceNumber>
+    <IssueDate>2026-05-12</IssueDate>
+    <CurrencyCode>TND</CurrencyCode>
+  </Header>
+  <Supplier>
+    <Name>شركة اختبار</Name>
+    <VATNumber>123456789</VATNumber>
+    <Address>تونس</Address>
+  </Supplier>
+  <Customer>
+    <Name>عميل تجريبي</Name>
+    <VATNumber>987654321</VATNumber>
+    <Address>سوسة</Address>
+  </Customer>
+  <LineItems>
+    
+      <Item>
+        <Description>خدمة تجريبية</Description>
+        <Quantity>1.00</Quantity>
+        <UnitPrice>100.00</UnitPrice>
+        <VATRate>19.00</VATRate>
+        <TotalHT>100.00</TotalHT>
+      </Item>
+    
+  </LineItems>
+  <Totals>
+    <TotalHT>100.00</TotalHT>
+    <TotalVAT>19.00</TotalVAT>
+    <TotalTTC>119.00</TotalTTC>
+  </Totals>
+</Invoice>

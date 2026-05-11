@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice xmlns="urn:fawtara:ttn:v1">
+  <Header>
+    <InvoiceNumber>INV-2023-001</InvoiceNumber>
+    <IssueDate>2023-10-15</IssueDate>
+    <CurrencyCode>TND</CurrencyCode>
+  </Header>
+  <Supplier>
+    <Name>شركة التقنية المتطورة</Name>
+    <VATNumber>123456789012345</VATNumber>
+    <Address>تونس، الرياض، شارع الحرية 123</Address>
+  </Supplier>
+  <Customer>
+    <Name>مؤسسة التسويق الرقمي</Name>
+    <VATNumber>987654321098765</VATNumber>
+    <Address>سليانة، شارع البحرين 45</Address>
+  </Customer>
+  <LineItems>
+    
+      <Item>
+        <Description>تطوير تطبيق موبايل</Description>
+        <Quantity>1.00</Quantity>
+        <UnitPrice>5000.00</UnitPrice>
+        <VATRate>19.00</VATRate>
+        <TotalHT>5000.00</TotalHT>
+      </Item>
+    
+      <Item>
+        <Description>استشارات تقنية</Description>
+        <Quantity>10.00</Quantity>
+        <UnitPrice>200.00</UnitPrice>
+        <VATRate>19.00</VATRate>
+        <TotalHT>2000.00</TotalHT>
+      </Item>
+    
+  </LineItems>
+  <Totals>
+    <TotalHT>7000.00</TotalHT>
+    <TotalVAT>1330.00</TotalVAT>
+    <TotalTTC>8330.00</TotalTTC>
+  </Totals>
+</Invoice>

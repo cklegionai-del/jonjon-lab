@@ -1,0 +1,24 @@
+{
+  "name": "fawtara",
+  "version": "1.0.0",
+  "description": "Tunisian Electronic Invoicing System",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "fawtara": "./src/cli.js"
+  },
+  "scripts": {
+    "test": "node tests/xmlGenerator.test.js"
+  },
+  "keywords": [
+    "invoice",
+    "tunisia",
+    "electronic",
+    "fawtara"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0"
+  }
+}

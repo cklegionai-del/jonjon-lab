@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice xmlns="urn:tn:gov:dgi:teif:1.8"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="urn:tn:gov:dgi:teif:1.8 TEIF_v1.8.7.xsd">
+  <ID>TEST-001</ID>
+  <IssueDate>2026-05-12</IssueDate>
+  <IssueTime>12:00:00</IssueTime>
+  <InvoiceTypeCode>380</InvoiceTypeCode>
+  <DocumentCurrencyCode>TND</DocumentCurrencyCode>
+  <TaxCurrencyCode>TND</TaxCurrencyCode>
+  <DueDate>2026-06-11</DueDate>
+  
+  <Parties>
+    <Supplier>
+      <PartyIdentification>
+        <ID schemeID="TN_MF">123456789</ID>
+      </PartyIdentification>
+      <PartyName>
+        <Name>شركة اختبار</Name>
+      </PartyName>
+      <PostalAddress>
+        <StreetName>تونس</StreetName>
+        <CityName>Tunis</CityName>
+        <PostalZone>1000</PostalZone>
+        <CountrySubentity>Tunis</CountrySubentity>
+        <Country>
+          <IdentificationCode>TN</IdentificationCode>
+        </Country>
+      </PostalAddress>
+    </Supplier>
+    <Customer>
+      <PartyIdentification>
+        <ID schemeID="TN_MF">987654321</ID>
+      </PartyIdentification>
+      <PartyName>
+        <Name>عميل تجريبي</Name>
+      </PartyName>
+      <PostalAddress>
+        <StreetName>سوسة</StreetName>
+        <CityName>Tunis</CityName>
+        <PostalZone>1000</PostalZone>
+        <CountrySubentity>Tunis</CountrySubentity>
+        <Country>
+          <IdentificationCode>TN</IdentificationCode>
+        </Country>
+      </PostalAddress>
+    </Customer>
+  </Parties>
+  
+  <InvoiceLines>
+    
+    <InvoiceLine>
+      <ID>1</ID>
+      <InvoicedQuantity unitCode="HUR">1.000</InvoicedQuantity>
+      <LineExtensionAmount currencyID="TND">100.000</LineExtensionAmount>
+      <Item>
+        <Name>خدمة تجريبية</Name>
+        <ClassifiedTaxCategory>
+          <ID>S</ID>
+          <Percent>19</Percent>
+          <TaxScheme>
+            <ID>TVA</ID>
+          </TaxScheme>
+        </ClassifiedTaxCategory>
+      </Item>
+      <Price>
+        <PriceAmount currencyID="TND">100.000</PriceAmount>
+        <BaseQuantity unitCode="HUR">1</BaseQuantity>
+      </Price>
+    </InvoiceLine>
+  </InvoiceLines>
+  
+  <TaxTotal>
+    <TaxAmount currencyID="TND">19.000</TaxAmount>
+    <TaxSubtotal>
+      <TaxableAmount currencyID="TND">100.000</TaxableAmount>
+      <TaxAmount currencyID="TND">19.000</TaxAmount>
+      <TaxCategory>
+        <ID>S</ID>
+        <Percent>19</Percent>
+        <TaxScheme>
+          <ID>TVA</ID>
+        </TaxScheme>
+      </TaxCategory>
+    </TaxSubtotal>
+  </TaxTotal>
+  
+  <LegalMonetaryTotal>
+    <LineExtensionAmount currencyID="TND">100.000</LineExtensionAmount>
+    <TaxExclusiveAmount currencyID="TND">100.000</TaxExclusiveAmount>
+    <TaxInclusiveAmount currencyID="TND">119.000</TaxInclusiveAmount>
+    <PayableAmount currencyID="TND">119.000</PayableAmount>
+  </LegalMonetaryTotal>
+  
+  <!-- Signature and QR Code sections to be added in v0.2 -->
+</Invoice>

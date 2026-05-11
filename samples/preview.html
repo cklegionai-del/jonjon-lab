@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فاتورة إلكترونية رسمية — TEST-001</title>
+  <style>
+    :root { --primary: #1a365d; --accent: #c05621; --bg: #f7fafc; --text: #2d3748; --border: #e2e8f0; --success: #38a169; }
+    * { box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; margin: 0; padding: 20px; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .invoice-box { max-width: 850px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); position: relative; }
+    .badge { position: absolute; top: 20px; left: 20px; background: #f0fff4; border: 1px solid #c6f6d5; color: var(--success); padding: 6px 10px; border-radius: 6px; font-size: 0.85em; font-weight: 600; }
+    .header { border-bottom: 3px solid var(--primary); padding-bottom: 15px; margin-bottom: 25px; }
+    .header h1 { margin: 0; color: var(--primary); font-size: 1.8em; }
+    .header-meta { display: flex; justify-content: space-between; margin-top: 10px; font-size: 0.9em; color: #718096; flex-wrap: wrap; gap: 8px; }
+    .meta-bar { background: #edf2f7; padding: 8px 12px; border-radius: 6px; font-size: 0.8em; color: #64748b; margin-bottom: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; }
+    .parties { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 25px 0; }
+    .party { background: #f8fafc; padding: 15px; border-radius: 8px; border-right: 4px solid var(--primary); }
+    .party h3 { margin: 0 0 10px 0; color: var(--primary); font-size: 1.1em; }
+    .party p { margin: 4px 0; font-size: 0.95em; }
+    .party .label { color: #718096; font-size: 0.85em; }
+    table { width: 100%; border-collapse: collapse; margin: 25px 0; font-size: 0.95em; }
+    th { background: var(--primary); color: white; padding: 12px; text-align: right; }
+    td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+    tr:nth-child(even) { background: #f8fafc; }
+    .amount { font-family: 'Courier New', monospace; text-align: left !important; font-weight: 600; }
+    .totals { display: flex; justify-content: flex-end; margin: 20px 0; }
+    .totals-box { background: #f0f4f8; padding: 15px 20px; border-radius: 8px; min-width: 260px; }
+    .totals-row { display: flex; justify-content: space-between; margin: 6px 0; font-size: 0.95em; }
+    .totals-row.final { font-size: 1.15em; font-weight: bold; color: var(--primary); border-top: 2px solid var(--border); padding-top: 8px; margin-top: 8px; }
+    .seal-section { margin-top: 30px; padding: 15px; background: #fffaf0; border: 1px dashed var(--accent); border-radius: 8px; display: flex; align-items: center; gap: 15px; }
+    .qr-box { width: 80px; height: 80px; background: #e2e8f0; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.7em; color: #718096; text-align: center; }
+    .seal-text { flex: 1; font-size: 0.9em; color: #744210; }
+    .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid var(--border); text-align: center; font-size: 0.85em; color: #718096; }
+    .providers { display: flex; justify-content: center; gap: 15px; margin: 15px 0; flex-wrap: wrap; }
+    .provider { font-weight: 600; color: #4a5568; padding: 4px 10px; background: #edf2f7; border-radius: 4px; font-size: 0.85em; }
+    .btn { display: inline-block; margin-top: 15px; padding: 10px 20px; background: var(--primary); color: white; text-decoration: none; border-radius: 6px; font-weight: 500; transition: 0.2s; }
+    .btn:hover { background: #152a4a; }
+    @media print { body { background: white; } .invoice-box { box-shadow: none; border: 1px solid #ddd; } .btn, .seal-section { display: none; } }
+  </style>
+</head>
+<body>
+  <div class="invoice-box">
+    <div class="badge">✅ مطابق لمواصفات TEIF v1.8.7</div>
+    
+    <div class="header">
+      <h1>فاتورة إلكترونية رسمية</h1>
+      <div class="header-meta">
+        <span>رقم: <strong>TEST-001</strong></span>
+        <span>تاريخ الإصدار: <strong>2026-05-12</strong></span>
+        <span>النوع: <strong>إشعار دائن/مدين</strong></span>
+      </div>
+    </div>
+
+    <div class="meta-bar">
+      <span>🆔 معرف النظام: FAWTARA-PROD-01</span>
+      <span>⏱️ وقت التوليد: 11‏/5‏/2026، 7:21:34 م</span>
+      <span>🌐 المعيار: TEIF v1.8.7</span>
+    </div>
+
+    <div class="parties">
+      <div class="party">
+        <h3>🏢 المورد (البائع)</h3>
+        <p><span class="label">الاسم:</span> شركة اختبار</p>
+        <p><span class="label">رقم التسجيل الضريبي:</span> 123456789</p>
+        <p><span class="label">العنوان:</span> تونس</p>
+      </div>
+      <div class="party">
+        <h3>👤 العميل (المشتري)</h3>
+        <p><span class="label">الاسم:</span> عميل تجريبي</p>
+        <p><span class="label">رقم التسجيل الضريبي:</span> 987654321</p>
+        <p><span class="label">العنوان:</span> سوسة</p>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr><th>الترتيب</th><th>البيان</th><th>الكمية</th><th>سعر الوحدة</th><th>نسبة الضريبة</th><th>المجموع (د.ت)</th></tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>1</td>
+          <td>خدمة تجريبية</td>
+          <td class="amount">1.000</td>
+          <td class="amount">100.000</td>
+          <td>19%</td>
+          <td class="amount">100.000</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="totals">
+      <div class="totals-box">
+        <div class="totals-row"><span>المجموع قبل الضريبة</span><span class="amount">100.000</span></div>
+        <div class="totals-row"><span>ضريبة القيمة المضافة (19%)</span><span class="amount">19.000</span></div>
+        <div class="totals-row final"><span>الإجمالي الواجب دفعه</span><span class="amount">119.000 د.ت</span></div>
+      </div>
+    </div>
+
+    <div class="seal-section">
+      <div class="qr-box">QR<br>CODE</div>
+      <div class="seal-text">
+        <strong>🔐 الختم الإلكتروني:</strong> تجريبي (يتطلب شهادة TunTrust رسمية للإنتاج)<br>
+        <small>للتحقق من صحة الفاتورة: <a href="https://verify.elfatoora.tn" target="_blank" style="color:#2b6cb0;">verify.elfatoora.tn</a></small>
+      </div>
+    </div>
+
+    <a href="samples/preview.xml" class="btn" download>⬇ تحميل ملف XML الرسمي (TEIF v1.8.7)</a>
+
+    <div class="footer">
+      <div class="providers">
+        <span class="provider">🟠 Orange Tunisie</span>
+        <span class="provider">🔵 Ooredoo</span>
+        <span class="provider">🟢 Tunisie Télécom</span>
+      </div>
+      <p>منصة فوترة — متوافقة مع القانون المالي 2026 ومنصة El Fatoora (TTN)</p>
+      <p style="margin-top:5px; font-size:0.75em; opacity:0.7;">نسخة معاينة فقط. الفاتورة القانونية تُرسل عبر البوابة الرسمية.</p>
+    </div>
+  </div>
+</body>
+</html>

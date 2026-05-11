@@ -78,15 +78,31 @@ program.command('pdf')
       page.drawText('Date: '+sanitize(inv.date), {x:m+10,y:y-28,size:10});
       y-=70;
       
-      // Supplier/Customer
-      const colW = pw/2 - 10;
-      drawBox(m,y+10,colW,60,black,0.8);
-      page.drawText('SUPPLIER: '+sanitize(inv.supplier?.name), {x:m+10,y:y-15,size:9,font:bold});
-      page.drawText('VAT: '+sanitize(inv.supplier?.vatNumber), {x:m+10,y:y-30,size:8});
-      drawBox(m+colW+20,y+10,colW,60,black,0.8);
-      page.drawText('CUSTOMER: '+sanitize(inv.customer?.name), {x:m+colW+30,y:y-15,size:9,font:bold});
-      page.drawText('VAT: '+sanitize(inv.customer?.vatNumber), {x:m+colW+30,y:y-30,size:8});
-      y-=80;
+      // Supplier/Customer with ICE
+const colW = pw/2 - 10;
+drawBox(m,y+10,colW,75,black,0.8);
+page.drawText('SUPPLIER: '+sanitize(inv.supplier?.name), {x:m+10,y:y-15,size:9,font:bold});
+page.drawText('VAT: '+sanitize(inv.supplier?.vatNumber), {x:m+10,y:y-30,size:8});
+page.drawText('ICE: '+sanitize(inv.supplier?.ice), {x:m+10,y:y-42,size:7});
+page.drawText('RC: '+sanitize(inv.supplier?.registrationNumber), {x:m+10,y:y-53,size:7});
+
+drawBox(m+colW+20,y+10,colW,75,black,0.8);
+page.drawText('CUSTOMER: '+sanitize(inv.customer?.name), {x:m+colW+30,y:y-15,size:9,font:bold});
+page.drawText('VAT: '+sanitize(inv.customer?.vatNumber), {x:m+colW+30,y:y-30,size:8});
+page.drawText('ICE: '+sanitize(inv.customer?.ice), {x:m+colW+30,y:y-42,size:7});
+y-=90;
+
+// Bank Details
+const bank = inv.supplier?.bank;
+if(bank && (bank.name || bank.iban || bank.rib)) {
+  drawBox(m,y+10,pw,30,gray,0.5);
+  page.drawText('BANK: '+sanitize(bank.name||''), {x:m+10,y:y-10,size:8,font:bold,color:gray});
+  page.drawText('RIB: '+sanitize(bank.rib||''), {x:m+150,y:y-10,size:8,color:gray});
+  page.drawText('IBAN: '+sanitize(bank.iban||''), {x:m+320,y:y-10,size:8,color:gray});
+  y-=40;
+} else {
+  y-=10;
+}
       
       // Table Header
       drawBox(m,y+10,pw,25,blue,1);

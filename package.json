@@ -19,6 +19,9 @@
   "author": "Your Name",
   "license": "MIT",
   "dependencies": {
-    "commander": "^11.0.0"
+    "commander": "^11.0.0",
+    "html-pdf-node": "^1.0.8",
+    "pdf-lib": "^1.17.1",
+    "puppeteer-core": "^24.43.1"
   }
 }

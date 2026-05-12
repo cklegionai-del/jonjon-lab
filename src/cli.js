@@ -51,6 +51,7 @@ program.command('preview')
 program.command('pdf')
   .requiredOption('-f, --file <path>')
   .requiredOption('-o, --output <path>')
+  .option('--signed-xml <path>', 'Path to signed XML for QR hash')
   .action(async opt => {
     try {
       const inv = JSON.parse(fs.readFileSync(opt.file,'utf8'));

@@ -24,7 +24,6 @@ WORKDIR /app
 
 COPY package*.json ./
 RUN npm ci --omit=dev --ignore-scripts && npm rebuild
-
 COPY src/ ./src/
 
 ENTRYPOINT ["node", "src/cli.js"]

@@ -1,5 +1,5 @@
 // Test XML generation workflow
-import { validateInvoice } from './test-invoice.js';
+import { validateInvoice } from './src/test-invoice.js';
 import { generateInvoiceXML, saveXMLToFile } from './src/generators/xmlGenerator.js';
 
 // Example Tunisian invoice data

@@ -3,10 +3,11 @@
 
 import { Pdf } from 'html-pdf-node';
 import { generateTEIFQR } from '../utils/qrGenerator.js';
+import { extractSignatureHash } from '../utils/xmlUtils.js';
 
 const pdf = new Pdf();
 
-export async function generateInvoicePDF(htmlString, outputPath, invoice) {
+export async function generateInvoicePDF(htmlString, outputPath, invoice, signedXmlPath = null) {
   const options = { 
     format: 'A4',
     printBackground: true,
@@ -23,7 +24,12 @@ export async function generateInvoicePDF(htmlString, outputPath, invoice) {
     
     const amount = invoice.legalMonetaryTotal.payableAmount.toFixed(3);
     const uuid = invoice.id || generateUUID();
-    const sigHash = ''; // Empty for now
+    
+    // Get real signature hash if signed XML is provided
+    let sigHash = '';
+    if (signedXmlPath) {
+      sigHash = extractSignatureHash(signedXmlPath);
+    }
     
     const qrDataUri = await generateTEIFQR({ vat, timestamp, amount, sigHash, uuid });
     

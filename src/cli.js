@@ -194,5 +194,66 @@ if(bank && (bank.name || bank.iban || bank.rib)) {
       console.log('✅ Official PDF saved: '+opt.output);
     } catch(e){ console.error('❌',e.message); }
   });
+// === SIGN XML ===
+program.command('sign')
+  .requiredOption('-f, --file <path>', 'XML file to sign')
+  .requiredOption('-c, --cert <path>', 'Certificate path (.crt / .pem)')
+  .requiredOption('-k, --key <path>', 'Private key path (.key / .pem)')
+  .requiredOption('-o, --output <path>', 'Output signed XML path')
+  .action(async (opt) => {
+    try {
+      const { signInvoiceXML } = await import('./signers/xmlSigner.js');
+      const signedXml = await signInvoiceXML(opt.file, opt.cert, opt.key);
+      fs.writeFileSync(opt.output, signedXml);
+      console.log('✅ XML signed (RSA-SHA256 + DSig + TLV QR):', opt.output);
+    } catch(e) { console.error('❌ Error:', e.message); }
+  });
+
+// === SUBMIT TO TTN (El Fatoora) ===
+program.command('submit')
+  .requiredOption('-f, --file <path>', 'Signed XML file')
+  .option('--client-id <id>', 'OAuth2 client ID')
+  .option('--client-secret <secret>', 'OAuth2 client secret')
+  .option('--tls-cert <path>', 'TUNTRUST TLS cert path (mTLS)')
+  .option('--tls-key <path>', 'TUNTRUST TLS key path (mTLS)')
+  .option('--api-key <key>', 'TTN API Key (legacy Basic Auth)')
+  .option('--api-secret <secret>', 'TTN API Secret (legacy Basic Auth)')
+  .option('--sandbox', 'Use sandbox environment', true)
+  .action(async (opt) => {
+    try {
+      const { TTNClient } = await import('./api/ttnClient.js');
+
+      if (opt.clientId && opt.clientSecret) {
+        const client = new TTNClient({
+          clientId: opt.clientId,
+          clientSecret: opt.clientSecret,
+          tlsCertPath: opt.tlsCert,
+          tlsKeyPath: opt.tlsKey,
+          sandbox: opt.sandbox
+        });
+        console.log('📤 Submitting to TTN (OAuth2)...');
+        const result = await client.submitInvoice(opt.file);
+        if (result.success) {
+          console.log('✅ Submitted! UUID:', result.uuid);
+          console.log('Status:', result.status);
+        } else {
+          console.error('❌ Failed:', result.error);
+        }
+      } else if (opt.apiKey && opt.apiSecret) {
+        const { TTNClient: LegacyClient } = await import('./api/ttnClientLegacy.js');
+        const client = new LegacyClient(opt.apiKey, opt.apiSecret, opt.sandbox);
+        console.log('📤 Submitting to TTN (Basic Auth)...');
+        const result = await client.submitInvoice(opt.file);
+        if (result.success) {
+          console.log('✅ Submitted! UUID:', result.uuid);
+          console.log('Status:', result.status);
+        } else {
+          console.error('❌ Failed:', result.error);
+        }
+      } else {
+        console.error('❌ Provide either --client-id/--client-secret (OAuth2) or --api-key/--api-secret (Basic Auth)');
+      }
+    } catch(e) { console.error('❌ Error:', e.message); }
+  });
 
 program.parse();

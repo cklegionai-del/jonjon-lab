@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>زيزوى - قهوة تونسية أصيلة | Tunisian Coffee Ritual</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="hero-bg min-h-screen text-white overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="backdrop-blur-xl bg-white/20 shadow-2xl px-6 py-4 fixed w-full z-50 border-b border-white/40">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <img src="images/zezouia-cup.jpg" alt="زيزوى" class="w-12 h-12 rounded-full shadow-lg ring-4 ring-white/50">
+                <h1 class="text-3xl font-black bg-gradient-to-l from-amber-400 via-orange-500 to-yellow-500 bg-clip-text text-transparent drop-shadow-lg">زيزوى</h1>
+            </div>
+            <ul class="flex space-x-8 space-x-reverse">
+                <li><a href="#menu" class="hover:text-amber-300 transition-all duration-300 relative group">
+                    القائمة <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-400 group-hover:w-full transition-all duration-300"></span>
+                </a></li>
+                <li><a href="#shop" class="hover:text-amber-300 transition-all duration-300 relative group">المتجر</a></li>
+                <li><a href="#contact" class="hover:text-amber-300 transition-all duration-300 relative group">تواصل</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section مع صورة -->
+    <section class="pt-32 pb-32 relative overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="images/hero-coffee.jpg" class="w-full h-full object-cover opacity-20 mix-blend-overlay">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+            <div class="coffee-float mb-12">
+                <img src="images/zezouia-cup.jpg" alt="قهوة كابوشون تونسية" class="w-32 h-32 mx-auto rounded-3xl shadow-2xl ring-8 ring-white/30">
+            </div>
+            <h2 class="text-6xl md:text-8xl font-black mb-8 bg-gradient-to-r from-white via-slate-100 to-amber-100 bg-clip-text text-transparent drop-shadow-2xl leading-tight">
+                طقس القهوة<br>التونسي الأصيل
+            </h2>
+            <p class="text-xl md:text-2xl text-slate-200 mb-12 leading-relaxed max-w-4xl mx-auto opacity-90">
+                من زيزوى عثمانية إلى كافيهات سيدي بو سعيد: بن + ورد برتقال + ritual الصباح بعد الفجر
+            </p>
+            <div class="flex flex-col lg:flex-row gap-6 justify-center items-center">
+                <button onclick="orderCoffee()" class="group bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-slate-900 px-16 py-8 rounded-3xl text-2xl font-black shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-500 ring-4 ring-amber-400/50">
+                    اطلب قهوتك ☕ <span class="ml-2 group-hover:translate-x-2 transition-transform"></span>
+                </button>
+                <button onclick="getRecommendation()" class="backdrop-blur-xl bg-white/20 hover:bg-white/30 border-2 border-white/50 px-12 py-8 rounded-3xl text-xl font-semibold hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                    AI توصية ذكية
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-32 bg-gradient-to-b from-white/20 to-slate-800/20 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-5xl md:text-6xl font-black text-center mb-24 bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent drop-shadow-xl">القائمة الأصيلة</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="menu-items">
+                <div class="card-hover bg-white/20 backdrop-blur-xl p-10 rounded-3xl border border-white/30 hover:border-amber-400/50 group">
+                    <div class="w-24 h-24 bg-gradient-to-r from-amber-400 to-orange-500 rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-xl group-hover:scale-110 transition-all">
+                        ☕
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-white group-hover:text-amber-300">قهوة زيزوى كلاسيك</h4>
+                    <p class="text-slate-300 mb-6 leading-relaxed">بن مطحون ناعم + ورد برتقال أندلسي، ritual الصباح التونسي الأصيل</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-3xl font-black text-amber-400">5 DT</span>
+                        <button class="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-slate-900 rounded-xl font-semibold transition-all">أضف للسلة</button>
+                    </div>
+                </div>
+                <!-- المزيد سيأتي -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        async function getRecommendation() {
+            try {
+                const res = await fetch('/api/recommend?q=قهوة صباحية تونسية');
+                const data = await res.json();
+                if (data.recommendation) {
+                    alert('🎯 توصية من qwen3-coder:\n\n' + data.recommendation);
+                } else {
+                    alert('جاري تحسين Ollama... جرب مرة أخرى!');
+                }
+            } catch(e) {
+                alert('Ollama غير جاهز، شغّل: ollama serve');
+            }
+        }
+        
+        async function orderCoffee() {
+            document.querySelector('html').style.scrollBehavior = 'smooth';
+            document.getElementById('shop').scrollIntoView({behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>

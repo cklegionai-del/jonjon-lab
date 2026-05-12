@@ -139,26 +139,22 @@ export function generateInvoiceXML(invoiceObject) {
     <PayableAmount currencyID="TND">${totalTTC}</PayableAmount>
   </LegalMonetaryTotal>
   
-  <!-- DEMO MODE: Signature placeholder -->
-  <!-- In production, this section must be generated using XMLDSig (RSA-SHA256) 
-       with a valid TunTrust (ANCE) certificate -->
-  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="placeholder">
     <SignedInfo>
       <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
       <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
     </SignedInfo>
-    <SignatureValue>DEMO_SIGNATURE_PLACEHOLDER</SignatureValue>
+    <SignatureValue>PLACEHOLDER_REPLACE_BY_SIGNER</SignatureValue>
     <KeyInfo>
       <X509Data>
-        <X509Certificate>DEMO_CERTIFICATE_PLACEHOLDER</X509Certificate>
+        <X509Certificate>PLACEHOLDER_REPLACE_BY_SIGNER</X509Certificate>
       </X509Data>
     </KeyInfo>
   </Signature>
 
-  <!-- DEMO: QR Code placeholder (contains: iid, sid, dt, amt, sig) -->
   <VisibleElectronicSeal>
-    <QRCode>data:image/png;base64,DEMO_QR_PLACEHOLDER</QRCode>
-    <VerificationURL>https://verify.elfatoora.tn/demo</VerificationURL>
+    <QRCode>data:image/png;base64,PLACEHOLDER_REPLACE_BY_SIGNER</QRCode>
+    <VerificationURL>https://verify.elfatoora.tn</VerificationURL>
   </VisibleElectronicSeal>
 </Invoice>`;
 

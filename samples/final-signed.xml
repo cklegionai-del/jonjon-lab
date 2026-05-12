@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice xmlns="urn:tn:gov:dgi:teif:1.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:tn:gov:dgi:teif:1.8 TEIF_v1.8.7.xsd" Id="_0">
+  <ID>TEST-001</ID>
+  <IssueDate>2026-05-12</IssueDate>
+  <IssueTime>12:00:00</IssueTime>
+  <InvoiceTypeCode>380</InvoiceTypeCode>
+  <DocumentCurrencyCode>TND</DocumentCurrencyCode>
+  <TaxCurrencyCode>TND</TaxCurrencyCode>
+  <DueDate>2026-06-11</DueDate>
+  
+  <Parties>
+    <Supplier>
+      <PartyIdentification>
+        <ID schemeID="TN_MF">123456789</ID>
+      </PartyIdentification>
+      <PartyName>
+        <Name>شركة اختبار</Name>
+      </PartyName>
+      <PostalAddress>
+        <StreetName>تونس</StreetName>
+        <CityName>Tunis</CityName>
+        <PostalZone>1000</PostalZone>
+        <CountrySubentity>Tunis</CountrySubentity>
+        <Country>
+          <IdentificationCode>TN</IdentificationCode>
+        </Country>
+      </PostalAddress>
+    </Supplier>
+    <Customer>
+      <PartyIdentification>
+        <ID schemeID="TN_MF">987654321</ID>
+      </PartyIdentification>
+      <PartyName>
+        <Name>عميل تجريبي</Name>
+      </PartyName>
+      <PostalAddress>
+        <StreetName>سوسة</StreetName>
+        <CityName>Tunis</CityName>
+        <PostalZone>1000</PostalZone>
+        <CountrySubentity>Tunis</CountrySubentity>
+        <Country>
+          <IdentificationCode>TN</IdentificationCode>
+        </Country>
+      </PostalAddress>
+    </Customer>
+  </Parties>
+  
+  <InvoiceLines>
+    
+    <InvoiceLine>
+      <ID>1</ID>
+      <InvoicedQuantity unitCode="HUR">1.000</InvoicedQuantity>
+      <LineExtensionAmount currencyID="TND">100.000</LineExtensionAmount>
+      <Item>
+        <Name>خدمة تجريبية</Name>
+        <ClassifiedTaxCategory>
+          <ID>S</ID>
+          <Percent>19</Percent>
+          <TaxScheme>
+            <ID>TVA</ID>
+          </TaxScheme>
+        </ClassifiedTaxCategory>
+      </Item>
+      <Price>
+        <PriceAmount currencyID="TND">100.000</PriceAmount>
+        <BaseQuantity unitCode="HUR">1</BaseQuantity>
+      </Price>
+    </InvoiceLine>
+  </InvoiceLines>
+  
+  <TaxTotal>
+    <TaxAmount currencyID="TND">19.000</TaxAmount>
+    <TaxSubtotal>
+      <TaxableAmount currencyID="TND">100.000</TaxableAmount>
+      <TaxAmount currencyID="TND">19.000</TaxAmount>
+      <TaxCategory>
+        <ID>S</ID>
+        <Percent>19</Percent>
+        <TaxScheme>
+          <ID>TVA</ID>
+        </TaxScheme>
+      </TaxCategory>
+    </TaxSubtotal>
+  </TaxTotal>
+  
+  <LegalMonetaryTotal>
+    <LineExtensionAmount currencyID="TND">100.000</LineExtensionAmount>
+    <TaxExclusiveAmount currencyID="TND">100.000</TaxExclusiveAmount>
+    <TaxInclusiveAmount currencyID="TND">119.000</TaxInclusiveAmount>
+    <PayableAmount currencyID="TND">119.000</PayableAmount>
+  </LegalMonetaryTotal>
+  
+  
+
+  
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><Reference URI="#_0"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>8JFKwrX4G1aeFvwc/iotssaGZuwzC6E4whj4vF0PFwU=</DigestValue></Reference></SignedInfo><SignatureValue>ElWr0atuynAsfeU0tk9SPo6s/Bp0lKByGFKKQG+ObqMqd/w59TJyMYOLZBTP9CdNNvAWE3k6Qd3zfHZzDjgrX6Q0k+bviUANNsEJKPq5JOAIc3rlcU6GJbFibnLsG/oAP5i/Vqmj4gHaRLbjFGDSztLLcFTno0wih2sXtmFQr+LpeynJR0rj36f/++Uf3/dcl0HwlY8krMk5iEw60V2fCz4Wk03DYa+PHNaydTaxcMqSaqxpKlUhcW9m8uqozxGodv1Ak+lOltiBo8yZ/OtUFOWv4eal2u4e1s0Cuu2fk2pdcNKXpZAzlKYV1f9DsajOM1HZWdVoQusCQ6aknl6Brg==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIDJzCCAg+gAwIBAgIUEjiZ4qqL8Vu5BLmEuJO3wmz/3iQwDQYJKoZIhvcNAQELBQAwIzEUMBIGA1UEAwwLVGVzdEZhdG9vcmExCzAJBgNVBAYTAlRVMB4XDTI2MDUxMjEwNTczN1oXDTI3MDUxMjEwNTczN1owIzEUMBIGA1UEAwwLVGVzdEZhdG9vcmExCzAJBgNVBAYTAlRVMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjL/5lNOdvj9hI6LrjOMMJF6dKUq+9dYRPBwJhsjuj6/ivr4YVz27kXhriZhHWm4crUBh2cCBuV4dj0toqiJPWFlfpAdZY4v9tTLG/FJ97bOAC+6O0yR5e3h3SuN8OAaU5S97a9yxguJk/ReRYba1Za8EatHZUf3lCkPKU8yLLwzXisBPi8TGZVbcJhiD33p1QXv1ka7lWEIqiGYcp4jU27cA9h3Kd4s61e+oVpSMDPbF2ytYsFPYAo0vMzGRdm12QKbQ4/lqfwF9CQ2xNJ9s4u93Ff9nfLY0L7z+4NmKHq0S2QklEsJrA+V+GOJKM50hDUhwqKrNzG7uH2eXdHOknQIDAQABo1MwUTAdBgNVHQ4EFgQUC0nCzLQ1Z0Umnv6/DKvtbxe8u5UwHwYDVR0jBBgwFoAUC0nCzLQ1Z0Umnv6/DKvtbxe8u5UwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAgHDmlbg+VDrxmgp0Wz8HCHuEPCUVWkL3MMPvhm+Y/rhPLlJlvki7nkhKN/X8im1gPAj6N3qEzx3ElI1iyqFZ/c7zV2aTinIqAlzAL5xp1p+4ZKLyCv4Jf3vd4gFMhcG3Du+5+TjeCZ3qsJbL/GvbnperZC/5xmZyXLfhlMHFMW2R4txBkSOe9cZyIb/YuV8OwUojtczDkAOCFBt7MSlQZOCUlitmkL+KRfnxFOYEe1kXUqZ0E+1w/yrkKQ2XXIY80e9JwO4gv/p+lYzxNZ1/bE56VCJ1r1jQ/chuYziGrGrzBDRKi0/mgVJEnnjjl5uWjAvCF2Sj3AVy2AyVf6PU4A==</X509Certificate></X509Data></KeyInfo></Signature>  <VisibleElectronicSeal>
+    <QRCode>data:image/png;base64,PLACEHOLDER_REPLACE_BY_SIGNER</QRCode>
+    <VerificationURL>https://verify.elfatoora.tn</VerificationURL>
+  </VisibleElectronicSeal>
+</Invoice>

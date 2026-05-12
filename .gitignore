@@ -27,3 +27,4 @@ tools/dify/dify/
 tools/aider/venv/
 *.db
 .env
+node_modules/

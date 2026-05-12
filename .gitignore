@@ -29,3 +29,6 @@ tools/aider/venv/
 .env
 node_modules/
 node_modules/
+samples/*.pdf
+samples/*.png
+*.log

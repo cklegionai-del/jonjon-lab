@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { program } from 'commander';
 import fs from 'fs';
-import { validateInvoice } from '../test-invoice.js';
+import { validateInvoice } from './test-invoice.js';
 import { generateInvoiceXML, saveXMLToFile } from './generators/xmlGenerator.js';
 import QRCode from 'qrcode';
 

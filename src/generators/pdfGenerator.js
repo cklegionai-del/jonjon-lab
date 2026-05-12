@@ -20,7 +20,7 @@ export async function generateInvoicePDF(htmlString, outputPath, invoice, signed
     
     // Format timestamp as YYYYMMDDHHmmss
     const date = new Date(invoice.issueDate);
-    const timestamp = `${date.getFullYear()}${String(date.getMonth() + 1).padStart(2, '0')}${String(date.getDate()).padStart(2, '0')}${String(date.getHours()).padStart(2, '0')}${String(date.getMinutes()).padStart(2, '0')}${String(date.getSeconds()).padStart(2, '0')}`;
+    let timestamp = `${date.getFullYear()}${String(date.getMonth() + 1).padStart(2, '0')}${String(date.getDate()).padStart(2, '0')}${String(date.getHours()).padStart(2, '0')}${String(date.getMinutes()).padStart(2, '0')}${String(date.getSeconds()).padStart(2, '0')}`;
     
     const amount = invoice.legalMonetaryTotal.payableAmount.toFixed(3);
     const uuid = invoice.id || generateUUID();
@@ -31,12 +31,15 @@ export async function generateInvoicePDF(htmlString, outputPath, invoice, signed
       sigHash = extractSignatureHash(signedXmlPath);
     }
     
-    const qrDataUri = await generateTEIFQR({ vat, timestamp, amount, sigHash, uuid });
+    const qrBase64 = await generateTEIFQR({ vat, timestamp, amount, sigHash, uuid });
     
-    // Inject QR code into HTML
+    // Convert base64 to buffer for pdf-lib
+    const qrBuffer = Buffer.from(qrBase64, 'base64');
+    
+    // Inject QR code into HTML with better sizing and background
     const qrHtml = `
-      <div style="position: absolute; bottom: 20px; right: 20px; width: 80px; height: 80px;">
-        <img src="${qrDataUri}" style="width: 80px; height: 80px;" alt="QR Code" />
+      <div style="position: absolute; bottom: 20px; right: 20px; width: 100px; height: 100px; background-color: white; padding: 2px;">
+        <img src="data:image/png;base64,${qrBase64}" style="width: 100px; height: 100px;" alt="QR Code" />
         <div style="font-size: 7px; color: gray; text-align: center; margin-top: 2px;">امسح للتحقق</div>
       </div>
     `;

@@ -17,14 +17,39 @@ export function buildTLVPayload({ vat, timestamp, amount, sigHash, uuid }) {
 }
 
 export async function generateTEIFQR({ vat, timestamp, amount, sigHash, uuid }) {
-  const tlvBuf = buildTLVPayload({ vat, timestamp, amount, sigHash, uuid });
-  // Latin1 preserves all byte values for QR byte-mode encoding
-  const dataUri = await QRCode.toDataURL(tlvBuf.toString('latin1'), {
-    width: 200,
-    margin: 2,
-    errorCorrectionLevel: 'M'
-  });
-  return dataUri;
+  try {
+    // Ensure timestamp is in correct format (YYYYMMDDHHmmss)
+    let formattedTimestamp = timestamp;
+    if (timestamp && timestamp.includes('/')) {
+      // Handle DD/MM/YYYY format
+      const parts = timestamp.split('/');
+      if (parts.length === 3) {
+        formattedTimestamp = `${parts[2]}${parts[1]}${parts[0]}000000`;
+      }
+    } else if (timestamp && timestamp.length === 8) {
+      // Handle YYYYMMDD format
+      formattedTimestamp = `${timestamp}000000`;
+    }
+    
+    const tlvBuf = buildTLVPayload({ vat, timestamp: formattedTimestamp, amount, sigHash, uuid });
+    
+    // Generate QR code without data URI prefix
+    const qrData = await QRCode.toDataURL(tlvBuf.toString('latin1'), {
+      width: 300,
+      margin: 1,
+      errorCorrectionLevel: 'M'
+    });
+    
+    // Remove data URI prefix if present
+    if (qrData.startsWith('data:image/png;base64,')) {
+      return qrData.substring('data:image/png;base64,'.length);
+    }
+    
+    return qrData;
+  } catch (error) {
+    console.error('❌ Error generating QR code:', error.message);
+    throw error;
+  }
 }
 
 export function generateUUID() {

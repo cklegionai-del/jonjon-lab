@@ -1,34 +1,103 @@
-# بيانات n8n
+# === Node ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+# === Environment ===
+.env
+.env.*
+*.secret
+*.pem
+*.key
+*.crt
+
+# === Build output ===
+dist/
+build/
+out/
+.next/
+.cache/
+
+# === Python ===
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+.aider*
+.uv-cache/
+
+# === Docker / Compose volumes ===
+docker/volumes/
+tools/dify/volumes/
+tools/dify/dify/
+tools/aider/
+postgres_data/
+langfuse-db/
 n8n_data/
 tools/n8n/n8n_data/
 
-# بيانات Docker
-postgres_data/
-langfuse-db/
+# === Databases ===
+*.db
+*.sqlite
+*.sqlite3
 
-# إعدادات البيئة
-.env
-*.secret
+# === Large binaries ===
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.ttf
+*.otf
+*.woff
+*.woff2
+*.eot
+*.mp4
+*.mov
+*.avi
+*.zip
+*.tar
+*.gz
+*.dmg
+*.app
+*.framework
 
-# ذاكرة بايثون
-__pycache__/
-*.pyc
+# === Embedded git repos (not submodules) ===
+html-templates/*/.git/
+agents/*/.git/
+rag-gpt-v1.5/.git/
 
-# تقارير مؤقتة
+# === Logs / reports ===
 *.log
 reports/
-.aider*
-tools/dify/volumes/
-tools/dify/dify/
-tools/aider/venv/
-*.db
-tools/dify/volumes/
-tools/dify/dify/
-tools/aider/venv/
-*.db
-.env
-node_modules/
-node_modules/
+
+# === IDE ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# === OS ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# === Generated samples ===
+samples/*.xml
 samples/*.pdf
 samples/*.png
-*.log
+samples/*.html
+final.pdf
+invoice.xml
+signed.xml
+
+# === Git filter-repo backup ===
+.git/incoming-*
+.git/filter-repo/
